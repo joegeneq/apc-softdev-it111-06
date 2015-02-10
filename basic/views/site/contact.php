@@ -7,7 +7,7 @@ use yii\captcha\Captcha;
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model app\models\ContactForm */
 
-$this->title = 'Contact';
+$this->title = 'Contact Us';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
@@ -32,12 +32,55 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php else: ?>
 
-    <p>
-        If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
+    <p style="height: 50px">
+            <b> <em>  If you have business inquiries or other questions fill out the following form to contact us. Thank you.</em></b>
     </p>
 
+    <div id="section">
+        <h2>Manila</h2>
+    <p>Box 1831, Manila
+        Philippines
+        Tel. 726-3021 to 24
+        Fax 63-2-727-0077
+        info@blind.org.ph
+    </p>
+    <h2>Davao</h2>
+    <p>Box 80540 DCCPO
+    Davao City 8000
+    Tel. 225-8937
+    Fax 63-82-225-8938
+    davao@blind.org.ph
+    </p>
+    <h2>Cebu</h2>
+    <p>
+    Box 470 CPO
+    Cebu City 6000
+    Tel. 232-2004
+    Fax 63-32-233-7763
+    cebu@blind.org.ph
+    </p>
+    <h2>USA</h2>
+    <p>
+    Resources for the Blind
+    PO Box 4499
+    Columbia, SC 29240
+    Telephone: 803-790-9264 
+    Fax no.:803-790-9264
+    info@blindusa.org
+    www.blindusa.org
+    </p>
+    <h2>Within Metro Manila</h2>
+    <p>
+    726-3021 up to 24
+    </p>
+    <h2>Outside Mtero Manila</h2>
+    <p>
+    1-800-10-725-4637
+    </p>
+    </div>
     <div class="row">
         <div class="col-lg-5">
+            <p style="color:red"><em>Please fill up all necessary information.</em></p>
             <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
                 <?= $form->field($model, 'name') ?>
                 <?= $form->field($model, 'email') ?>
