@@ -2,15 +2,16 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-$this->title = 'About';
+$this->title = 'Inventory System';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        This is the About page. You may modify the following file to customize its content:
-    </p>
-
-    <code><?= __FILE__ ?></code>
+   <center>
+   <?= Html::img('images/Companies.png', ['alt'=>'some', 'class'=>'thing']);?>
+    <?= Html::img('images/Customers.png', ['alt'=>'some', 'class'=>'thing']);?>
+     <?= Html::img('images/Items.png', ['alt'=>'some', 'class'=>'thing']);?>
+     <?= Html::img('images/Orders.png', ['alt'=>'some', 'class'=>'thing']);?>
+     <?= Html::img('images/Sales.png', ['alt'=>'some', 'class'=>'thing']);?>
+     <?= Html::img('images/Suppliers.png', ['alt'=>'some', 'class'=>'thing']);?>
+     </center>
 </div>
