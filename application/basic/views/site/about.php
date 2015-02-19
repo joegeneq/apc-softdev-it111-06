@@ -7,11 +7,11 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
    <center>
-   <?= Html::img('images/Companies.png', ['alt'=>'some', 'class'=>'thing']);?>
-    <?= Html::img('images/Customers.png', ['alt'=>'some', 'class'=>'thing']);?>
-     <?= Html::img('images/Items.png', ['alt'=>'some', 'class'=>'thing']);?>
-     <?= Html::img('images/Orders.png', ['alt'=>'some', 'class'=>'thing']);?>
-     <?= Html::img('images/Sales.png', ['alt'=>'some', 'class'=>'thing']);?>
-     <?= Html::img('images/Suppliers.png', ['alt'=>'some', 'class'=>'thing']);?>
+   '<a href="index.php?r=company"><img src="images/Companies.png"  /></a>';
+   '<a href="index.php?r=customer"><img src="images/Customers.png"  /></a>';
+   '<a href="index.php?r=item"><img src="images/Items.png"  /></a>';
+   '<a href="index.php?r=order"><img src="images/Orders.png"  /></a>';
+   '<a href="index.php?r=sales"><img src="images/Sales.png"  /></a>';
+   '<a href="index.php?r=supplier"><img src="images/Suppliers.png"  /></a>';
      </center>
 </div>
