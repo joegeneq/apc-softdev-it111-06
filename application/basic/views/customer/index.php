@@ -7,18 +7,16 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\CustomerSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Customers';
+$this->title = 'List of Customers';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customer-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
+        <p align="center">
+        <?= Html::a('Add Customer', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Manage Customers', ['view'], ['class' => 'btn btn-danger']) ?>
+    </p><br>
+    <h1><center><?= Html::encode($this->title) ?></center></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Customer', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -28,10 +26,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_customer',
             'customer_firstName',
             'customer_lastName',
-            'customer_address',
+          //  'customer_address',
             'customer_contact',
-            // 'customer_type',
-            // 'customer_country',
+             'customer_type',
+             'customer_country',
             // 'customer_zipCode',
             // 'customer_createDate',
             // 'customer_updateDate',

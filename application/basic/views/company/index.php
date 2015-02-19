@@ -11,13 +11,12 @@ $this->title = 'List of Companies';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="company-index">
-
-    <h1><center><?= Html::encode($this->title) ?></center></h1>
+    <p align="center">
+        <?= Html::a('Add Company', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Manage Companies', ['view'], ['class' => 'btn btn-danger']) ?>
+    </p><br>
+    <h1 align="center"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Company', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -30,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'company_address',
             'company_contact',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            //['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 
