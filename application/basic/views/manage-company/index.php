@@ -1,20 +1,21 @@
+
+<div class="manage-company-index">
 <?php
 
 use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\CompanySearch */
+/* @var $searchModel app\models\manageCompanySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'List of Companies';
+$this->title = 'Manage Companies';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="company-index">
     <p align="center">
-        <?= Html::a('Add Company', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Manage Companies', ['/manage-company/index'], ['class' => 'btn btn-danger']) ?>
-    </p><br>
+        <?= Html::a('Add Company', ['/company/create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('View Company', ['/company/index'], ['class' => 'btn btn-success']) ?>
+    </p>
     <h1 align="center"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
@@ -29,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'company_address',
             'company_contact',
 
-            //['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 

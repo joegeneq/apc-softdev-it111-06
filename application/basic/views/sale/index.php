@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="sale-index">
 	<p align="center">
         <?= Html::a('Create Sale', ['create'], ['class' => 'btn btn-success']) ?>
-		<?= Html::a('Manage Sales', ['view'], ['class' => 'btn btn-danger']) ?>
+		<?= Html::a('Manage Sales', ['manage-sale/index'], ['class' => 'btn btn-danger']) ?>
     </p>
 	<br>
     <h1><center><?= Html::encode($this->title) ?></center></h1>

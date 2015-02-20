@@ -4,21 +4,21 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\SupplierSearch */
+/* @var $searchModel app\models\manageSupplierSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'List of Suppliers';
+$this->title = 'Manage Suppliers';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="supplier-index">
-<p align="center">
-        <?= Html::a('Add Supplier', ['create'], ['class' => 'btn btn-success']) ?>
-		<?= Html::a('Manage Suppliers', ['/manage-supplier/index'], ['class' => 'btn btn-danger']) ?>
-    </p>
-	<br>
-    <h1><center><?= Html::encode($this->title) ?></center></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+<div class="manage-supplier-index">
 
+     <p align="center">
+        <?= Html::a('Add Supplier', ['/supplier/create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('View Supplier', ['/supplier/index'], ['class' => 'btn btn-success']) ?>
+    </p>
+
+    <h1 align="center"><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'supplier_createDate',
             // 'supplier_updateDate',
 
-            //['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 
