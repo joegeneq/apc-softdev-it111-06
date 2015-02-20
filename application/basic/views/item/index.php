@@ -10,9 +10,13 @@ use yii\grid\GridView;
 $this->title = 'List of Items';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<div style="display:none">
+	<audio autoplay>
+	<source src="audio/ItemsAudio.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio>
+</div>
 <div class="item-index">
-
-
     <p align="center">
         <?= Html::a('Add Item', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Manage Items', ['/manage-item/index'], ['class' => 'btn btn-danger']) ?>

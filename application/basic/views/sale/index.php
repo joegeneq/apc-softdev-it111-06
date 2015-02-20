@@ -10,6 +10,12 @@ use yii\grid\GridView;
 $this->title = 'List of Sales';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<div style="display:none">
+	<audio autoplay>
+	<source src="audio/SalesAudio.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio>
+</div>
 <div class="sale-index">
 	<p align="center">
         <?= Html::a('Create Sale', ['create'], ['class' => 'btn btn-success']) ?>
