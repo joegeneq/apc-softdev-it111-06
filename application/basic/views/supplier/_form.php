@@ -12,15 +12,15 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'supplier_name')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'Name')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'supplier_address')->textInput(['maxlength' => 225]) ?>
+    <?= $form->field($model, 'Address')->textInput(['maxlength' => 225]) ?>
 
-    <?= $form->field($model, 'supplier_contact')->textInput() ?>
+    <?= $form->field($model, 'ContactNo')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'supplier_createDate')->textInput() ?>
+    <?= $form->field($model, 'CreateDate')->textInput() ?>
 
-    <?= $form->field($model, 'supplier_updateDate')->textInput() ?>
+    <?= $form->field($model, 'UpdateDate')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

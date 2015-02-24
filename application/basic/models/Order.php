@@ -7,13 +7,15 @@ use Yii;
 /**
  * This is the model class for table "order".
  *
- * @property integer $id_order
- * @property string $order_date
- * @property string $order_status
- * @property integer $Customer_id_customer
+ * @property integer $ID
+ * @property string $Date
+ * @property string $Status
+ * @property integer $ItemQty
+ * @property integer $Customer_ID
+ * @property integer $Item_ID
  *
- * @property Item[] $items
- * @property Customer $customerIdCustomer
+ * @property Customer $customer
+ * @property Item $item
  */
 class Order extends \yii\db\ActiveRecord
 {
@@ -31,10 +33,10 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['order_date', 'order_status', 'Customer_id_customer'], 'required'],
-            [['order_date'], 'safe'],
-            [['Customer_id_customer'], 'integer'],
-            [['order_status'], 'string', 'max' => 1]
+            [['Date', 'Status', 'ItemQty', 'Customer_ID', 'Item_ID'], 'required'],
+            [['Date'], 'safe'],
+            [['ItemQty', 'Customer_ID', 'Item_ID'], 'integer'],
+            [['Status'], 'string', 'max' => 45]
         ];
     }
 
@@ -44,26 +46,28 @@ class Order extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_order' => 'Id Order',
-            'order_date' => 'Order Date',
-            'order_status' => 'Order Status',
-            'Customer_id_customer' => 'Customer Id Customer',
+            'ID' => 'ID',
+            'Date' => 'Date',
+            'Status' => 'Status',
+            'ItemQty' => 'Item Qty',
+            'Customer_ID' => 'Customer  ID',
+            'Item_ID' => 'Item  ID',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getItems()
+    public function getCustomer()
     {
-        return $this->hasMany(Item::className(), ['Order_id_order' => 'id_order']);
+        return $this->hasOne(Customer::className(), ['ID' => 'Customer_ID']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCustomerIdCustomer()
+    public function getItem()
     {
-        return $this->hasOne(Customer::className(), ['id_customer' => 'Customer_id_customer']);
+        return $this->hasOne(Item::className(), ['ID' => 'Item_ID']);
     }
 }

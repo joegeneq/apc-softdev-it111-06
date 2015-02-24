@@ -7,10 +7,10 @@ use Yii;
 /**
  * This is the model class for table "company".
  *
- * @property integer $id_company
- * @property string $company_name
- * @property string $company_address
- * @property integer $company_contact
+ * @property integer $ID
+ * @property string $Name
+ * @property string $Address
+ * @property string $ContactNo
  *
  * @property Customer[] $customers
  */
@@ -30,9 +30,9 @@ class manageCompany extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['company_name', 'company_address', 'company_contact'], 'required'],
-            [['company_contact'], 'integer'],
-            [['company_name', 'company_address'], 'string', 'max' => 225]
+            [['Name', 'Address', 'ContactNo'], 'required'],
+            [['Name', 'Address'], 'string', 'max' => 225],
+            [['ContactNo'], 'string', 'max' => 45]
         ];
     }
 
@@ -42,10 +42,10 @@ class manageCompany extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_company' => 'Id Company',
-            'company_name' => 'Company Name',
-            'company_address' => 'Company Address',
-            'company_contact' => 'Company Contact',
+            'ID' => 'ID',
+            'Name' => 'Name',
+            'Address' => 'Address',
+            'ContactNo' => 'Contact No',
         ];
     }
 
@@ -54,6 +54,6 @@ class manageCompany extends \yii\db\ActiveRecord
      */
     public function getCustomers()
     {
-        return $this->hasMany(Customer::className(), ['Company_id_company' => 'id_company']);
+        return $this->hasMany(Customer::className(), ['Company_ID' => 'ID']);
     }
 }

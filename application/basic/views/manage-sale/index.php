@@ -11,12 +11,13 @@ $this->title = 'Manage Sales';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-sale-index">
-   <p align="center">
-        <?= Html::a('Add Sales', ['/sale/create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('View Sales', ['/sale/index'], ['class' => 'btn btn-success']) ?>
-    </p>
-     <h1 align="center"><?= Html::encode($this->title) ?></h1>
+
+    <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+    <p>
+        <?= Html::a('Create Manage Sale', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -24,10 +25,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_sale',
-            'sale_date',
-            'sale_orNo',
-            'Customer_id_customer',
+            'ID',
+            'Date',
+            'ReceiptNo',
+            'Customer_ID',
+            'Item_ID',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

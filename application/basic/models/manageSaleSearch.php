@@ -18,8 +18,8 @@ class manageSaleSearch extends manageSale
     public function rules()
     {
         return [
-            [['id_sale', 'Customer_id_customer'], 'integer'],
-            [['sale_date', 'sale_orNo'], 'safe'],
+            [['ID', 'Customer_ID', 'Item_ID'], 'integer'],
+            [['Date', 'ReceiptNo'], 'safe'],
         ];
     }
 
@@ -56,12 +56,13 @@ class manageSaleSearch extends manageSale
         }
 
         $query->andFilterWhere([
-            'id_sale' => $this->id_sale,
-            'sale_date' => $this->sale_date,
-            'Customer_id_customer' => $this->Customer_id_customer,
+            'ID' => $this->ID,
+            'Date' => $this->Date,
+            'Customer_ID' => $this->Customer_ID,
+            'Item_ID' => $this->Item_ID,
         ]);
 
-        $query->andFilterWhere(['like', 'sale_orNo', $this->sale_orNo]);
+        $query->andFilterWhere(['like', 'ReceiptNo', $this->ReceiptNo]);
 
         return $dataProvider;
     }

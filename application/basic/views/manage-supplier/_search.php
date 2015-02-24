@@ -15,17 +15,17 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id_supplier') ?>
+    <?= $form->field($model, 'ID') ?>
 
-    <?= $form->field($model, 'supplier_name') ?>
+    <?= $form->field($model, 'Name') ?>
 
-    <?= $form->field($model, 'supplier_address') ?>
+    <?= $form->field($model, 'Address') ?>
 
-    <?= $form->field($model, 'supplier_contact') ?>
+    <?= $form->field($model, 'ContactNo') ?>
 
-    <?= $form->field($model, 'supplier_createDate') ?>
+    <?= $form->field($model, 'CreateDate') ?>
 
-    <?php // echo $form->field($model, 'supplier_updateDate') ?>
+    <?php // echo $form->field($model, 'UpdateDate') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

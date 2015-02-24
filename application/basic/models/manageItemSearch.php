@@ -18,9 +18,9 @@ class manageItemSearch extends manageItem
     public function rules()
     {
         return [
-            [['id_item', 'item_qty', 'Sale_id_sale', 'Order_id_order', 'Supplier_id_supplier'], 'integer'],
-            [['item_name', 'item_unit', 'item_serialNo', 'item_status', 'item_createDate', 'item_updateDate'], 'safe'],
-            [['item_price'], 'number'],
+            [['ID', 'Qty', 'Supplier_ID'], 'integer'],
+            [['Name', 'Unit', 'SerialNo', 'Status', 'CreateDate', 'UpdateDate'], 'safe'],
+            [['Price'], 'number'],
         ];
     }
 
@@ -57,20 +57,18 @@ class manageItemSearch extends manageItem
         }
 
         $query->andFilterWhere([
-            'id_item' => $this->id_item,
-            'item_qty' => $this->item_qty,
-            'item_price' => $this->item_price,
-            'item_createDate' => $this->item_createDate,
-            'item_updateDate' => $this->item_updateDate,
-            'Sale_id_sale' => $this->Sale_id_sale,
-            'Order_id_order' => $this->Order_id_order,
-            'Supplier_id_supplier' => $this->Supplier_id_supplier,
+            'ID' => $this->ID,
+            'Qty' => $this->Qty,
+            'Price' => $this->Price,
+            'CreateDate' => $this->CreateDate,
+            'UpdateDate' => $this->UpdateDate,
+            'Supplier_ID' => $this->Supplier_ID,
         ]);
 
-        $query->andFilterWhere(['like', 'item_name', $this->item_name])
-            ->andFilterWhere(['like', 'item_unit', $this->item_unit])
-            ->andFilterWhere(['like', 'item_serialNo', $this->item_serialNo])
-            ->andFilterWhere(['like', 'item_status', $this->item_status]);
+        $query->andFilterWhere(['like', 'Name', $this->Name])
+            ->andFilterWhere(['like', 'Unit', $this->Unit])
+            ->andFilterWhere(['like', 'SerialNo', $this->SerialNo])
+            ->andFilterWhere(['like', 'Status', $this->Status]);
 
         return $dataProvider;
     }

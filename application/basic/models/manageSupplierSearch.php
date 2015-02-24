@@ -18,8 +18,8 @@ class manageSupplierSearch extends manageSupplier
     public function rules()
     {
         return [
-            [['id_supplier', 'supplier_contact'], 'integer'],
-            [['supplier_name', 'supplier_address', 'supplier_createDate', 'supplier_updateDate'], 'safe'],
+            [['ID'], 'integer'],
+            [['Name', 'Address', 'ContactNo', 'CreateDate', 'UpdateDate'], 'safe'],
         ];
     }
 
@@ -56,14 +56,14 @@ class manageSupplierSearch extends manageSupplier
         }
 
         $query->andFilterWhere([
-            'id_supplier' => $this->id_supplier,
-            'supplier_contact' => $this->supplier_contact,
-            'supplier_createDate' => $this->supplier_createDate,
-            'supplier_updateDate' => $this->supplier_updateDate,
+            'ID' => $this->ID,
+            'CreateDate' => $this->CreateDate,
+            'UpdateDate' => $this->UpdateDate,
         ]);
 
-        $query->andFilterWhere(['like', 'supplier_name', $this->supplier_name])
-            ->andFilterWhere(['like', 'supplier_address', $this->supplier_address]);
+        $query->andFilterWhere(['like', 'Name', $this->Name])
+            ->andFilterWhere(['like', 'Address', $this->Address])
+            ->andFilterWhere(['like', 'ContactNo', $this->ContactNo]);
 
         return $dataProvider;
     }

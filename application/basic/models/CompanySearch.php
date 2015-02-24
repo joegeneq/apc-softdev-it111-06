@@ -18,8 +18,8 @@ class CompanySearch extends Company
     public function rules()
     {
         return [
-            [['id_company', 'company_contact'], 'integer'],
-            [['company_name', 'company_address'], 'safe'],
+            [['ID'], 'integer'],
+            [['Name', 'Address', 'ContactNo'], 'safe'],
         ];
     }
 
@@ -56,12 +56,12 @@ class CompanySearch extends Company
         }
 
         $query->andFilterWhere([
-            'id_company' => $this->id_company,
-            'company_contact' => $this->company_contact,
+            'ID' => $this->ID,
         ]);
 
-        $query->andFilterWhere(['like', 'company_name', $this->company_name])
-            ->andFilterWhere(['like', 'company_address', $this->company_address]);
+        $query->andFilterWhere(['like', 'Name', $this->Name])
+            ->andFilterWhere(['like', 'Address', $this->Address])
+            ->andFilterWhere(['like', 'ContactNo', $this->ContactNo]);
 
         return $dataProvider;
     }

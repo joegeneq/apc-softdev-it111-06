@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Customer */
 
-$this->title = $model->id_customer;
+$this->title = $model->Name;
 $this->params['breadcrumbs'][] = ['label' => 'Customers', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id_customer], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id_customer], [
+        <?= Html::a('Update', ['update', 'id' => $model->ID], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->ID], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -28,17 +28,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id_customer',
-            'customer_firstName',
-            'customer_lastName',
-            'customer_address',
-            'customer_contact',
-            'customer_type',
-            'customer_country',
-            'customer_zipCode',
-            'customer_createDate',
-            'customer_updateDate',
-            'Company_id_company',
+            'ID',
+            'Name',
+            'Address',
+            'ContactNo',
+            'Country',
+            'ZipCode',
+            'CreateDate',
+            'UpdateDate',
+            'Company_ID',
         ],
     ]) ?>
 

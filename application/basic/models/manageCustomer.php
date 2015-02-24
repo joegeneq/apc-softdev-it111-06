@@ -7,19 +7,17 @@ use Yii;
 /**
  * This is the model class for table "customer".
  *
- * @property integer $id_customer
- * @property string $customer_firstName
- * @property string $customer_lastName
- * @property string $customer_address
- * @property integer $customer_contact
- * @property string $customer_type
- * @property string $customer_country
- * @property integer $customer_zipCode
- * @property string $customer_createDate
- * @property string $customer_updateDate
- * @property integer $Company_id_company
+ * @property integer $ID
+ * @property string $Name
+ * @property string $Address
+ * @property string $ContactNo
+ * @property string $Country
+ * @property integer $ZipCode
+ * @property string $CreateDate
+ * @property string $UpdateDate
+ * @property integer $Company_ID
  *
- * @property Company $companyIdCompany
+ * @property Company $company
  * @property Order[] $orders
  * @property Sale[] $sales
  */
@@ -39,12 +37,11 @@ class manageCustomer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['customer_firstName', 'customer_lastName', 'customer_address', 'customer_contact', 'customer_type', 'customer_country', 'Company_id_company'], 'required'],
-            [['customer_contact', 'customer_zipCode', 'Company_id_company'], 'integer'],
-            [['customer_createDate', 'customer_updateDate'], 'safe'],
-            [['customer_firstName', 'customer_lastName', 'customer_country'], 'string', 'max' => 45],
-            [['customer_address'], 'string', 'max' => 225],
-            [['customer_type'], 'string', 'max' => 1]
+            [['Name', 'Address', 'ContactNo', 'Country'], 'required'],
+            [['ZipCode', 'Company_ID'], 'integer'],
+            [['CreateDate', 'UpdateDate'], 'safe'],
+            [['Name', 'Address'], 'string', 'max' => 225],
+            [['ContactNo', 'Country'], 'string', 'max' => 45]
         ];
     }
 
@@ -54,26 +51,24 @@ class manageCustomer extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_customer' => 'Id Customer',
-            'customer_firstName' => 'Customer First Name',
-            'customer_lastName' => 'Customer Last Name',
-            'customer_address' => 'Customer Address',
-            'customer_contact' => 'Customer Contact',
-            'customer_type' => 'Customer Type',
-            'customer_country' => 'Customer Country',
-            'customer_zipCode' => 'Customer Zip Code',
-            'customer_createDate' => 'Customer Create Date',
-            'customer_updateDate' => 'Customer Update Date',
-            'Company_id_company' => 'Company Id Company',
+            'ID' => 'ID',
+            'Name' => 'Name',
+            'Address' => 'Address',
+            'ContactNo' => 'Contact No',
+            'Country' => 'Country',
+            'ZipCode' => 'Zip Code',
+            'CreateDate' => 'Create Date',
+            'UpdateDate' => 'Update Date',
+            'Company_ID' => 'Company  ID',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCompanyIdCompany()
+    public function getCompany()
     {
-        return $this->hasOne(Company::className(), ['id_company' => 'Company_id_company']);
+        return $this->hasOne(Company::className(), ['ID' => 'Company_ID']);
     }
 
     /**
@@ -81,7 +76,7 @@ class manageCustomer extends \yii\db\ActiveRecord
      */
     public function getOrders()
     {
-        return $this->hasMany(Order::className(), ['Customer_id_customer' => 'id_customer']);
+        return $this->hasMany(Order::className(), ['Customer_ID' => 'ID']);
     }
 
     /**
@@ -89,6 +84,6 @@ class manageCustomer extends \yii\db\ActiveRecord
      */
     public function getSales()
     {
-        return $this->hasMany(Sale::className(), ['Customer_id_customer' => 'id_customer']);
+        return $this->hasMany(Sale::className(), ['Customer_ID' => 'ID']);
     }
 }

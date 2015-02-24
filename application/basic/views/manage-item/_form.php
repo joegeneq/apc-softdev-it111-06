@@ -12,27 +12,23 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'item_name')->textInput(['maxlength' => 225]) ?>
+    <?= $form->field($model, 'Name')->textInput(['maxlength' => 225]) ?>
 
-    <?= $form->field($model, 'item_qty')->textInput() ?>
+    <?= $form->field($model, 'Qty')->textInput() ?>
 
-    <?= $form->field($model, 'item_unit')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'Unit')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'item_price')->textInput(['maxlength' => 10]) ?>
+    <?= $form->field($model, 'Price')->textInput(['maxlength' => 10]) ?>
 
-    <?= $form->field($model, 'item_serialNo')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'SerialNo')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'item_status')->textInput(['maxlength' => 1]) ?>
+    <?= $form->field($model, 'Status')->textInput(['maxlength' => 1]) ?>
 
-    <?= $form->field($model, 'item_createDate')->textInput() ?>
+    <?= $form->field($model, 'CreateDate')->textInput() ?>
 
-    <?= $form->field($model, 'item_updateDate')->textInput() ?>
+    <?= $form->field($model, 'UpdateDate')->textInput() ?>
 
-    <?= $form->field($model, 'Sale_id_sale')->textInput() ?>
-
-    <?= $form->field($model, 'Order_id_order')->textInput() ?>
-
-    <?= $form->field($model, 'Supplier_id_supplier')->textInput() ?>
+    <?= $form->field($model, 'Supplier_ID')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

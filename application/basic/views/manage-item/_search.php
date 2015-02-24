@@ -15,29 +15,25 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id_item') ?>
+    <?= $form->field($model, 'ID') ?>
 
-    <?= $form->field($model, 'item_name') ?>
+    <?= $form->field($model, 'Name') ?>
 
-    <?= $form->field($model, 'item_qty') ?>
+    <?= $form->field($model, 'Qty') ?>
 
-    <?= $form->field($model, 'item_unit') ?>
+    <?= $form->field($model, 'Unit') ?>
 
-    <?= $form->field($model, 'item_price') ?>
+    <?= $form->field($model, 'Price') ?>
 
-    <?php // echo $form->field($model, 'item_serialNo') ?>
+    <?php // echo $form->field($model, 'SerialNo') ?>
 
-    <?php // echo $form->field($model, 'item_status') ?>
+    <?php // echo $form->field($model, 'Status') ?>
 
-    <?php // echo $form->field($model, 'item_createDate') ?>
+    <?php // echo $form->field($model, 'CreateDate') ?>
 
-    <?php // echo $form->field($model, 'item_updateDate') ?>
+    <?php // echo $form->field($model, 'UpdateDate') ?>
 
-    <?php // echo $form->field($model, 'Sale_id_sale') ?>
-
-    <?php // echo $form->field($model, 'Order_id_order') ?>
-
-    <?php // echo $form->field($model, 'Supplier_id_supplier') ?>
+    <?php // echo $form->field($model, 'Supplier_ID') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

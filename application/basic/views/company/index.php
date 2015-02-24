@@ -10,17 +10,13 @@ use yii\grid\GridView;
 $this->title = 'List of Companies';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div style="display:none">
-	<audio autoplay>
-	<source src="audio/CompaniesAudio.mp3" type="audio/mpeg">
-	Your browser does not support the audio element.
-	</audio>
-</div>
 <div class="company-index">
+
     <p align="center">
         <?= Html::a('Add Company', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Manage Companies', ['/manage-company/index'], ['class' => 'btn btn-danger']) ?>
-    </p><br>
+         <?= Html::a('Manage Company', ['/manage-company/index'], ['class' => 'btn btn-danger']) ?>
+    </p>
+
     <h1 align="center"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
@@ -30,12 +26,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_company',
-            'company_name',
-            'company_address',
-            'company_contact',
+            'ID',
+            'Name',
+            'Address',
+            'ContactNo',
 
-            //['class' => 'yii\grid\ActionColumn'],
+            //  ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 

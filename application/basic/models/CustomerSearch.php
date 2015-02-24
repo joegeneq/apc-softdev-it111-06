@@ -18,8 +18,8 @@ class CustomerSearch extends Customer
     public function rules()
     {
         return [
-            [['id_customer', 'customer_contact', 'customer_zipCode', 'Company_id_company'], 'integer'],
-            [['customer_firstName', 'customer_lastName', 'customer_address', 'customer_type', 'customer_country', 'customer_createDate', 'customer_updateDate'], 'safe'],
+            [['ID', 'ZipCode', 'Company_ID'], 'integer'],
+            [['Name', 'Address', 'ContactNo', 'Country', 'CreateDate', 'UpdateDate'], 'safe'],
         ];
     }
 
@@ -56,19 +56,17 @@ class CustomerSearch extends Customer
         }
 
         $query->andFilterWhere([
-            'id_customer' => $this->id_customer,
-            'customer_contact' => $this->customer_contact,
-            'customer_zipCode' => $this->customer_zipCode,
-            'customer_createDate' => $this->customer_createDate,
-            'customer_updateDate' => $this->customer_updateDate,
-            'Company_id_company' => $this->Company_id_company,
+            'ID' => $this->ID,
+            'ZipCode' => $this->ZipCode,
+            'CreateDate' => $this->CreateDate,
+            'UpdateDate' => $this->UpdateDate,
+            'Company_ID' => $this->Company_ID,
         ]);
 
-        $query->andFilterWhere(['like', 'customer_firstName', $this->customer_firstName])
-            ->andFilterWhere(['like', 'customer_lastName', $this->customer_lastName])
-            ->andFilterWhere(['like', 'customer_address', $this->customer_address])
-            ->andFilterWhere(['like', 'customer_type', $this->customer_type])
-            ->andFilterWhere(['like', 'customer_country', $this->customer_country]);
+        $query->andFilterWhere(['like', 'Name', $this->Name])
+            ->andFilterWhere(['like', 'Address', $this->Address])
+            ->andFilterWhere(['like', 'ContactNo', $this->ContactNo])
+            ->andFilterWhere(['like', 'Country', $this->Country]);
 
         return $dataProvider;
     }

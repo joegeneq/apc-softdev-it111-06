@@ -7,22 +7,20 @@ use Yii;
 /**
  * This is the model class for table "item".
  *
- * @property integer $id_item
- * @property string $item_name
- * @property integer $item_qty
- * @property string $item_unit
- * @property string $item_price
- * @property string $item_serialNo
- * @property string $item_status
- * @property string $item_createDate
- * @property string $item_updateDate
- * @property integer $Sale_id_sale
- * @property integer $Order_id_order
- * @property integer $Supplier_id_supplier
+ * @property integer $ID
+ * @property string $Name
+ * @property integer $Qty
+ * @property string $Unit
+ * @property string $Price
+ * @property string $SerialNo
+ * @property string $Status
+ * @property string $CreateDate
+ * @property string $UpdateDate
+ * @property integer $Supplier_ID
  *
- * @property Sale $saleIdSale
- * @property Order $orderIdOrder
- * @property Supplier $supplierIdSupplier
+ * @property Supplier $supplier
+ * @property Order[] $orders
+ * @property Sale[] $sales
  */
 class Item extends \yii\db\ActiveRecord
 {
@@ -40,13 +38,13 @@ class Item extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['item_name', 'item_qty', 'item_unit', 'item_price', 'item_serialNo', 'item_status', 'Sale_id_sale', 'Order_id_order', 'Supplier_id_supplier'], 'required'],
-            [['item_qty', 'Sale_id_sale', 'Order_id_order', 'Supplier_id_supplier'], 'integer'],
-            [['item_price'], 'number'],
-            [['item_createDate', 'item_updateDate'], 'safe'],
-            [['item_name'], 'string', 'max' => 225],
-            [['item_unit', 'item_serialNo'], 'string', 'max' => 45],
-            [['item_status'], 'string', 'max' => 1]
+            [['Name', 'Qty', 'Unit', 'Price', 'SerialNo', 'Status', 'Supplier_ID'], 'required'],
+            [['Qty', 'Supplier_ID'], 'integer'],
+            [['Price'], 'number'],
+            [['CreateDate', 'UpdateDate'], 'safe'],
+            [['Name'], 'string', 'max' => 225],
+            [['Unit', 'SerialNo'], 'string', 'max' => 45],
+            [['Status'], 'string', 'max' => 1]
         ];
     }
 
@@ -56,42 +54,40 @@ class Item extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_item' => 'Id Item',
-            'item_name' => 'Item Name',
-            'item_qty' => 'Item Qty',
-            'item_unit' => 'Item Unit',
-            'item_price' => 'Item Price',
-            'item_serialNo' => 'Item Serial No',
-            'item_status' => 'Item Status',
-            'item_createDate' => 'Item Create Date',
-            'item_updateDate' => 'Item Update Date',
-            'Sale_id_sale' => 'Sale Id Sale',
-            'Order_id_order' => 'Order Id Order',
-            'Supplier_id_supplier' => 'Supplier Id Supplier',
+            'ID' => 'ID',
+            'Name' => 'Name',
+            'Qty' => 'Qty',
+            'Unit' => 'Unit',
+            'Price' => 'Price',
+            'SerialNo' => 'Serial No',
+            'Status' => 'Status',
+            'CreateDate' => 'Create Date',
+            'UpdateDate' => 'Update Date',
+            'Supplier_ID' => 'Supplier  ID',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getSaleIdSale()
+    public function getSupplier()
     {
-        return $this->hasOne(Sale::className(), ['id_sale' => 'Sale_id_sale']);
+        return $this->hasOne(Supplier::className(), ['ID' => 'Supplier_ID']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getOrderIdOrder()
+    public function getOrders()
     {
-        return $this->hasOne(Order::className(), ['id_order' => 'Order_id_order']);
+        return $this->hasMany(Order::className(), ['Item_ID' => 'ID']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getSupplierIdSupplier()
+    public function getSales()
     {
-        return $this->hasOne(Supplier::className(), ['id_supplier' => 'Supplier_id_supplier']);
+        return $this->hasMany(Sale::className(), ['Item_ID' => 'ID']);
     }
 }

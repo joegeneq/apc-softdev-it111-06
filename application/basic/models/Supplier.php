@@ -7,12 +7,12 @@ use Yii;
 /**
  * This is the model class for table "supplier".
  *
- * @property integer $id_supplier
- * @property string $supplier_name
- * @property string $supplier_address
- * @property integer $supplier_contact
- * @property string $supplier_createDate
- * @property string $supplier_updateDate
+ * @property integer $ID
+ * @property string $Name
+ * @property string $Address
+ * @property string $ContactNo
+ * @property string $CreateDate
+ * @property string $UpdateDate
  *
  * @property Item[] $items
  */
@@ -32,11 +32,10 @@ class Supplier extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['supplier_name', 'supplier_address', 'supplier_contact'], 'required'],
-            [['supplier_contact'], 'integer'],
-            [['supplier_createDate', 'supplier_updateDate'], 'safe'],
-            [['supplier_name'], 'string', 'max' => 45],
-            [['supplier_address'], 'string', 'max' => 225]
+            [['Name', 'Address', 'ContactNo'], 'required'],
+            [['CreateDate', 'UpdateDate'], 'safe'],
+            [['Name', 'ContactNo'], 'string', 'max' => 45],
+            [['Address'], 'string', 'max' => 225]
         ];
     }
 
@@ -46,12 +45,12 @@ class Supplier extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_supplier' => 'Id Supplier',
-            'supplier_name' => 'Supplier Name',
-            'supplier_address' => 'Supplier Address',
-            'supplier_contact' => 'Supplier Contact',
-            'supplier_createDate' => 'Supplier Create Date',
-            'supplier_updateDate' => 'Supplier Update Date',
+            'ID' => 'ID',
+            'Name' => 'Name',
+            'Address' => 'Address',
+            'ContactNo' => 'Contact No',
+            'CreateDate' => 'Create Date',
+            'UpdateDate' => 'Update Date',
         ];
     }
 
@@ -60,6 +59,6 @@ class Supplier extends \yii\db\ActiveRecord
      */
     public function getItems()
     {
-        return $this->hasMany(Item::className(), ['Supplier_id_supplier' => 'id_supplier']);
+        return $this->hasMany(Item::className(), ['Supplier_ID' => 'ID']);
     }
 }

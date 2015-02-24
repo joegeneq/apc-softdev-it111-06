@@ -12,13 +12,12 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-supplier-index">
 
-     <p align="center">
-        <?= Html::a('Add Supplier', ['/supplier/create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('View Supplier', ['/supplier/index'], ['class' => 'btn btn-success']) ?>
-    </p>
-
-    <h1 align="center"><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+    <p>
+        <?= Html::a('Create Manage Supplier', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -26,12 +25,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_supplier',
-            'supplier_name',
-            'supplier_address',
-            'supplier_contact',
-            'supplier_createDate',
-            // 'supplier_updateDate',
+            'ID',
+            'Name',
+            'Address',
+            'ContactNo',
+            'CreateDate',
+            // 'UpdateDate',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

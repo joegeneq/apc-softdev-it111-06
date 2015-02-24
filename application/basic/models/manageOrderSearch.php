@@ -18,8 +18,8 @@ class manageOrderSearch extends manageOrder
     public function rules()
     {
         return [
-            [['id_order', 'Customer_id_customer'], 'integer'],
-            [['order_date', 'order_status'], 'safe'],
+            [['ID', 'ItemQty', 'Customer_ID', 'Item_ID'], 'integer'],
+            [['Date', 'Status'], 'safe'],
         ];
     }
 
@@ -56,12 +56,14 @@ class manageOrderSearch extends manageOrder
         }
 
         $query->andFilterWhere([
-            'id_order' => $this->id_order,
-            'order_date' => $this->order_date,
-            'Customer_id_customer' => $this->Customer_id_customer,
+            'ID' => $this->ID,
+            'Date' => $this->Date,
+            'ItemQty' => $this->ItemQty,
+            'Customer_ID' => $this->Customer_ID,
+            'Item_ID' => $this->Item_ID,
         ]);
 
-        $query->andFilterWhere(['like', 'order_status', $this->order_status]);
+        $query->andFilterWhere(['like', 'Status', $this->Status]);
 
         return $dataProvider;
     }

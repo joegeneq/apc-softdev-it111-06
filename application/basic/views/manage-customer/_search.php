@@ -15,27 +15,23 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id_customer') ?>
+    <?= $form->field($model, 'ID') ?>
 
-    <?= $form->field($model, 'customer_firstName') ?>
+    <?= $form->field($model, 'Name') ?>
 
-    <?= $form->field($model, 'customer_lastName') ?>
+    <?= $form->field($model, 'Address') ?>
 
-    <?= $form->field($model, 'customer_address') ?>
+    <?= $form->field($model, 'ContactNo') ?>
 
-    <?= $form->field($model, 'customer_contact') ?>
+    <?= $form->field($model, 'Country') ?>
 
-    <?php // echo $form->field($model, 'customer_type') ?>
+    <?php // echo $form->field($model, 'ZipCode') ?>
 
-    <?php // echo $form->field($model, 'customer_country') ?>
+    <?php // echo $form->field($model, 'CreateDate') ?>
 
-    <?php // echo $form->field($model, 'customer_zipCode') ?>
+    <?php // echo $form->field($model, 'UpdateDate') ?>
 
-    <?php // echo $form->field($model, 'customer_createDate') ?>
-
-    <?php // echo $form->field($model, 'customer_updateDate') ?>
-
-    <?php // echo $form->field($model, 'Company_id_company') ?>
+    <?php // echo $form->field($model, 'Company_ID') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

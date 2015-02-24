@@ -12,13 +12,12 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-item-index">
 
-   <p align="center">
-        <?= Html::a('Add Item', ['/item/create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('View Item', ['/item/index'], ['class' => 'btn btn-success']) ?>
-    </p>
-
-    <h1 align="center"><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+    <p>
+        <?= Html::a('Create Manage Item', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -26,18 +25,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_item',
-            'item_name',
-            'item_qty',
-            'item_unit',
-            'item_price',
-            // 'item_serialNo',
-            // 'item_status',
-            // 'item_createDate',
-            // 'item_updateDate',
-            // 'Sale_id_sale',
-            // 'Order_id_order',
-            // 'Supplier_id_supplier',
+            'ID',
+            'Name',
+            'Qty',
+            'Unit',
+            'Price',
+            // 'SerialNo',
+            // 'Status',
+            // 'CreateDate',
+            // 'UpdateDate',
+            // 'Supplier_ID',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

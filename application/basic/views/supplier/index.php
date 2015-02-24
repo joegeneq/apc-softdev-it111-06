@@ -7,24 +7,17 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\SupplierSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'List of Suppliers';
+$this->title = 'Suppliers';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div style="display:none">
-	<audio autoplay>
-	<source src="audio/SuppliersAudio.mp3" type="audio/mpeg">
-	Your browser does not support the audio element.
-	</audio>
-</div>
 <div class="supplier-index">
-<p align="center">
-        <?= Html::a('Add Supplier', ['create'], ['class' => 'btn btn-success']) ?>
-		<?= Html::a('Manage Suppliers', ['/manage-supplier/index'], ['class' => 'btn btn-danger']) ?>
-    </p>
-	<br>
-    <h1><center><?= Html::encode($this->title) ?></center></h1>
+
+    <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
+    <p>
+        <?= Html::a('Create Supplier', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -32,14 +25,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_supplier',
-            'supplier_name',
-            'supplier_address',
-            'supplier_contact',
-            'supplier_createDate',
-            // 'supplier_updateDate',
+            'ID',
+            'Name',
+            'Address',
+            'ContactNo',
+            'CreateDate',
+            // 'UpdateDate',
 
-            //['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 

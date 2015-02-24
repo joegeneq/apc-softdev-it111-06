@@ -12,25 +12,21 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'customer_firstName')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'Name')->textInput(['maxlength' => 225]) ?>
 
-    <?= $form->field($model, 'customer_lastName')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'Address')->textInput(['maxlength' => 225]) ?>
 
-    <?= $form->field($model, 'customer_address')->textInput(['maxlength' => 225]) ?>
+    <?= $form->field($model, 'ContactNo')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'customer_contact')->textInput() ?>
+    <?= $form->field($model, 'Country')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'customer_type')->textInput(['maxlength' => 1]) ?>
+    <?= $form->field($model, 'ZipCode')->textInput() ?>
 
-    <?= $form->field($model, 'customer_country')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'CreateDate')->textInput() ?>
 
-    <?= $form->field($model, 'customer_zipCode')->textInput() ?>
+    <?= $form->field($model, 'UpdateDate')->textInput() ?>
 
-    <?= $form->field($model, 'customer_createDate')->textInput() ?>
-
-    <?= $form->field($model, 'customer_updateDate')->textInput() ?>
-
-    <?= $form->field($model, 'Company_id_company')->textInput() ?>
+    <?= $form->field($model, 'Company_ID')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

@@ -7,22 +7,17 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\ItemSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'List of Items';
+$this->title = 'Items';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div style="display:none">
-	<audio autoplay>
-	<source src="audio/ItemsAudio.mp3" type="audio/mpeg">
-	Your browser does not support the audio element.
-	</audio>
-</div>
 <div class="item-index">
-    <p align="center">
-        <?= Html::a('Add Item', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Manage Items', ['/manage-item/index'], ['class' => 'btn btn-danger']) ?>
-    </p><br>
-    <center><h1><?= Html::encode($this->title) ?></h1></center>
+
+    <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+    <p>
+        <?= Html::a('Create Item', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -30,18 +25,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_item',
-            'item_name',
-           // 'item_qty',
-           // 'item_unit',
-            'item_price',
-             'item_serialNo',
-             'item_status',
-            // 'item_createDate',
-            // 'item_updateDate',
-            // 'Sale_id_sale',
-            // 'Order_id_order',
-            // 'Supplier_id_supplier',
+            'ID',
+            'Name',
+            'Qty',
+            'Unit',
+            'Price',
+            // 'SerialNo',
+            // 'Status',
+            // 'CreateDate',
+            // 'UpdateDate',
+            // 'Supplier_ID',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -7,13 +7,14 @@ use Yii;
 /**
  * This is the model class for table "sale".
  *
- * @property integer $id_sale
- * @property string $sale_date
- * @property string $sale_orNo
- * @property integer $Customer_id_customer
+ * @property integer $ID
+ * @property string $Date
+ * @property string $ReceiptNo
+ * @property integer $Customer_ID
+ * @property integer $Item_ID
  *
- * @property Item[] $items
- * @property Customer $customerIdCustomer
+ * @property Customer $customer
+ * @property Item $item
  */
 class Sale extends \yii\db\ActiveRecord
 {
@@ -31,10 +32,10 @@ class Sale extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['sale_date', 'sale_orNo', 'Customer_id_customer'], 'required'],
-            [['sale_date'], 'safe'],
-            [['Customer_id_customer'], 'integer'],
-            [['sale_orNo'], 'string', 'max' => 45]
+            [['Date', 'ReceiptNo', 'Customer_ID', 'Item_ID'], 'required'],
+            [['Date'], 'safe'],
+            [['Customer_ID', 'Item_ID'], 'integer'],
+            [['ReceiptNo'], 'string', 'max' => 45]
         ];
     }
 
@@ -44,26 +45,27 @@ class Sale extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_sale' => 'Id Sale',
-            'sale_date' => 'Sale Date',
-            'sale_orNo' => 'Sale Or No',
-            'Customer_id_customer' => 'Customer Id Customer',
+            'ID' => 'ID',
+            'Date' => 'Date',
+            'ReceiptNo' => 'Receipt No',
+            'Customer_ID' => 'Customer  ID',
+            'Item_ID' => 'Item  ID',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getItems()
+    public function getCustomer()
     {
-        return $this->hasMany(Item::className(), ['Sale_id_sale' => 'id_sale']);
+        return $this->hasOne(Customer::className(), ['ID' => 'Customer_ID']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCustomerIdCustomer()
+    public function getItem()
     {
-        return $this->hasOne(Customer::className(), ['id_customer' => 'Customer_id_customer']);
+        return $this->hasOne(Item::className(), ['ID' => 'Item_ID']);
     }
 }
