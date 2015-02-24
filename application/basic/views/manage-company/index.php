@@ -12,12 +12,14 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-company-index">
 
+	<p align="center">
+        <?= Html::a('View Companies', ['company/index'], ['class' => 'btn btn-success']) ?>
+		<?= Html::a('Create Company', ['company/create'], ['class' => 'btn btn-primary']) ?>
+    </p>
+
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Manage Company', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

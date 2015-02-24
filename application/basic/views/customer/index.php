@@ -12,12 +12,14 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customer-index">
 
+	<p align="center">
+        <?= Html::a('Create Customer', ['create'], ['class' => 'btn btn-success']) ?>
+		<?= Html::a('Manage Customers', ['/manage-customer/index'], ['class' => 'btn btn-danger']) ?>
+    </p>
+
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Customer', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -35,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'UpdateDate',
             // 'Company_ID',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            //['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 
