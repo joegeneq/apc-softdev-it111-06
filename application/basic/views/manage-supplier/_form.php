@@ -18,6 +18,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'ContactNo')->textInput(['maxlength' => 45]) ?>
 
+    <?= $form->field($model, 'ContactPerson')->textInput(['maxlength' => 45]) ?>
+
+    <?= $form->field($model, 'Email')->textInput(['maxlength' => 45]) ?>
+
     <?= $form->field($model, 'CreateDate')->textInput() ?>
 
     <?= $form->field($model, 'UpdateDate')->textInput() ?>

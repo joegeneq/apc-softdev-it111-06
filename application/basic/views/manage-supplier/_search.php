@@ -23,7 +23,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'ContactNo') ?>
 
-    <?= $form->field($model, 'CreateDate') ?>
+    <?= $form->field($model, 'ContactPerson') ?>
+
+    <?php // echo $form->field($model, 'Email') ?>
+
+    <?php // echo $form->field($model, 'CreateDate') ?>
 
     <?php // echo $form->field($model, 'UpdateDate') ?>
 

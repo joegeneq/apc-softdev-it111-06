@@ -38,7 +38,7 @@ class Item extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Name', 'QoH', 'Unit', 'Price', 'SerialNo', 'Status', 'Supplier_ID'], 'required'],
+            [['Name', 'QoH', 'Unit', 'Price', 'SerialNo', 'Status', 'CreateDate', 'Supplier_ID'], 'required'],
             [['QoH', 'Supplier_ID'], 'integer'],
             [['Price'], 'number'],
             [['CreateDate', 'UpdateDate'], 'safe'],

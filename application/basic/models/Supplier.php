@@ -11,6 +11,8 @@ use Yii;
  * @property string $Name
  * @property string $Address
  * @property string $ContactNo
+ * @property string $ContactPerson
+ * @property string $Email
  * @property string $CreateDate
  * @property string $UpdateDate
  *
@@ -32,9 +34,9 @@ class Supplier extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Name', 'Address', 'ContactNo'], 'required'],
+            [['Name', 'Address', 'ContactNo', 'ContactPerson', 'Email', 'CreateDate'], 'required'],
             [['CreateDate', 'UpdateDate'], 'safe'],
-            [['Name', 'ContactNo'], 'string', 'max' => 45],
+            [['Name', 'ContactNo', 'ContactPerson', 'Email'], 'string', 'max' => 45],
             [['Address'], 'string', 'max' => 225]
         ];
     }
@@ -49,6 +51,8 @@ class Supplier extends \yii\db\ActiveRecord
             'Name' => 'Name',
             'Address' => 'Address',
             'ContactNo' => 'Contact No',
+            'ContactPerson' => 'Contact Person',
+            'Email' => 'Email',
             'CreateDate' => 'Create Date',
             'UpdateDate' => 'Update Date',
         ];

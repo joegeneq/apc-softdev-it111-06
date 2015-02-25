@@ -19,7 +19,7 @@ class SupplierSearch extends Supplier
     {
         return [
             [['ID'], 'integer'],
-            [['Name', 'Address', 'ContactNo', 'CreateDate', 'UpdateDate'], 'safe'],
+            [['Name', 'Address', 'ContactNo', 'ContactPerson', 'Email', 'CreateDate', 'UpdateDate'], 'safe'],
         ];
     }
 
@@ -63,7 +63,9 @@ class SupplierSearch extends Supplier
 
         $query->andFilterWhere(['like', 'Name', $this->Name])
             ->andFilterWhere(['like', 'Address', $this->Address])
-            ->andFilterWhere(['like', 'ContactNo', $this->ContactNo]);
+            ->andFilterWhere(['like', 'ContactNo', $this->ContactNo])
+            ->andFilterWhere(['like', 'ContactPerson', $this->ContactPerson])
+            ->andFilterWhere(['like', 'Email', $this->Email]);
 
         return $dataProvider;
     }

@@ -37,7 +37,7 @@ class manageCustomer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Name', 'Address', 'ContactNo', 'Country'], 'required'],
+            [['Name', 'Address', 'ContactNo', 'Country', 'CreateDate'], 'required'],
             [['ZipCode', 'Company_ID'], 'integer'],
             [['CreateDate', 'UpdateDate'], 'safe'],
             [['Name', 'Address'], 'string', 'max' => 225],
