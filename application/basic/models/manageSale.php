@@ -7,9 +7,10 @@ use Yii;
 /**
  * This is the model class for table "sale".
  *
- * @property integer $ID
+ * @property string $ID
  * @property string $Date
  * @property string $ReceiptNo
+ * @property integer $ItemQty
  * @property integer $Customer_ID
  * @property integer $Item_ID
  *
@@ -32,9 +33,9 @@ class manageSale extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Date', 'ReceiptNo', 'Customer_ID', 'Item_ID'], 'required'],
+            [['Date', 'ReceiptNo', 'ItemQty', 'Customer_ID', 'Item_ID'], 'required'],
             [['Date'], 'safe'],
-            [['Customer_ID', 'Item_ID'], 'integer'],
+            [['ItemQty', 'Customer_ID', 'Item_ID'], 'integer'],
             [['ReceiptNo'], 'string', 'max' => 45]
         ];
     }
@@ -48,6 +49,7 @@ class manageSale extends \yii\db\ActiveRecord
             'ID' => 'ID',
             'Date' => 'Date',
             'ReceiptNo' => 'Receipt No',
+            'ItemQty' => 'Item Qty',
             'Customer_ID' => 'Customer  ID',
             'Item_ID' => 'Item  ID',
         ];

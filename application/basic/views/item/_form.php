@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Name')->textInput(['maxlength' => 225]) ?>
 
-    <?= $form->field($model, 'Qty')->textInput() ?>
+    <?= $form->field($model, 'QoH')->textInput() ?>
 
     <?= $form->field($model, 'Unit')->textInput(['maxlength' => 45]) ?>
 

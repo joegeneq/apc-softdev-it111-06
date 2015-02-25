@@ -9,7 +9,7 @@ use Yii;
  *
  * @property integer $ID
  * @property string $Name
- * @property integer $Qty
+ * @property integer $QoH
  * @property string $Unit
  * @property string $Price
  * @property string $SerialNo
@@ -38,8 +38,8 @@ class manageItem extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Name', 'Qty', 'Unit', 'Price', 'SerialNo', 'Status', 'Supplier_ID'], 'required'],
-            [['Qty', 'Supplier_ID'], 'integer'],
+            [['Name', 'QoH', 'Unit', 'Price', 'SerialNo', 'Status', 'Supplier_ID'], 'required'],
+            [['QoH', 'Supplier_ID'], 'integer'],
             [['Price'], 'number'],
             [['CreateDate', 'UpdateDate'], 'safe'],
             [['Name'], 'string', 'max' => 225],
@@ -56,7 +56,7 @@ class manageItem extends \yii\db\ActiveRecord
         return [
             'ID' => 'ID',
             'Name' => 'Name',
-            'Qty' => 'Qty',
+            'QoH' => 'Qo H',
             'Unit' => 'Unit',
             'Price' => 'Price',
             'SerialNo' => 'Serial No',

@@ -5,14 +5,12 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "company".
+ * This is the model class for table "Company".
  *
  * @property integer $ID
  * @property string $Name
  * @property string $Address
  * @property string $ContactNo
- *
- * @property Customer[] $customers
  */
 class manageCompany extends \yii\db\ActiveRecord
 {
@@ -21,7 +19,7 @@ class manageCompany extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'company';
+        return 'Company';
     }
 
     /**
@@ -47,13 +45,5 @@ class manageCompany extends \yii\db\ActiveRecord
             'Address' => 'Address',
             'ContactNo' => 'Contact No',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getCustomers()
-    {
-        return $this->hasMany(Customer::className(), ['Company_ID' => 'ID']);
     }
 }

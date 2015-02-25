@@ -18,7 +18,7 @@ class manageItemSearch extends manageItem
     public function rules()
     {
         return [
-            [['ID', 'Qty', 'Supplier_ID'], 'integer'],
+            [['ID', 'QoH', 'Supplier_ID'], 'integer'],
             [['Name', 'Unit', 'SerialNo', 'Status', 'CreateDate', 'UpdateDate'], 'safe'],
             [['Price'], 'number'],
         ];
@@ -58,7 +58,7 @@ class manageItemSearch extends manageItem
 
         $query->andFilterWhere([
             'ID' => $this->ID,
-            'Qty' => $this->Qty,
+            'QoH' => $this->QoH,
             'Price' => $this->Price,
             'CreateDate' => $this->CreateDate,
             'UpdateDate' => $this->UpdateDate,

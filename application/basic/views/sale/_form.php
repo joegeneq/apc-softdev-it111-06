@@ -16,6 +16,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'ReceiptNo')->textInput(['maxlength' => 45]) ?>
 
+    <?= $form->field($model, 'ItemQty')->textInput() ?>
+
     <?= $form->field($model, 'Customer_ID')->textInput() ?>
 
     <?= $form->field($model, 'Item_ID')->textInput() ?>

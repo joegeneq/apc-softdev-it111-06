@@ -28,8 +28,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'ID',
             'Date',
             'ReceiptNo',
+            'ItemQty',
             'Customer_ID',
-            'Item_ID',
+            // 'Item_ID',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

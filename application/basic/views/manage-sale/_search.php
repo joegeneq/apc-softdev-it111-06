@@ -21,9 +21,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'ReceiptNo') ?>
 
+    <?= $form->field($model, 'ItemQty') ?>
+
     <?= $form->field($model, 'Customer_ID') ?>
 
-    <?= $form->field($model, 'Item_ID') ?>
+    <?php // echo $form->field($model, 'Item_ID') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

@@ -18,7 +18,7 @@ class SaleSearch extends Sale
     public function rules()
     {
         return [
-            [['ID', 'Customer_ID', 'Item_ID'], 'integer'],
+            [['ID', 'ItemQty', 'Customer_ID', 'Item_ID'], 'integer'],
             [['Date', 'ReceiptNo'], 'safe'],
         ];
     }
@@ -58,6 +58,7 @@ class SaleSearch extends Sale
         $query->andFilterWhere([
             'ID' => $this->ID,
             'Date' => $this->Date,
+            'ItemQty' => $this->ItemQty,
             'Customer_ID' => $this->Customer_ID,
             'Item_ID' => $this->Item_ID,
         ]);

@@ -43,7 +43,7 @@ class SaleController extends Controller
 
     /**
      * Displays a single Sale model.
-     * @param integer $id
+     * @param string $id
      * @return mixed
      */
     public function actionView($id)
@@ -74,7 +74,7 @@ class SaleController extends Controller
     /**
      * Updates an existing Sale model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     * @param string $id
      * @return mixed
      */
     public function actionUpdate($id)
@@ -93,7 +93,7 @@ class SaleController extends Controller
     /**
      * Deletes an existing Sale model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     * @param string $id
      * @return mixed
      */
     public function actionDelete($id)
@@ -106,7 +106,7 @@ class SaleController extends Controller
     /**
      * Finds the Sale model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
+     * @param string $id
      * @return Sale the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */

@@ -18,7 +18,7 @@ class manageSaleSearch extends manageSale
     public function rules()
     {
         return [
-            [['ID', 'Customer_ID', 'Item_ID'], 'integer'],
+            [['ID', 'ItemQty', 'Customer_ID', 'Item_ID'], 'integer'],
             [['Date', 'ReceiptNo'], 'safe'],
         ];
     }
@@ -58,6 +58,7 @@ class manageSaleSearch extends manageSale
         $query->andFilterWhere([
             'ID' => $this->ID,
             'Date' => $this->Date,
+            'ItemQty' => $this->ItemQty,
             'Customer_ID' => $this->Customer_ID,
             'Item_ID' => $this->Item_ID,
         ]);

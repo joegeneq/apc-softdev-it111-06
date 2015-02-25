@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'ID',
             'Name',
-            'Qty',
+            'QoH',
             'Unit',
             'Price',
             // 'SerialNo',
