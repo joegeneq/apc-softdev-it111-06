@@ -24,10 +24,13 @@
 			'filterModel' => $searchModel,
 			'columns' => [
 			['class' => 'yii\grid\SerialColumn'],
+			[
+				'attribute' => 'myaddress_id',
+				'value' => 'myaddress.lastname',
+			],
 	
             'id',
-            'myaddress.lastname',
-           'author',
+            'author',
             'body:ntext',
             'created_at',
 
