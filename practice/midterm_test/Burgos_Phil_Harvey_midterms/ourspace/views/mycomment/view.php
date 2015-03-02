@@ -32,7 +32,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'author',
             'body:ntext',
             'created_at',
-            'myaddress_id.lastname',
+            //'myaddress_id',
+             [
+               'attribute'=>'myaddress_id.lastname',
+                
+            ],           
         ],
     ]) ?>
 
