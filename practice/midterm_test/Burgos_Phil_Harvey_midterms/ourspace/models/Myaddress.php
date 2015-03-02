@@ -45,9 +45,9 @@ class Myaddress extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'firstname' => 'Firstname',
-            'lastname' => 'Lastname',
-            'gender' => 'Gender',
+            'firstname' => 'First Name',
+            'lastname' => 'Last Name',
+            'gender' => 'Male/Female',
             'created_at' => 'Created At',
         ];
     }
