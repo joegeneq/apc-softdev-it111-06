@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use app\models\myaddress;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\mycomment */
@@ -18,7 +20,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'created_at')->textInput() ?>
 
-    <?= $form->field($model, 'myaddress_id')->textInput() ?>
+    <?= $form->field($model, 'myaddress_id')->dropDownList(
+    		ArrayHelper::map(myaddress::find()->all(), 'id', 'lastname'),
+    		['prompt'=>'Select Last Name'])
+    ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
