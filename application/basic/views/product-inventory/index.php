@@ -7,17 +7,18 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\ProductInventorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Productinventories';
+$this->title = 'Product Inventory';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="productinventory-index">
 
+	<p align="center">
+        <?= Html::a('Add Product', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
+
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Productinventory', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -38,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'UpdatedBy',
             // 'Supplier_ID',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            //['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 

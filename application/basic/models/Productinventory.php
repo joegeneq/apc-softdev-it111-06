@@ -57,7 +57,7 @@ class Productinventory extends \yii\db\ActiveRecord
             'ID' => 'ID',
             'Name' => 'Name',
             'Description' => 'Description',
-            'QoH' => 'Qo H',
+            'QoH' => 'Quantity on Hand',
             'SerialNo' => 'Serial No',
             'Price' => 'Price',
             'Status' => 'Status',
