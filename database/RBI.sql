@@ -76,8 +76,8 @@ CREATE TABLE IF NOT EXISTS `RBI`.`ProductInventory` (
   `UpdatedBy` VARCHAR(45) NULL,
   `Supplier_ID` INT NOT NULL,
   PRIMARY KEY (`ID`, `Supplier_ID`),
-  INDEX `fk_Product Inventory_Supplier1_idx` (`Supplier_ID` ASC),
-  CONSTRAINT `fk_Product Inventory_Supplier1`
+  INDEX `fk_ProductInventory_Supplier1_idx` (`Supplier_ID` ASC),
+  CONSTRAINT `fk_ProductInventory_Supplier1`
     FOREIGN KEY (`Supplier_ID`)
     REFERENCES `RBI`.`Supplier` (`ID`)
     ON DELETE NO ACTION
@@ -119,17 +119,17 @@ CREATE TABLE IF NOT EXISTS `RBI`.`Order` (
   `Amount` DECIMAL NOT NULL,
   `Discount` DECIMAL NULL,
   `Customer_ID` INT NOT NULL,
-  `Product Inventory_ID` INT NOT NULL,
-  PRIMARY KEY (`ID`, `Customer_ID`, `Product Inventory_ID`),
+  `ProductInventory_ID` INT NOT NULL,
+  PRIMARY KEY (`ID`, `Customer_ID`, `ProductInventory_ID`),
   INDEX `fk_Order_Customer_idx` (`Customer_ID` ASC),
-  INDEX `fk_Order_Product Inventory1_idx` (`Product Inventory_ID` ASC),
+  INDEX `fk_Order_ProductInventory1_idx` (`ProductInventory_ID` ASC),
   CONSTRAINT `fk_Order_Customer`
     FOREIGN KEY (`Customer_ID`)
     REFERENCES `RBI`.`Customer` (`ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Order_Product Inventory1`
-    FOREIGN KEY (`Product Inventory_ID`)
+  CONSTRAINT `fk_Order_ProductInventory1`
+    FOREIGN KEY (`ProductInventory_ID`)
     REFERENCES `RBI`.`ProductInventory` (`ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
