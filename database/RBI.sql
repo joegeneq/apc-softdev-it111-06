@@ -60,9 +60,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `RBI`.`Product Inventory`
+-- Table `RBI`.`ProductInventory`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `RBI`.`Product Inventory` (
+CREATE TABLE IF NOT EXISTS `RBI`.`ProductInventory` (
   `ID` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(225) NOT NULL,
   `Description` VARCHAR(225) NOT NULL,
@@ -86,9 +86,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `RBI`.`Customer_Contact`
+-- Table `RBI`.`CustomerContact`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `RBI`.`Customer_Contact` (
+CREATE TABLE IF NOT EXISTS `RBI`.`CustomerContact` (
   `ID` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(225) NOT NULL,
   `ContactNo` VARCHAR(45) NOT NULL,
@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `RBI`.`Order` (
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Order_Product Inventory1`
     FOREIGN KEY (`Product Inventory_ID`)
-    REFERENCES `RBI`.`Product Inventory` (`ID`)
+    REFERENCES `RBI`.`ProductInventory` (`ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
