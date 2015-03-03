@@ -51,10 +51,10 @@ class Customercontact extends \yii\db\ActiveRecord
         return [
             'ID' => 'ID',
             'Name' => 'Name',
-            'ContactNo' => 'Contact No',
+            'ContactNo' => 'Contact Number',
             'Email' => 'Email',
-            'CreateDate' => 'Create Date',
-            'UpdateDate' => 'Update Date',
+            'CreateDate' => 'Created Date',
+            'UpdateDate' => 'Updated Date',
             'CreatedBy' => 'Created By',
             'UpdatedBy' => 'Updated By',
             'Customer_ID' => 'Customer  ID',

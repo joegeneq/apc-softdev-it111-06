@@ -7,17 +7,18 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\CustomercontactSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Customercontacts';
+$this->title = 'Contact Lists';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customercontact-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <p align="center">
+        <?= Html::a('Add Contact', ['create'], ['class' => 'btn btn-success']) ?>
 
-    <p>
-        <?= Html::a('Create Customercontact', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
+
+    <h1 align="center"><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,17 +26,17 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'ID',
+            //'ID',
             'Name',
             'ContactNo',
             'Email:email',
-            'CreateDate',
-            // 'UpdateDate',
+            //'CreateDate',
+             'UpdateDate',
             // 'CreatedBy',
-            // 'UpdatedBy',
+             'UpdatedBy',
             // 'Customer_ID',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            // /['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 
