@@ -22,6 +22,10 @@ use app\models\Company
     	ArrayHelper:: map (Company::find()->all(), 'id', 'company_name'),
     		['prompt'=>'Select Company']
     	) ?>
+        <?= $form->field($model, 'Company_id')->dropDownList(
+        ArrayHelper:: map (Company::find()->all(), 'id', 'company_description'),
+            ['prompt'=>'Select Description']
+        ) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

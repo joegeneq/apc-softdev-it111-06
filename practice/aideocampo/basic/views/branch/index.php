@@ -28,6 +28,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'Company_id',
                 'value'=>'company.company_name',
             ],
+            [
+                'attribute'=>'Company_id',
+                'value'=>'company.company_description',
+            ],
 
             'id',
             'branch_name',

@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use app\models\Company;
 
 /**
  * This is the model class for table "branch".
@@ -31,7 +32,7 @@ class Branch extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['branch_name', 'branch_description', 'Company_id'], 'required'],
+            [['branch_name', 'branch_description', 'Company_id', 'company.company_name', 'company.Company_description'], 'required'],
             [['Company_id'], 'integer'],
             [['branch_name', 'branch_description'], 'string', 'max' => 32]
         ];
@@ -46,7 +47,9 @@ class Branch extends \yii\db\ActiveRecord
             'id' => 'ID',
             'branch_name' => 'Branch Name',
             'branch_description' => 'Branch Description',
-            'Company_id' => 'Company Name',
+            'company.Company_name' => 'Company Name',
+            'company.Company_description' => 'Company Description',
+
         ];
     }
 
