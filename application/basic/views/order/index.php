@@ -7,17 +7,17 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\OrderSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Orders';
+$this->title = 'List of Orders';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="order-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
+    <center><p>
         <?= Html::a('Create Order', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    </p><br>
+
+<h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?></center>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -26,15 +26,16 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'ID',
+            'Customer_ID',
+             'ProductInventory_ID',
             'Date',
-            'Status',
             'NumOfItems',
             'Amount',
+            'Status',
             // 'Discount',
-            // 'Customer_ID',
-            // 'ProductInventory_ID',
+          
 
-            ['class' => 'yii\grid\ActionColumn'],
+           // ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 

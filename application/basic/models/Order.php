@@ -35,7 +35,7 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Date', 'Status', 'NumOfItems', 'Amount', 'Customer_ID', 'Product Inventory_ID'], 'required'],
+            [['Date', 'Status', 'NumOfItems', 'Amount', 'Customer_ID', 'ProductInventory_ID'], 'required'],
             [['Date'], 'safe'],
             [['NumOfItems', 'Customer_ID', 'Product Inventory_ID'], 'integer'],
             [['Amount', 'Discount'], 'number'],
@@ -52,7 +52,7 @@ class Order extends \yii\db\ActiveRecord
             'ID' => 'ID',
             'Date' => 'Date',
             'Status' => 'Status',
-            'NumOfItems' => 'Num Of Items',
+            'NumOfItems' => 'Number Of Items',
             'Amount' => 'Amount',
             'Discount' => 'Discount',
             'Customer_ID' => 'Customer  ID',
