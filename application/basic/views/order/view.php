@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'ID' => $model->ID, 'Customer_ID' => $model->Customer_ID, 'Product Inventory_ID' => $model->Product Inventory_ID], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'ID' => $model->ID, 'Customer_ID' => $model->Customer_ID, 'Product Inventory_ID' => $model->Product Inventory_ID], [
+        <?= Html::a('Update', ['update', 'ID' => $model->ID, 'Customer_ID' => $model->Customer_ID, 'ProductInventory_ID' => $model->ProductInventory_ID], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'ID' => $model->ID, 'Customer_ID' => $model->Customer_ID, 'ProductInventory_ID' => $model->ProductInventory_ID], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'Amount',
             'Discount',
             'Customer_ID',
-            'Product Inventory_ID',
+            'ProductInventory_ID',
         ],
     ]) ?>
 

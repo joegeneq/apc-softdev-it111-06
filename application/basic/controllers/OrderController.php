@@ -45,13 +45,13 @@ class OrderController extends Controller
      * Displays a single Order model.
      * @param integer $ID
      * @param integer $Customer_ID
-     * @param integer $Product Inventory_ID
+     * @param integer $ProductInventory_ID
      * @return mixed
      */
-    public function actionView($ID, $Customer_ID, $Product Inventory_ID)
+    public function actionView($ID, $Customer_ID, $ProductInventory_ID)
     {
         return $this->render('view', [
-            'model' => $this->findModel($ID, $Customer_ID, $Product Inventory_ID),
+            'model' => $this->findModel($ID, $Customer_ID, $ProductInventory_ID),
         ]);
     }
 
@@ -65,7 +65,7 @@ class OrderController extends Controller
         $model = new Order();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'ID' => $model->ID, 'Customer_ID' => $model->Customer_ID, 'Product Inventory_ID' => $model->Product Inventory_ID]);
+            return $this->redirect(['view', 'ID' => $model->ID, 'Customer_ID' => $model->Customer_ID, 'ProductInventory_ID' => $model->ProductInventory_ID]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -78,15 +78,15 @@ class OrderController extends Controller
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $ID
      * @param integer $Customer_ID
-     * @param integer $Product Inventory_ID
+     * @param integer $ProductInventory_ID
      * @return mixed
      */
-    public function actionUpdate($ID, $Customer_ID, $Product Inventory_ID)
+    public function actionUpdate($ID, $Customer_ID, $ProductInventory_ID)
     {
-        $model = $this->findModel($ID, $Customer_ID, $Product Inventory_ID);
+        $model = $this->findModel($ID, $Customer_ID, $ProductInventory_ID);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'ID' => $model->ID, 'Customer_ID' => $model->Customer_ID, 'Product Inventory_ID' => $model->Product Inventory_ID]);
+            return $this->redirect(['view', 'ID' => $model->ID, 'Customer_ID' => $model->Customer_ID, 'ProductInventory_ID' => $model->ProductInventory_ID]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -99,12 +99,12 @@ class OrderController extends Controller
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $ID
      * @param integer $Customer_ID
-     * @param integer $Product Inventory_ID
+     * @param integer $ProductInventory_ID
      * @return mixed
      */
-    public function actionDelete($ID, $Customer_ID, $Product Inventory_ID)
+    public function actionDelete($ID, $Customer_ID, $ProductInventory_ID)
     {
-        $this->findModel($ID, $Customer_ID, $Product Inventory_ID)->delete();
+        $this->findModel($ID, $Customer_ID, $ProductInventory_ID)->delete();
 
         return $this->redirect(['index']);
     }
@@ -114,13 +114,13 @@ class OrderController extends Controller
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $ID
      * @param integer $Customer_ID
-     * @param integer $Product Inventory_ID
+     * @param integer $ProductInventory_ID
      * @return Order the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($ID, $Customer_ID, $Product Inventory_ID)
+    protected function findModel($ID, $Customer_ID, $ProductInventory_ID)
     {
-        if (($model = Order::findOne(['ID' => $ID, 'Customer_ID' => $Customer_ID, 'Product Inventory_ID' => $Product Inventory_ID])) !== null) {
+        if (($model = Order::findOne(['ID' => $ID, 'Customer_ID' => $Customer_ID, 'ProductInventory_ID' => $ProductInventory_ID])) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

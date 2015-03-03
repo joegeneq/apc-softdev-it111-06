@@ -18,7 +18,7 @@ class OrderSearch extends Order
     public function rules()
     {
         return [
-            [['ID', 'NumOfItems', 'Customer_ID', 'Product Inventory_ID'], 'integer'],
+            [['ID', 'NumOfItems', 'Customer_ID', 'ProductInventory_ID'], 'integer'],
             [['Date', 'Status'], 'safe'],
             [['Amount', 'Discount'], 'number'],
         ];
@@ -63,7 +63,7 @@ class OrderSearch extends Order
             'Amount' => $this->Amount,
             'Discount' => $this->Discount,
             'Customer_ID' => $this->Customer_ID,
-            'Product Inventory_ID' => $this->Product Inventory_ID,
+            'ProductInventory_ID' => $this->ProductInventory_ID,
         ]);
 
         $query->andFilterWhere(['like', 'Status', $this->Status]);

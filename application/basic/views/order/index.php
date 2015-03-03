@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'Amount',
             // 'Discount',
             // 'Customer_ID',
-            // 'Product Inventory_ID',
+            // 'ProductInventory_ID',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
