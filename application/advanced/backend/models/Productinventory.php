@@ -55,9 +55,9 @@ class Productinventory extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
+            'name' => 'Product Name',
             'description' => 'Description',
-            'qoh' => 'Qoh',
+            'qoh' => 'Quantity on Hand',
             'serial_no' => 'Serial No',
             'price' => 'Price',
             'status' => 'Status',
@@ -65,7 +65,7 @@ class Productinventory extends \yii\db\ActiveRecord
             'update_date' => 'Update Date',
             'created_by' => 'Created By',
             'updated_by' => 'Updated By',
-            'supplier_id' => 'Supplier ID',
+            'supplier_id' => 'Supplier Name',
         ];
     }
 
