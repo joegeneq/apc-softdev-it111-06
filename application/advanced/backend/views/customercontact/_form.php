@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use app\models\customer;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Customercontact */
@@ -26,7 +28,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'updated_by')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'customer_id')->textInput() ?>
+    <?= $form->field($model, 'customer_id')->dropDownList(
+                    ArrayHelper:: map(customer::find() -> all(), 'id', 'name'),
+                      ['prompt' => 'Select Customer']
+     ) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
