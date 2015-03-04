@@ -24,7 +24,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
+            [
+                'attribute'=>'supplier_id',
+                'value'=>'supplier.name',
+            ],
             'id',
             'name',
             'description',
@@ -36,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'update_date',
             // 'created_by',
             // 'updated_by',
-            // 'supplier_id',
+            
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -18,8 +18,8 @@ class ProductInventorySearch extends productinventory
     public function rules()
     {
         return [
-            [['id', 'qoh', 'supplier_id'], 'integer'],
-            [['name', 'description', 'serial_no', 'status', 'create_date', 'update_date', 'created_by', 'updated_by'], 'safe'],
+            [['id', 'qoh'], 'integer'],
+            [['name', 'description', 'supplier_id', 'serial_no', 'status', 'create_date', 'update_date', 'created_by', 'updated_by'], 'safe'],
             [['price'], 'number'],
         ];
     }
@@ -56,13 +56,15 @@ class ProductInventorySearch extends productinventory
             return $dataProvider;
         }
 
+        $query->joinWith('supplier');
+
         $query->andFilterWhere([
             'id' => $this->id,
             'qoh' => $this->qoh,
             'price' => $this->price,
             'create_date' => $this->create_date,
             'update_date' => $this->update_date,
-            'supplier_id' => $this->supplier_id,
+            'supplier_id' => $this->id,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
@@ -70,7 +72,8 @@ class ProductInventorySearch extends productinventory
             ->andFilterWhere(['like', 'serial_no', $this->serial_no])
             ->andFilterWhere(['like', 'status', $this->status])
             ->andFilterWhere(['like', 'created_by', $this->created_by])
-            ->andFilterWhere(['like', 'updated_by', $this->updated_by]);
+            ->andFilterWhere(['like', 'updated_by', $this->updated_by])
+            ->andFilterWhere(['like', 'supplier.name', $this->supplier_id]);
 
         return $dataProvider;
     }
