@@ -15,124 +15,134 @@ CREATE SCHEMA IF NOT EXISTS `RBI` DEFAULT CHARACTER SET utf8 COLLATE utf8_genera
 USE `RBI` ;
 
 -- -----------------------------------------------------
--- Table `RBI`.`Customer`
+-- Table `RBI`.`customer`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `RBI`.`Customer` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `Name` VARCHAR(225) NOT NULL,
-  `ContactNo` VARCHAR(45) NOT NULL,
-  `HouseNo` VARCHAR(45) NOT NULL,
-  `Street` VARCHAR(225) NOT NULL,
-  `Area` VARCHAR(225) NOT NULL,
-  `City` VARCHAR(225) NOT NULL,
-  `ZipCode` INT NULL,
-  `Country` VARCHAR(225) NOT NULL,
-  `Email` VARCHAR(225) NOT NULL,
-  `CreateDate` DATE NOT NULL,
-  `UpdateDate` DATE NULL,
-  `CreatedBy` VARCHAR(45) NOT NULL,
-  `UpdatedBy` VARCHAR(45) NULL,
-  PRIMARY KEY (`ID`))
+CREATE TABLE IF NOT EXISTS `RBI`.`customer` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(225) NOT NULL,
+  `contact_no` VARCHAR(45) NOT NULL,
+  `house_no` VARCHAR(45) NOT NULL,
+  `street` VARCHAR(225) NOT NULL,
+  `area` VARCHAR(225) NOT NULL,
+  `city` VARCHAR(225) NOT NULL,
+  `zip_code` INT NULL,
+  `country` VARCHAR(225) NOT NULL,
+  `email` VARCHAR(225) NOT NULL,
+  `create_date` DATE NOT NULL,
+  `update_date` DATE NULL,
+  `created_by` VARCHAR(45) NOT NULL,
+  `updated_by` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `RBI`.`Supplier`
+-- Table `RBI`.`supplier`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `RBI`.`Supplier` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `Name` VARCHAR(225) NOT NULL,
-  `ContactNo` VARCHAR(45) NOT NULL,
-  `ContactPerson` VARCHAR(225) NOT NULL,
-  `HouseNo` VARCHAR(45) NOT NULL,
-  `Street` VARCHAR(225) NOT NULL,
-  `Area` VARCHAR(225) NOT NULL,
-  `City` VARCHAR(225) NOT NULL,
-  `ZipCode` INT NULL,
-  `Country` VARCHAR(225) NOT NULL,
-  `Email` VARCHAR(45) NOT NULL,
-  `CreateDate` DATE NOT NULL,
-  `UpdateDate` DATE NULL,
-  `CreatedBy` VARCHAR(45) NOT NULL,
-  `UpdatedBy` VARCHAR(45) NULL,
-  PRIMARY KEY (`ID`))
+CREATE TABLE IF NOT EXISTS `RBI`.`supplier` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(225) NOT NULL,
+  `contact_no` VARCHAR(45) NOT NULL,
+  `contact_person` VARCHAR(225) NOT NULL,
+  `house_no` VARCHAR(45) NOT NULL,
+  `street` VARCHAR(225) NOT NULL,
+  `area` VARCHAR(225) NOT NULL,
+  `city` VARCHAR(225) NOT NULL,
+  `zip_code` INT NULL,
+  `country` VARCHAR(225) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `create_date` DATE NOT NULL,
+  `update_date` DATE NULL,
+  `created_by` VARCHAR(45) NOT NULL,
+  `updated_by` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `RBI`.`ProductInventory`
+-- Table `RBI`.`productinventory`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `RBI`.`ProductInventory` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `Name` VARCHAR(225) NOT NULL,
-  `Description` VARCHAR(225) NOT NULL,
-  `QoH` INT NOT NULL,
-  `SerialNo` VARCHAR(45) NOT NULL,
-  `Price` DECIMAL NOT NULL,
-  `Status` VARCHAR(45) NOT NULL,
-  `CreateDate` DATE NOT NULL,
-  `UpdateDate` DATE NULL,
-  `CreatedBy` VARCHAR(45) NOT NULL,
-  `UpdatedBy` VARCHAR(45) NULL,
-  `Supplier_ID` INT NOT NULL,
-  PRIMARY KEY (`ID`, `Supplier_ID`),
-  INDEX `fk_ProductInventory_Supplier1_idx` (`Supplier_ID` ASC),
-  CONSTRAINT `fk_ProductInventory_Supplier1`
-    FOREIGN KEY (`Supplier_ID`)
-    REFERENCES `RBI`.`Supplier` (`ID`)
+CREATE TABLE IF NOT EXISTS `RBI`.`productinventory` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(225) NOT NULL,
+  `description` VARCHAR(225) NOT NULL,
+  `qoh` INT NOT NULL,
+  `serial_no` VARCHAR(45) NOT NULL,
+  `price` DECIMAL NOT NULL,
+  `status` VARCHAR(45) NOT NULL,
+  `create_date` DATE NOT NULL,
+  `update_date` DATE NULL,
+  `created_by` VARCHAR(45) NOT NULL,
+  `updated_by` VARCHAR(45) NULL,
+  `supplier_id` INT NOT NULL,
+  PRIMARY KEY (`id`, `supplier_id`),
+  INDEX `fk_productinventory_supplier1_idx` (`supplier_id` ASC),
+  CONSTRAINT `fk_productinventory_supplier1`
+    FOREIGN KEY (`supplier_id`)
+    REFERENCES `RBI`.`supplier` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `RBI`.`CustomerContact`
+-- Table `RBI`.`customercontact`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `RBI`.`CustomerContact` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `Name` VARCHAR(225) NOT NULL,
-  `ContactNo` VARCHAR(45) NOT NULL,
-  `Email` VARCHAR(225) NOT NULL,
-  `CreateDate` DATE NOT NULL,
-  `UpdateDate` DATE NULL,
-  `CreatedBy` VARCHAR(45) NOT NULL,
-  `UpdatedBy` VARCHAR(45) NULL,
-  `Customer_ID` INT NOT NULL,
-  PRIMARY KEY (`ID`, `Customer_ID`),
-  INDEX `fk_Customer_Contact_Customer1_idx` (`Customer_ID` ASC),
-  CONSTRAINT `fk_Customer_Contact_Customer1`
-    FOREIGN KEY (`Customer_ID`)
-    REFERENCES `RBI`.`Customer` (`ID`)
+CREATE TABLE IF NOT EXISTS `RBI`.`customercontact` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(225) NOT NULL,
+  `contact_no` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(225) NOT NULL,
+  `create_date` DATE NOT NULL,
+  `update_date` DATE NULL,
+  `created_by` VARCHAR(45) NOT NULL,
+  `updated_by` VARCHAR(45) NULL,
+  `customer_id` INT NOT NULL,
+  PRIMARY KEY (`id`, `customer_id`),
+  INDEX `fk_customercontact_customer1_idx` (`customer_id` ASC),
+  CONSTRAINT `fk_customercontact_customer1`
+    FOREIGN KEY (`customer_id`)
+    REFERENCES `RBI`.`customer` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `RBI`.`Order`
+-- Table `RBI`.`order`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `RBI`.`Order` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `Date` DATE NOT NULL,
-  `Status` VARCHAR(45) NOT NULL,
-  `NumOfItems` INT NOT NULL,
-  `Amount` DECIMAL NOT NULL,
-  `Discount` DECIMAL NULL,
-  `Customer_ID` INT NOT NULL,
-  `ProductInventory_ID` INT NOT NULL,
-  PRIMARY KEY (`ID`, `Customer_ID`, `ProductInventory_ID`),
-  INDEX `fk_Order_Customer_idx` (`Customer_ID` ASC),
-  INDEX `fk_Order_ProductInventory1_idx` (`ProductInventory_ID` ASC),
-  CONSTRAINT `fk_Order_Customer`
-    FOREIGN KEY (`Customer_ID`)
-    REFERENCES `RBI`.`Customer` (`ID`)
+CREATE TABLE IF NOT EXISTS `RBI`.`order` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `date` DATE NOT NULL,
+  `status` VARCHAR(45) NOT NULL,
+  `num_items` INT NOT NULL,
+  `amount` DECIMAL NOT NULL,
+  `discount` DECIMAL UNSIGNED NULL,
+  `customer_id` INT NOT NULL,
+  `productinventory_id` INT NOT NULL,
+  PRIMARY KEY (`id`, `customer_id`, `productinventory_id`),
+  INDEX `fk_order_customer_idx` (`customer_id` ASC),
+  INDEX `fk_order_productinventory1_idx` (`productinventory_id` ASC),
+  CONSTRAINT `fk_order_customer`
+    FOREIGN KEY (`customer_id`)
+    REFERENCES `RBI`.`customer` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Order_ProductInventory1`
-    FOREIGN KEY (`ProductInventory_ID`)
-    REFERENCES `RBI`.`ProductInventory` (`ID`)
+  CONSTRAINT `fk_order_productinventory1`
+    FOREIGN KEY (`productinventory_id`)
+    REFERENCES `RBI`.`productinventory` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `RBI`.`table1`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `RBI`.`table1` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `status` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
