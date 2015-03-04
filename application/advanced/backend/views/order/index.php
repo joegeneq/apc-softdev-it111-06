@@ -24,6 +24,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
+            
+            [
+            'attribute' => 'customer_id',
+            'value' => 'customer.name',
+            ],
+
+            [
+            'attribute' => 'productinventory_id',
+            'value' => 'productinventory.name',
+            ],
 
             'id',
             'date',
@@ -31,8 +41,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'num_items',
             'amount',
             // 'discount',
-             'customer_id',
-            'productinventory_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
