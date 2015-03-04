@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Customercontact */
 
-$this->title = 'Create Customercontact';
+$this->title = 'Add Contact';
 $this->params['breadcrumbs'][] = ['label' => 'Customercontacts', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

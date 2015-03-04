@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\CustomerSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Customers';
+$this->title = 'Customer List';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customer-index">
@@ -25,20 +25,20 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'name',
             'contact_no',
-            'house_no',
-            'street',
+            //'house_no',
+            //'street',
             // 'area',
-            // 'city',
+             'city',
             // 'zip_code',
             // 'country',
-            // 'email:email',
+             'email:email',
             // 'create_date',
-            // 'update_date',
+             //'update_date',
             // 'created_by',
-            // 'updated_by',
+             //'updated_by',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
