@@ -7,17 +7,19 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\CustomerSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Customer List';
+$this->title = 'List of Customers';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customer-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Customer', ['create'], ['class' => 'btn btn-success']) ?>
+    <p align="center">
+        <?= Html::a('Add Customer', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Add Contact Person', ['/customercontact/create'], ['class' => 'btn btn-success']) ?>
+         <?= Html::a('Manage Customer', ['/manage-customer/index'], ['class' => 'btn btn-danger']) ?>
     </p>
+
+    <h1 align="center"><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -40,8 +42,12 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'created_by',
              //'updated_by',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            //['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+<p align="right">
+        <?= Html::a('Back to Inventory', ['/site/index'], ['class' => 'btn btn-primary']) ?>
+</p>
+
 
 </div>
