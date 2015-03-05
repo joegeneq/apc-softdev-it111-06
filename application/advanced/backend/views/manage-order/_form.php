@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'date')->textInput() ?><p><b><i>* Date format: YYYY-MM-DD</b></i></p><br>
 
-    <?= $form->field($model, 'status')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'status')->textInput(['maxlength' => 45]) ?><p><b><i>*Input: Pending, Confirmed or Cancelled</b></i></p><br>
 
     <?= $form->field($model, 'num_items')->textInput() ?>
 
