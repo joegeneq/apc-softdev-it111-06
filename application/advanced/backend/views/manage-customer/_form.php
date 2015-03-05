@@ -32,9 +32,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => 225]) ?>
 
-    <?= $form->field($model, 'create_date')->textInput() ?>
+    <?= $form->field($model, 'create_date')->textInput() ?><p><b><i>* Date format: YYYY-MM-DD</b></i></p><br>
 
-    <?= $form->field($model, 'update_date')->textInput() ?>
+    <?= $form->field($model, 'update_date')->textInput() ?><p><b><i>* Date format: YYYY-MM-DD</b></i></p><br>
 
     <?= $form->field($model, 'created_by')->textInput(['maxlength' => 45]) ?>
 
