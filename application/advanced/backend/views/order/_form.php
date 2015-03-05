@@ -14,8 +14,8 @@ use app\models\productinventory
 <div class="order-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
-    <?= $form->field($model, 'date')->textInput() ?>
+    
+    <?= $form->field($model, 'date')->textInput() ?><p><b><i>* Date format: YYYY-MM-DD</b></i></p><br>
 
     <?= $form->field($model, 'status')->textInput(['maxlength' => 45]) ?>
 
