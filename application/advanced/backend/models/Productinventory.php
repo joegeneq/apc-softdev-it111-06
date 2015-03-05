@@ -60,7 +60,7 @@ class Productinventory extends \yii\db\ActiveRecord
             'qoh' => 'Quantity on Hand',
             'serial_no' => 'Serial No',
             'price' => 'Price',
-            'status' => 'Defective Status',
+            'status' => 'Status',
             'create_date' => 'Create Date',
             'update_date' => 'Update Date',
             'created_by' => 'Created By',

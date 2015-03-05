@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
-    <p align="right">
+    <p align="left">
     <?= Html::a('Back to Manage Inventory', ['/manage-product-inventory/index'], ['class' => 'btn btn-primary']) ?>
     </p>
 </div>
