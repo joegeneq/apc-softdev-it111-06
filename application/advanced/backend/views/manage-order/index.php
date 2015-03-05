@@ -12,12 +12,9 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-order-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <center><h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?></center>
 
-    <p>
-        <?= Html::a('Create Manage Order', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -31,11 +28,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'num_items',
             'amount',
             // 'discount',
-            // 'customer_id',
-            // 'productinventory_id',
+             'customer.name',
+             'productinventory.name',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
+<p align="right">
+                <?= Html::a('Back to Orders', ['order/index'], ['class' => 'btn btn-primary']) ?>
+            </p>
 </div>

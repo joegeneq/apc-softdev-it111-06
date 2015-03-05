@@ -52,7 +52,7 @@ class manageOrder extends \yii\db\ActiveRecord
             'id' => 'ID',
             'date' => 'Date',
             'status' => 'Status',
-            'num_items' => 'Num Items',
+            'num_items' => 'Number of Items',
             'amount' => 'Amount',
             'discount' => 'Discount',
             'customer_id' => 'Customer ID',
