@@ -18,8 +18,8 @@ class manageCustomercontactSearch extends manageCustomercontact
     public function rules()
     {
         return [
-            [['id', 'customer_id'], 'integer'],
-            [['name', 'contact_no', 'email', 'create_date', 'update_date', 'created_by', 'updated_by'], 'safe'],
+            [['id'], 'integer'],
+            [['name', 'contact_no', 'email', 'create_date', 'update_date', 'created_by', 'updated_by',  'customer_id'], 'safe'],
         ];
     }
 
@@ -55,18 +55,21 @@ class manageCustomercontactSearch extends manageCustomercontact
             return $dataProvider;
         }
 
+        $query->joinWith('customer');
+
         $query->andFilterWhere([
             'id' => $this->id,
             'create_date' => $this->create_date,
             'update_date' => $this->update_date,
-            'customer_id' => $this->customer_id,
+            'customer_id' => $this->id,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'contact_no', $this->contact_no])
             ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'created_by', $this->created_by])
-            ->andFilterWhere(['like', 'updated_by', $this->updated_by]);
+            ->andFilterWhere(['like', 'updated_by', $this->updated_by])
+            ->andFilterWhere(['like', 'customer.name', $this->customer_id]);
 
         return $dataProvider;
     }

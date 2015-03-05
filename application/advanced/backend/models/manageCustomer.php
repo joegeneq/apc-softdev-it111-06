@@ -56,7 +56,7 @@ class manageCustomer extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
+            'name' => 'Customer Name',
             'contact_no' => 'Contact No',
             'house_no' => 'House No',
             'street' => 'Street',
@@ -65,8 +65,8 @@ class manageCustomer extends \yii\db\ActiveRecord
             'zip_code' => 'Zip Code',
             'country' => 'Country',
             'email' => 'Email',
-            'create_date' => 'Create Date',
-            'update_date' => 'Update Date',
+            'create_date' => 'Created Date',
+            'update_date' => 'Updated Date',
             'created_by' => 'Created By',
             'updated_by' => 'Updated By',
         ];

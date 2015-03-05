@@ -9,6 +9,7 @@ use yii\bootstrap\ActiveForm;
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<a href="index.php"><img src="images/b2c_logo_100e1.jpg"></a>
 <div class="site-login">
     <h1><?= Html::encode($this->title) ?></h1>
 

@@ -53,11 +53,11 @@ class manageCustomercontact extends \yii\db\ActiveRecord
             'name' => 'Name',
             'contact_no' => 'Contact No',
             'email' => 'Email',
-            'create_date' => 'Create Date',
-            'update_date' => 'Update Date',
+            'create_date' => 'Created Date',
+            'update_date' => 'Updated Date',
             'created_by' => 'Created By',
             'updated_by' => 'Updated By',
-            'customer_id' => 'Customer ID',
+            'customer_id' => 'Customer Name',
         ];
     }
 
