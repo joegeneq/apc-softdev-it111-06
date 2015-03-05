@@ -38,5 +38,5 @@ $this->params['breadcrumbs'][] = $this->title;
             'productinventory.name',
         ],
     ]) ?>
-
+<?= Html::a('Back to Manage Orders', ['/manage-order/index'], ['class' => 'btn btn-primary']) ?>
 </div>

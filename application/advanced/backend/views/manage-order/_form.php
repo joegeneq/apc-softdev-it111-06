@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'date')->textInput() ?>
+    <?= $form->field($model, 'date')->textInput() ?><p><b><i>* Date format: YYYY-MM-DD</b></i></p><br>
 
     <?= $form->field($model, 'status')->textInput(['maxlength' => 45]) ?>
 
@@ -27,7 +27,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'productinventory_id')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-success']) ?>
+        <?= Html::a('Back to Manage Orders', ['/manage-order/index'], ['class' => 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
