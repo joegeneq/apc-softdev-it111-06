@@ -65,8 +65,8 @@ class Customer extends \yii\db\ActiveRecord
             'zip_code' => 'Zip Code',
             'country' => 'Country',
             'email' => 'Email',
-            'create_date' => 'Created Date',
-            'update_date' => 'Updated Date',
+            'create_date' => 'Create Date',
+            'update_date' => 'Update Date',
             'created_by' => 'Created By',
             'updated_by' => 'Updated By',
         ];
