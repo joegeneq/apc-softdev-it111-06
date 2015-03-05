@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\SupplierSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Suppliers';
+$this->title = 'List of Suppliers';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="supplier-index">
@@ -15,10 +15,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <p align="center">
         <?= Html::a('Add Supplier', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Manage Suppliers', ['manage-supplier/index'], ['class' => 'btn btn-danger']) ?>   
-    </p>
+    </p><br>
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <center><h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?></center>
 
 
     <?= GridView::widget([

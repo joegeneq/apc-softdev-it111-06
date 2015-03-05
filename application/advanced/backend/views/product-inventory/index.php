@@ -15,10 +15,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <p align="center">
         <?= Html::a('Add Product', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Manage Inventory', ['manage-product-inventory/index'], ['class' => 'btn btn-danger']) ?>   
-    </p>
+    </p><br>
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <center><h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?></center>
 
 
     <?= GridView::widget([
