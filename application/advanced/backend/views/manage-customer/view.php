@@ -44,5 +44,5 @@ $this->params['breadcrumbs'][] = $this->title;
             'updated_by',
         ],
     ]) ?>
-
+<?= Html::a('Back to Manage Customers', ['/customercontact/index'], ['class' => 'btn btn-primary']) ?>
 </div>

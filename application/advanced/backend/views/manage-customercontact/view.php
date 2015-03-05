@@ -39,5 +39,5 @@ $this->params['breadcrumbs'][] = $this->title;
             'customer_id',
         ],
     ]) ?>
-
+<?= Html::a('Back to Manage Contact Persons', ['/customercontact/index'], ['class' => 'btn btn-primary']) ?>
 </div>
