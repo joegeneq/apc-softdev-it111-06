@@ -6,11 +6,11 @@ $this->title = 'RBI Inventory System';
 <div class="site-index">
    <div class="jumbotron">
     <center>
-    <a href="index.php?r=customer"><img src="images/Customers.png"></a>
-    <a href="index.php?r=order"><img src="images/Orders.png"></a>
-    <a href="index.php?r=product-inventory"><img src="images/Products.png"></a>
-    <a href="index.php?r=supplier"><img src="images/Suppliers.png"></a>
-    <a href="index.php?r=transaction"><img src="images/Transactions.png"></a>
+    <a href="index.php?r=customer"><img src="images/Customers.png" onmouseover="this.src='images/Customers1.png'" onmouseout="this.src='images/Customers.png'" alt="Customers"></a>
+    <a href="index.php?r=order"><img src="images/Orders.png" onmouseover="this.src='images/Orders1.png'" onmouseout="this.src='images/Orders.png'" alt="Orders"></a>
+    <a href="index.php?r=product-inventory"><img src="images/Products.png" onmouseover="this.src='images/Products1.png'" onmouseout="this.src='images/Products.png'" alt="Products"></a>
+    <a href="index.php?r=supplier"><img src="images/Suppliers.png" onmouseover="this.src='images/Suppliers1.png'" onmouseout="this.src='images/Suppliers.png'" alt="Suppliers"></a>
+    <a href="index.php?r=transaction"><img src="images/Transactions.png" onmouseover="this.src='images/Transactions1.png'" onmouseout="this.src='images/Transactions.png'" alt="Transactions"></a>
     </center>
    </div>
 </div>
