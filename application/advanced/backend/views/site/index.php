@@ -4,8 +4,7 @@
 $this->title = 'RBI Inventory System';
 ?>
 <div class="site-index">
-
-    <div class="jumbotron">
+   <div class="jumbotron">
     <center>
     <a href="index.php?r=customer"><img src="images/Customers.png"></a>
     <a href="index.php?r=order"><img src="images/Orders.png"></a>
@@ -13,5 +12,5 @@ $this->title = 'RBI Inventory System';
     <a href="index.php?r=supplier"><img src="images/Suppliers.png"></a>
     <a href="index.php?r=transaction"><img src="images/Transactions.png"></a>
     </center>
-    </div>
+   </div>
 </div>
