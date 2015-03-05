@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\manageCustomercontact */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Manage Customercontacts', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Manage Contact Person', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-customercontact-view">
@@ -39,5 +39,5 @@ $this->params['breadcrumbs'][] = $this->title;
             'customer_id',
         ],
     ]) ?>
-<?= Html::a('Back to Manage Contact Persons', ['/customercontact/index'], ['class' => 'btn btn-primary']) ?>
+<?= Html::a('Back to Manage Contact Persons', ['/manage-customercontact/index'], ['class' => 'btn btn-primary']) ?>
 </div>

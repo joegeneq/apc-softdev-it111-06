@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $model app\models\manageCustomercontact */
 
 $this->title = 'Update Manage Customercontact: ' . ' ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Manage Customercontacts', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Manage Contact Person', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id, 'customer_id' => $model->customer_id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 <p align="right">
-        <?= Html::a('Back to Home', ['/site/index'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Back to List of Customers', ['customer/index'], ['class' => 'btn btn-primary']) ?>
 </p>
 
 </div>
