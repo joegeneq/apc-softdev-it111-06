@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\manageProductInventory */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Manage Product Inventories', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Manage Inventory', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-product-inventory-view">
@@ -43,4 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
+    <p align="right">
+    <?= Html::a('Back to Manage Inventory', ['/manage-product-inventory/index'], ['class' => 'btn btn-primary']) ?>
+    </p>
 </div>

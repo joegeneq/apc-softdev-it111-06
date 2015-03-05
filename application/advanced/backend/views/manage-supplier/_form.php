@@ -36,14 +36,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'create_date')->textInput() ?>
 
-    <?= $form->field($model, 'update_date')->textInput() ?>
+    <?= $form->field($model, 'update_date')->textInput() ?><p><b><i>* Date format: YYYY-MM-DD</b></i></p><br>
 
     <?= $form->field($model, 'created_by')->textInput(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'updated_by')->textInput(['maxlength' => 45]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-success']) ?>
+        <?= Html::a('Back to Manage Suppliers', ['/manage-supplier/index'], ['class' => 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

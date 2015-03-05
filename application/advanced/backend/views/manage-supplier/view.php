@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\managesupplier */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Managesuppliers', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Manage Suppliers', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="managesupplier-view">
@@ -46,4 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
+    <p align="right">
+    <?= Html::a('Back to Manage Suppliers', ['/manage-supplier/index'], ['class' => 'btn btn-primary']) ?>
+    </p>
 </div>
