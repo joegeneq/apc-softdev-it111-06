@@ -7,17 +7,14 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\manageCustomercontactSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Manage Customercontacts';
+$this->title = 'Manage Contact Person';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-customercontact-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Manage Customercontact', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    <h1 align="center"><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -38,5 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+<p align="right">
+     <?= Html::a('Back to View Contact Person', ['/customer/index'], ['class' => 'btn btn-primary']) ?>
+</p>
 
 </div>

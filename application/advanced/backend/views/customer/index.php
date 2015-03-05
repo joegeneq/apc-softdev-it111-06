@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p align="center">
         <?= Html::a('Add Customer', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('View Contact Persons', ['/customercontact/create'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('View Contact Persons', ['/customercontact/index'], ['class' => 'btn btn-primary']) ?>
          <?= Html::a('Manage Customer', ['/manage-customer/index'], ['class' => 'btn btn-danger']) ?>
     </p><br>
 
@@ -46,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 <p align="right">
-        <?= Html::a('Back to Inventory', ['/site/index'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Back to Home', ['/site/index'], ['class' => 'btn btn-primary']) ?>
 </p>
 
 
