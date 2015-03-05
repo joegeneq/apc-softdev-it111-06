@@ -14,9 +14,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p align="center">
         <?= Html::a('Add Customer', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Add Contact Person', ['/customercontact/create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('View Contact Persons', ['/customercontact/create'], ['class' => 'btn btn-primary']) ?>
          <?= Html::a('Manage Customer', ['/manage-customer/index'], ['class' => 'btn btn-danger']) ?>
-    </p>
+    </p><br>
 
     <h1 align="center"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

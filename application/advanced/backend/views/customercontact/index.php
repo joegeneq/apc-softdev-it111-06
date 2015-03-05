@@ -11,12 +11,10 @@ $this->title = 'List of Contact Persons';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customercontact-index">
-
     <p align="center">
         <?= Html::a('Add Contact Person', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Manage Contact Person', ['/manage-customercontact/index'], ['class' => 'btn btn-danger']) ?>
-    </p>
-
+    </p><br>
     <h1 align="center"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
