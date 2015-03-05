@@ -18,8 +18,8 @@ class manageOrderSearch extends manageOrder
     public function rules()
     {
         return [
-            [['id', 'num_items', 'customer_id', 'productinventory_id'], 'integer'],
-            [['date', 'status'], 'safe'],
+            [['id', 'num_items', ], 'integer'],
+            [['date', 'customer_id', 'productinventory_id', 'status'], 'safe'],
             [['amount', 'discount'], 'number'],
         ];
     }
@@ -55,6 +55,8 @@ class manageOrderSearch extends manageOrder
             // $query->where('0=1');
             return $dataProvider;
         }
+        $query->joinWith('customer');
+        $query->joinWith('productinventory');
 
         $query->andFilterWhere([
             'id' => $this->id,
@@ -62,11 +64,13 @@ class manageOrderSearch extends manageOrder
             'num_items' => $this->num_items,
             'amount' => $this->amount,
             'discount' => $this->discount,
-            'customer_id' => $this->customer_id,
-            'productinventory_id' => $this->productinventory_id,
+            'customer_id' => $this->id,
+            'productinventory_id' => $this->id,
         ]);
 
         $query->andFilterWhere(['like', 'status', $this->status]);
+        $query->andFilterWhere(['like', 'customer.name', $this->customer_id]);
+        $query->andFilterWhere(['like', 'productinventory.name', $this->productinventory_id]);
 
         return $dataProvider;
     }

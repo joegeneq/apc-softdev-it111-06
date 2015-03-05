@@ -65,7 +65,7 @@ class manageProductInventory extends \yii\db\ActiveRecord
             'update_date' => 'Update Date',
             'created_by' => 'Created By',
             'updated_by' => 'Updated By',
-            'supplier_id' => 'Supplier ID',
+            'supplier_id' => 'Supplier Name',
         ];
     }
 

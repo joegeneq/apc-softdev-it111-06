@@ -55,8 +55,8 @@ class manageOrder extends \yii\db\ActiveRecord
             'num_items' => 'Number of Items',
             'amount' => 'Amount',
             'discount' => 'Discount',
-            'customer_id' => 'Customer ID',
-            'productinventory_id' => 'Productinventory ID',
+            'customer_id' => 'Customer Name',
+            'productinventory_id' => 'Product Name',
         ];
     }
 
