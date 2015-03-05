@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'contact_no')->textInput(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'contact_person')->textInput(['maxlength' => 225]) ?>
-<fieldset><legend>Address</legend>
+
     <?= $form->field($model, 'house_no')->textInput(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'street')->textInput(['maxlength' => 225]) ?>
@@ -29,13 +29,12 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'zip_code')->textInput() ?>
 
     <?= $form->field($model, 'country')->textInput(['maxlength' => 225]) ?>
-    </fieldset><hr>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'create_date')->textInput() ?>
+    <?= $form->field($model, 'create_date')->textInput() ?><p><b><i>* Date format: YYYY-MM-DD</b></i></p><br>
 
-    <?= $form->field($model, 'update_date')->textInput() ?>
+    <?= $form->field($model, 'update_date')->textInput() ?><p><b><i>* Date format: YYYY-MM-DD</b></i></p><br>
 
     <?= $form->field($model, 'created_by')->textInput(['maxlength' => 45]) ?>
 

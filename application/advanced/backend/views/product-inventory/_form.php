@@ -26,9 +26,9 @@ use app\models\supplier
 
     <?= $form->field($model, 'status')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'create_date')->textInput() ?>
+    <?= $form->field($model, 'create_date')->textInput() ?><p><b><i>* Date format: YYYY-MM-DD</b></i></p><br>
 
-    <?= $form->field($model, 'update_date')->textInput() ?>
+    <?= $form->field($model, 'update_date')->textInput() ?><p><b><i>* Date format: YYYY-MM-DD</b></i></p><br>
 
     <?= $form->field($model, 'created_by')->textInput(['maxlength' => 45]) ?>
 
