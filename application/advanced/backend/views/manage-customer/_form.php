@@ -18,6 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'house_no')->textInput(['maxlength' => 45]) ?>
 
+<fieldset><legend>Address</legend>
     <?= $form->field($model, 'street')->textInput(['maxlength' => 225]) ?>
 
     <?= $form->field($model, 'area')->textInput(['maxlength' => 225]) ?>
@@ -27,6 +28,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'zip_code')->textInput() ?>
 
     <?= $form->field($model, 'country')->textInput(['maxlength' => 225]) ?>
+       </fieldset><hr>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => 225]) ?>
 
@@ -39,8 +41,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'updated_by')->textInput(['maxlength' => 45]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-        <?= Html::a('Back to Manage Customers', ['/customercontact/index'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-success']) ?>
+        <?= Html::a('Back to Manage Customers', ['/manage-customer/index'], ['class' => 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
