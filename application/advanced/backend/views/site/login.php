@@ -9,14 +9,15 @@ use yii\bootstrap\ActiveForm;
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<a href="index.php"><img src="images/b2c_logo_100e1.jpg"></a>
 <div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>Please fill out the following fields to login:</p>
 
     <div class="row">
-        <div class="col-lg-5">
+    <a class="col-lg-55" href="index.php?r=site%2Flogin"><img src="images/b2c_logo_100e1.jpg"></a>
+    <div align="center" class="col-lg-5">
+    <h1><?= Html::encode($this->title) ?></h1>
+
+        <p>Please fill out the following fields to login:</p>
+
             <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
                 <?= $form->field($model, 'username') ?>
                 <?= $form->field($model, 'password')->passwordInput() ?>
@@ -26,5 +27,5 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             <?php ActiveForm::end(); ?>
         </div>
-    </div>
+           </div>
 </div>
