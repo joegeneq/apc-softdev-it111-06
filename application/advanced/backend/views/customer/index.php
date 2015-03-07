@@ -7,15 +7,21 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\CustomerSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'List of Customers';
+
+$this->title = 'Customers Page';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customer-index">
+    <p><h3>Instructions:</h3></p>
+    <p>Press Alt + A, to add a new customer<br></p>
+    <p>Press Alt + V, to view Contact Persons<br></p>
+    <p>Press Alt + M, to Manage Customers<br></p>
+    <p>Press Alt + H, to return to Home Page<br></p>
 
     <p align="center">
-        <?= Html::a('Add Customer', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('View Contact Persons', ['/customercontact/index'], ['class' => 'btn btn-primary']) ?>
-         <?= Html::a('Manage Customer', ['/manage-customer/index'], ['class' => 'btn btn-danger']) ?>
+        <?= Html::a('Add Customer', ['create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
+        <?= Html::a('View Contact Persons', ['/customercontact/index'], ['class' => 'btn btn-primary','accesskey' => 'v']) ?>
+         <?= Html::a('Manage Customer', ['/manage-customer/index'], ['class' => 'btn btn-danger','accesskey' => 'm']) ?>
     </p><br>
 
     <h1 align="center"><?= Html::encode($this->title) ?></h1>
@@ -46,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 <p align="right">
-        <?= Html::a('Back to Home', ['/site/index'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Back to Home', ['/site/index'], ['class' => 'btn btn-primary','accesskey' => 'h']) ?>
 </p>
 
 

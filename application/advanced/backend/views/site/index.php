@@ -1,24 +1,37 @@
 <?php
 /* @var $this yii\web\View */
 
-$this->title = 'RBI Inventory System';
+$this->title = 'RBI Inventory System Home Page';
 ?>
 
+<p><h3>Instructions:</h3></p>
+    <p>Press Alt + C, to go to Customer Page<br></p>
+    <p>Press Alt + O, to go to Order Page<br></p>
+    <p>Press Alt + P, to go to Product Inventory Page<br></p>
+    <p>Press Alt + S, to go to Suppliers Page<br></p>
+    <p>Press Alt + T, to go to Transactions Page<br></p>
+
 <div class="site-index">
-   <div class="jumbotron">
+   
     <center>
-    <?php
-
-    $image_name = 'images/Customers.png';
-    $image_url = 'index.php?r=customer';
-
-    ?>
-
-    <a alt="Customer" href='<?php echo $image_url; ?>' border='0'><img src='<?php echo $image_name; ?>' onmouseover="this.src='images/Customers1.png'" onmouseout="this.src='images/Customers.png'" alt="Customers"></a>
-    <a href="index.php?r=order"><img src="images/Orders.png" onmouseover="this.src='images/Orders1.png'" onmouseout="this.src='images/Orders.png'" alt="Orders"></a>
-    <a href="index.php?r=product-inventory"><img src="images/Products.png" onmouseover="this.src='images/Products1.png'" onmouseout="this.src='images/Products.png'" alt="Products"></a>
-    <a href="index.php?r=supplier"><img src="images/Suppliers.png" onmouseover="this.src='images/Suppliers1.png'" onmouseout="this.src='images/Suppliers.png'" alt="Suppliers"></a>
-    <a href="index.php?r=transaction"><img src="images/Transactions.png" onmouseover="this.src='images/Transactions1.png'" onmouseout="this.src='images/Transactions.png'" alt="Transactions"></a>
+    <div>
+        <a href="index.php?r=customer" title="Customers" accesskey="c"><img src="images/Customers2.png" height="200" width="200"><h2>Customer</h2></a>
+        <br><br><br>
+    </div> 
+    <div>
+        <a href="index.php?r=order" title="Orders" accesskey="o"><img src="images/Orders2.png" height="200" width="200"><h2>Orders</h2></a>
+        <br><br><br>
+    </div> 
+    <div>
+        <a href="index.php?r=product-inventory" title="Product Inventory" accesskey="p"><img src="images/Products2.png" height="200" width="200"><h2>Product Inventory</h2></a>
+        <br><br><br>
+    </div>     
+    <div>
+        <a href="index.php?r=supplier" title="Suppliers"accesskey="s"><img src="images/Suppliers2.png" height="200" width="200"><h2>Suppliers</h2></a>
+        <br><br><br>
+    </div>     
+    <div>
+        <a href="index.php?r=transaction" title="Transactions" accesskey="t"><img src="images/Transactions2.png" height="200" width="200"><h2>Transactions</h2></a>
+    </div>     
     </center>
-   </div>
 </div>
