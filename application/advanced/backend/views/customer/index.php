@@ -9,12 +9,12 @@ use yii\grid\GridView;
 
 
 $this->title = 'Customers Page';
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customer-index">
     <p><h3>Instructions:</h3></p>
     <p>Press Alt + A, to add a new customer<br></p>
-    <p>Press Alt + V, to view Contact Persons<br></p>
+    <p>Press Alt + V, to View Contact Persons<br></p>
     <p>Press Alt + M, to Manage Customers<br></p>
     <p>Press Alt + H, to return to Home Page<br></p>
 
@@ -29,9 +29,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+       // 'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+          //  ['class' => 'yii\grid\SerialColumn'],
 
             //'id',
             'name',

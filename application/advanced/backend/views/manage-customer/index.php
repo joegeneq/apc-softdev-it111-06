@@ -8,10 +8,11 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Manage Customers';
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-customer-index">
-
+    <p><h3>Instructions:</h3></p>
+    <p>Press Alt + B, to return to Customers Page<br></p>
 
     <h1 align="center"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -41,6 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 <p align="right">
-     <?= Html::a('Back to List of Customers', ['customer/index'], ['class' => 'btn btn-primary']) ?>
+     <?= Html::a('Back to Customers Page', ['customer/index'], ['class' => 'btn btn-primary', 'accesskey'=> 'b']) ?>
+     
 </p>
 </div>

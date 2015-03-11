@@ -43,7 +43,9 @@ use yii\widgets\ActiveForm;
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-        <?= Html::a('Back to List of Customers', ['/customer/index'], ['class' => 'btn btn-primary']) ?>
+    </div>
+    <div>
+         <?= Html::a('Back to Customers Page', ['/customer/index'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

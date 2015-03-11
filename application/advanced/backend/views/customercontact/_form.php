@@ -35,7 +35,9 @@ use app\models\customer;
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-        <?= Html::a('Back to Contact Persons', ['/customercontact/index'], ['class' => 'btn btn-primary']) ?>
+    </div>
+    <div>
+         <?= Html::a('Back to Contact Persons Page', ['/customercontact/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

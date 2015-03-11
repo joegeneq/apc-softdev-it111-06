@@ -2,6 +2,7 @@
 /* @var $this yii\web\View */
 
 $this->title = 'RBI Inventory System Home Page';
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <p><h3>Instructions:</h3></p>
