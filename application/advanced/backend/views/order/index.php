@@ -7,15 +7,19 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\OrderSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'List of Orders';
+
+$this->title = 'Orders Page';
 // $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="order-index">
-
+    <p><h3>Instructions:</h3></p>
+    <p>Press Alt + A, to Add a new Order<br></p>
+    <p>Press Alt + M, to Manage Orders<br></p>
+    <p>Press Alt + H, to return to Home Page<br></p>
 
     <center><p>
-        <?= Html::a('Create Order', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Manage Orders', ['manage-order/index'], ['class' => 'btn btn-danger']) ?>
+        <?= Html::a('Add Order', ['create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
+        <?= Html::a('Manage Orders', ['manage-order/index'], ['class' => 'btn btn-danger','accesskey' => 'm']) ?>
     </p><br>
 
 
@@ -50,6 +54,6 @@ $this->title = 'List of Orders';
     ]); ?>
 
     <p align="right">
-                <?= Html::a('Back to Home', ['site/index'], ['class' => 'btn btn-primary']) ?>
+                <?= Html::a('Back to Home', ['site/index'], ['class' => 'btn btn-primary','accesskey' => 'h']) ?>
             </p>
 </div>

@@ -7,10 +7,12 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\manageProductInventorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Manage Inventory';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Manage Inventory Page';
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-product-inventory-index">
+    <p><h3>Instructions:</h3></p>
+    <p>Press Alt + B, to return to Product Inventory Page<br></p>
 
     <center><h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?></center>
@@ -43,6 +45,6 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
 
     <p align="right">
-        <?= Html::a('Back to Product Inventory', ['product-inventory/index'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Back to Product Inventory', ['product-inventory/index'], ['class' => 'btn btn-primary', 'accesskey'=> 'b']) ?>
     </p>
 </div>
