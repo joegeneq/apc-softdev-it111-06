@@ -8,7 +8,7 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Product Inventory';
-$this->params['breadcrumbs'][] = $this->title;
+// $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="productinventory-index">
 
@@ -23,20 +23,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+       // 'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+         //   ['class' => 'yii\grid\SerialColumn'],
             [
                 'attribute'=>'supplier_id',
                 'value'=>'supplier.name',
             ],
-            'id',
+           // 'id',
             'name',
            // 'description',
             'qoh',
-            'serial_no',
+          //  'serial_no',
              'price',
-            // 'status',
+             'status',
             // 'create_date',
             // 'update_date',
             // 'created_by',

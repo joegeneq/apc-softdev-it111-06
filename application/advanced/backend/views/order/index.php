@@ -8,7 +8,7 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'List of Orders';
-$this->params['breadcrumbs'][] = $this->title;
+// $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="order-index">
 
@@ -24,9 +24,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+     //   'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+         //   ['class' => 'yii\grid\SerialColumn'],
             
             [
             'attribute' => 'customer_id',
@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'value' => 'productinventory.name',
             ],
 
-            'id',
+           // 'id',
             'date',
             'status',
             'num_items',
