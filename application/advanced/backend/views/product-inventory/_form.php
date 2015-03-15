@@ -43,7 +43,7 @@ use app\models\supplier
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
    
     
-        <?= Html::a('Back to Product Inventory', ['product-inventory/index'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Back to Product Inventory', ['product-inventory/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
     
 
     </div>
