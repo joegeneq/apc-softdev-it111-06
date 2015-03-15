@@ -5,6 +5,13 @@ Yii Framework 2 Change Log
 -----------------------
 
 - Bug #7529: Fixed `yii\web\Response::sendContentAsFile()` that was broken in 2.0.3 (samdark)
+- Bug #7603: Fixed escape characters in `FormatConverter` to work with unicode characters (maddoger, cebe)
+- Enh #6895: Added `ignoreCategories` config option for message command to ignore categories specified (samdark)
+- Enh #7488: Added `StringHelper::explode` to perform explode with trimming and skipping of empty elements (SilverFire, nineinchnick, creocoder, samdark)
+- Enh #7562: `yii help` now lists all sub-commands by default (callmez)
+- Enh #7571: HTTP status 500 and "An internal server error occurred." are now returned in case there was an exception in layout and `YII_DEBUG` is false (samdark)
+- Enh: Added `yii\helper\Console::wrapText()` method to wrap indented text by console window width and used it in `yii help` command (cebe)
+- Chg: Updated dependency to `cebe/markdown` to version `1.1.x` (cebe)
 
 
 2.0.3 March 01, 2015
