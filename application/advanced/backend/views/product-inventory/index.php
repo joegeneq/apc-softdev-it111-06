@@ -35,7 +35,15 @@ $this->title = 'Product Inventory Page';
                 'value'=>'supplier.name',
             ],
            // 'id',
-            'name',
+            //'name',
+            [
+            'attribute' => 'name',
+            'format' => 'raw',
+            'value'=>function ($data) {
+            return Html::a(Html::encode($data->name), array('view', 'id'=>$data->id, 'supplier_id'=>$data->supplier_id));
+
+        },
+           ],
            // 'description',
             'qoh',
           //  'serial_no',
