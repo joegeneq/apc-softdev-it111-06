@@ -31,7 +31,13 @@ $this->title = 'Contact Persons Page';
           //  ['class' => 'yii\grid\SerialColumn'],
 
             //'id',
-            'name',
+            [
+            'attribute' => 'name',
+            'format' => 'raw',
+            'value'=>function ($data) {
+            return Html::a(Html::encode($data->name), array('view', 'id'=>$data->id, 'customer_id'=>$data->customer_id));
+        },
+           ],
             'contact_no',
             'email:email',
             //'create_date',

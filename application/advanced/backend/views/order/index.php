@@ -31,7 +31,13 @@ $this->title = 'Orders Page';
      //   'filterModel' => $searchModel,
         'columns' => [
          //   ['class' => 'yii\grid\SerialColumn'],
-            
+            [
+            'attribute' => 'id',
+            'format' => 'raw',
+            'value'=>function ($data) {
+           return Html::a(Html::encode($data->id), array('view', 'id'=>$data->id, 'customer_id'=>$data->customer_id, 'productinventory_id'=>$data->productinventory_id));
+        },
+           ],
             [
             'attribute' => 'customer_id',
             'value' => 'customer.name',
@@ -42,11 +48,13 @@ $this->title = 'Orders Page';
             'value' => 'productinventory.name',
             ],
 
-           // 'id',
+          // 'id',
             'date',
             'status',
             'num_items',
             'amount',
+           // 'id',
+            
             // 'discount',
             
            // ['class' => 'yii\grid\ActionColumn'],

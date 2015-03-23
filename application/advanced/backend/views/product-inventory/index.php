@@ -27,23 +27,25 @@ $this->title = 'Product Inventory Page';
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
+        
        // 'filterModel' => $searchModel,
         'columns' => [
          //   ['class' => 'yii\grid\SerialColumn'],
+         [
+          'attribute' => 'name',
+           'format' => 'raw',
+           'value'=>function ($data) {
+           return Html::a(Html::encode($data->name), array('view', 'id'=>$data->id, 'supplier_id'=>$data->supplier_id));
+
+       },
+               ],
             [
                 'attribute'=>'supplier_id',
                 'value'=>'supplier.name',
             ],
            // 'id',
             //'name',
-            [
-            'attribute' => 'name',
-            'format' => 'raw',
-            'value'=>function ($data) {
-            return Html::a(Html::encode($data->name), array('view', 'id'=>$data->id, 'supplier_id'=>$data->supplier_id));
-
-        },
-           ],
+           
            // 'description',
             'qoh',
           //  'serial_no',
