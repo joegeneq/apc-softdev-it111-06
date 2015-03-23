@@ -38,7 +38,7 @@ $this->title = 'Customers Page';
             'attribute' => 'name',
             'format' => 'raw',
             'value'=>function ($data) {
-            return Html::a(Html::encode($data->name), array('customer/view', 'id'=>$data->id));
+            return Html::a(Html::encode($data->name), array('view', 'id'=>$data->id));
         },
            ],
             'contact_no',
