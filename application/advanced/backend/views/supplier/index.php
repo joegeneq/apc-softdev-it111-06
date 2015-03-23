@@ -33,7 +33,13 @@ $this->title = 'Suppliers Page';
         //    ['class' => 'yii\grid\SerialColumn'],
 
            // 'id',
-            'name',
+        [
+            'attribute' => 'name',
+            'format' => 'raw',
+            'value'=>function ($data) {
+            return Html::a(Html::encode($data->name), array('supplier/view', 'id'=>$data->id));
+        },
+           ],
             'contact_no',
             'contact_person',
           //  'house_no',
