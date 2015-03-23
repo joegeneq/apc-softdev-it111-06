@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="row">
     <a class="col-lg-55" href="index.php?r=site%2Flogin"><img src="images/b2c_logo_100e1.jpg"></a>
-    <div align="center" class="col-lg-5">
+    <div align="center" class="col-lg-56">
     <h1><?= Html::encode($this->title) ?></h1>
 
         <p>Please fill out the following fields to login:</p>
