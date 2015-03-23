@@ -62,6 +62,7 @@ $this->title = 'Orders Page';
     ]); ?>
 
     <p align="right">
-                <?= Html::a('Back to Home', ['site/index'], ['class' => 'btn btn-primary','accesskey' => 'h']) ?>
-            </p>
+        <?= Html::a('Generate Orders', ['generated-order/index'], ['class' => 'btn btn-success','accesskey' => 'h']) ?>
+        <?= Html::a('Back to Home', ['site/index'], ['class' => 'btn btn-primary','accesskey' => 'h']) ?>
+    </p>
 </div>
