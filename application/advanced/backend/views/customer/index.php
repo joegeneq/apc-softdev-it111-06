@@ -34,7 +34,13 @@ $this->title = 'Customers Page';
           //  ['class' => 'yii\grid\SerialColumn'],
 
             //'id',
-            'name',
+           [
+            'attribute' => 'name',
+            'format' => 'raw',
+            'value'=>function ($data) {
+            return Html::a(Html::encode($data->name), array('customer/view', 'id'=>$data->id));
+        },
+           ],
             'contact_no',
             //'house_no',
             //'street',
@@ -48,7 +54,7 @@ $this->title = 'Customers Page';
             // 'created_by',
              //'updated_by',
 
-            //['class' => 'yii\grid\ActionColumn'],
+          //  ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 <p align="right">
