@@ -32,10 +32,10 @@ AppAsset::register($this);
                 ],
             ]);
             $menuItems = [
-                ['alt' => 'Press Alt + C, to go to Customer Page','label' => 'Customer', 'url' => ['/customer/index']],
-                ['alt' => 'Press Alt + S, to go to Suppliers Page','label' => 'Suppliers', 'url' => ['/supplier/index']],
-                ['alt' => 'Press Alt + P, to go to Product Inventory Page','label' => 'Product Inventory', 'url' => ['/product-inventory/index']],
-                ['alt' => 'ress Alt + O, to go to Order Page','label' => 'Orders', 'url' => ['/order/index']],
+                ['label' => 'Customer','alt' => 'Customer, Alt + C', 'url' => ['/customer/index'],['accesskey'=>'c']],
+                ['label' => 'Suppliers','alt' => 'Suppliers Page, Alt + S', 'url' =>  ['/supplier/index'],['accesskey'=>'s']],
+                ['label' => 'Product Inventory','alt' => 'Product Inventory Page, Alt + P', 'url' => ['/product-inventory/index'],['accesskey'=>'p']],
+                ['label' => 'Orders','alt' => 'Order Page, Alt + O', 'url' => ['/order/index'],['accesskey'=>'o']],
 
             ];
             if (Yii::$app->user->isGuest) {
