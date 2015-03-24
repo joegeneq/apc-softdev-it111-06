@@ -42,7 +42,6 @@ $this->title = 'Orders Page';
             'attribute' => 'customer_id',
             'value' => 'customer.name',
             ],
-
             [
             'attribute' => 'productinventory_id',
             'value' => 'productinventory.name',
