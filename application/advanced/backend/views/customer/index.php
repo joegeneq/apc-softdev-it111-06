@@ -12,17 +12,25 @@ $this->title = 'Customers Page';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customer-index">
-    <p><h3>Instructions:</h3></p>
-    <p>Press Alt + A, to Add a new Customer<br></p>
-    <p>Press Alt + V, to View Contact Persons<br></p>
-    <p>Press Alt + M, to Manage Customers<br></p>
-    <p>Press Alt + H, to return to Home Page<br></p>
+    <p hidden><h3 hidden>Instructions:</h3></p>
+    <p hidden>Press Alt + A, to Add a new Customer<br></p>
+    <p hidden>Press Alt + V, to View Contact Persons<br></p>
+    <p hidden>Press Alt + M, to Manage Customers<br></p>
+    <p hidden>Press Alt + H, to return to Home Page<br></p>
 
-    <p align="center">
+
+    
+    <center><p> 
         <?= Html::a('Add Customer', ['create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
-        <?= Html::a('View Contact Persons', ['/customercontact/index'], ['class' => 'btn btn-primary','accesskey' => 'v']) ?>
-         <?= Html::a('Manage Customer', ['/manage-customer/index'], ['class' => 'btn btn-danger','accesskey' => 'm']) ?>
-    </p><br>
+      </p>
+    <p>
+        <?= Html::a('View Contact Persons', ['/customercontact/index'], ['class' => 'btn btn-primary','accesskey' => 'v', 'width'=>'20px', 'height'=>'20px']) ?>
+      </p>
+    <p>
+         <?= Html::a('Manage Customer', ['/manage-customer/index'], ['class' => 'btn btn-danger','accesskey' => 'm', 'width'=>'20px', 'height'=>'20px']) ?>   
+      </p></center>
+    <br>
+
 
     <h1 align="center"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

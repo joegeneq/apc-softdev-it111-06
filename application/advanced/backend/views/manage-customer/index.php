@@ -11,8 +11,8 @@ $this->title = 'Manage Customers Page';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-customer-index">
-    <p><h3>Instructions:</h3></p>
-    <p>Press Alt + B, to return to Customers Page<br></p>
+    <p hidden><h3>Instructions:</h3></p>
+    <p hidden>Press Alt + B, to return to Customers Page<br></p>
 
     <h1 align="center"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
