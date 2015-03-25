@@ -21,6 +21,14 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
+
+    <p>
+        <a href="index.php" accesskey="h" hidden>Home</a>
+        <a href="index.php?r=customer%2Findex" accesskey="c" hidden>Customer</a>
+        <a href="index.php?r=supplier%2Findex" accesskey="s" hidden>Supplier</a>
+        <a href="index.php?r=product-inventory%2Findex" accesskey="p" hidden>Product Inventory</a>
+        <a href="index.php?r=order%2Findex" accesskey="s" hidden>Orders</a>
+    </p>
     <?php $this->beginBody() ?>
     <div class="wrap">
         <?php
@@ -53,6 +61,8 @@ AppAsset::register($this);
             ]);
             NavBar::end();
         ?>
+
+
 
         <div class="container">
         <?= Breadcrumbs::widget([
