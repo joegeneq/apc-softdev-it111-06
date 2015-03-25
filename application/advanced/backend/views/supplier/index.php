@@ -12,10 +12,10 @@ $this->title = 'Suppliers Page';
 // $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="supplier-index">
-    <p><h3>Instructions:</h3></p>
-    <p>Press Alt + A, to Add a new Supplier<br></p>
-    <p>Press Alt + M, to Manage Suppliers<br></p>
-    <p>Press Alt + H, to return to Home Page<br></p>
+    <p hidden><h3 hidden>Instructions:</h3></p>
+    <p hidden>Press Alt + A, to Add a new Supplier<br></p>
+    <p hidden>Press Alt + M, to Manage Suppliers<br></p>
+    <p hidden>Press Alt + H, to return to Home Page<br></p>
 
     <p align="center">
         <?= Html::a('Add Supplier', ['create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
