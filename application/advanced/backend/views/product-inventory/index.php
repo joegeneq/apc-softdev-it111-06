@@ -11,10 +11,10 @@ $this->title = 'Product Inventory Page';
 // $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="productinventory-index">
-    <p><h3>Instructions:</h3></p>
-    <p>Press Alt + A, to Add a new Product<br></p>
-    <p>Press Alt + M, to Manage Inventory<br></p>
-    <p>Press Alt + H, to return to Home Page<br></p>
+    <p hidden><h3 hidden>Instructions:</h3></p>
+    <p hidden>Press Alt + A, to Add a new Product<br></p>
+    <p hidden>Press Alt + M, to Manage Inventory<br></p>
+    <p hidden>Press Alt + H, to return to Home Page<br></p>
 
     <p align="center">
         <?= Html::a('Add Product', ['create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>

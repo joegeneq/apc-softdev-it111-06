@@ -11,8 +11,8 @@ $this->title = 'Manage Inventory Page';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-product-inventory-index">
-    <p><h3>Instructions:</h3></p>
-    <p>Press Alt + B, to return to Product Inventory Page<br></p>
+    <p hidden><h3 hidden>Instructions:</h3></p>
+    <p hidden>Press Alt + B, to return to Product Inventory Page<br></p>
 
     <center><h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?></center>

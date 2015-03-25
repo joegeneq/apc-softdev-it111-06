@@ -11,10 +11,10 @@ $this->title = 'Add Product';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="productinventory-create">
-	<p><h3>Instructions:</h3></p>
-	<p>Press Down Arrow key, to read the given fields</p>
-	<p>Press Enter, to edit given fields</p>
-    <p>Press Alt + B, to return to Product Inventory Page<br></p>
+	<p hidden><h3 hidden>Instructions:</h3></p>
+	<p hidden>Press Down Arrow key, to read the given fields</p>
+	<p hidden>Press Enter, to edit given fields</p>
+    <p hidden>Press Alt + B, to return to Product Inventory Page<br></p>
 
     <h1><?= Html::encode($this->title) ?></h1>
 
