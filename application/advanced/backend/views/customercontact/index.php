@@ -11,11 +11,11 @@ $this->title = 'Contact Persons Page';
 // $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customercontact-index">
-    <p><h3>Instructions:</h3></p>
-    <p>Press Alt + A, to add a new Contact Person<br></p>
-    <p>Press Alt + M, to Manage Contact Persons<br></p>
-    <p>Press Alt + B, to return to Customers Page<br></p>
-    <p>Press Alt + H, to return to Home Page<br></p>
+    <p hidden><h3 hidden>Instructions:</h3></p>
+    <p hidden>Press Alt + A, to add a new Contact Person<br></p>
+    <p hidden>Press Alt + M, to Manage Contact Persons<br></p>
+    <p hidden>Press Alt + B, to return to Customers Page<br></p>
+    <p hidden>Press Alt + H, to return to Home Page<br></p>
 
     <p align="center">
         <?= Html::a('Add Contact Person', ['create'], ['class' => 'btn btn-success' ,'accesskey' => 'a']) ?>
