@@ -17,8 +17,7 @@ use app\models\productinventory
     
     <?= $form->field($model, 'date')->textInput() ?><p><b><i>* Date format: YYYY-MM-DD</b></i></p><br>
 
-    <?= $form->field($model, 'status')->textInput(['maxlength' => 45]) ?><p><b><i>*Input: Pending, Confirmed or Cancelled</b></i></p><br>
-
+    <?= $form->field($model, 'status')->dropDownList(array('1'=>'Pending','2'=>'Confirmed', '3'=>'Cancelled', '4'=>'For Replacement'), array('options' => array('1'=>array('selected'=>true)))); ?>
 
     <?= $form->field($model, 'num_items')->textInput() ?>
 
