@@ -43,6 +43,6 @@ $this->title = 'Manage Customers Page';
     ]); ?>
 <p align="right">
      <?= Html::a('Back to Customers Page', ['customer/index'], ['class' => 'btn btn-primary', 'accesskey'=> 'b']) ?>
-     
+    
 </p>
 </div>
