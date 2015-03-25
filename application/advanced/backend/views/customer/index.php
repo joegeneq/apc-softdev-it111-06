@@ -18,16 +18,14 @@ $this->title = 'Customers Page';
     <p hidden>Press Alt + M, to Manage Customers<br></p>
     <p hidden>Press Alt + H, to return to Home Page<br></p>
 
-
-    
     <center><p> 
         <?= Html::a('Add Customer', ['create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
       </p>
     <p>
-        <?= Html::a('View Contact Persons', ['/customercontact/index'], ['class' => 'btn btn-primary','accesskey' => 'v', 'width'=>'20px', 'height'=>'20px']) ?>
+        <?= Html::a('View Contact Persons', ['/customercontact/index'], ['class' => 'btn btn-primary','accesskey' => 'v']) ?>
       </p>
     <p>
-         <?= Html::a('Manage Customer', ['/manage-customer/index'], ['class' => 'btn btn-danger','accesskey' => 'm', 'width'=>'20px', 'height'=>'20px']) ?>   
+         <?= Html::a('Manage Customer', ['/manage-customer/index'], ['class' => 'btn btn-danger','accesskey' => 'm']) ?>   
       </p></center>
     <br>
 
