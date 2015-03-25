@@ -12,10 +12,10 @@ $this->title = 'Orders Page';
 // $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="order-index">
-    <p><h3>Instructions:</h3></p>
-    <p>Press Alt + A, to Add a new Order<br></p>
-    <p>Press Alt + M, to Manage Orders<br></p>
-    <p>Press Alt + H, to return to Home Page<br></p>
+    <p hidden><h3 hidden>Instructions:</h3></p>
+    <p hidden>Press Alt + A, to Add a new Order<br></p>
+    <p hidden>Press Alt + M, to Manage Orders<br></p>
+    <p hidden>Press Alt + H, to return to Home Page<br></p>
 
     <center><p>
         <?= Html::a('Add Order', ['create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
