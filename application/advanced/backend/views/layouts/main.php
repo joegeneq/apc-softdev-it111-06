@@ -32,19 +32,19 @@ AppAsset::register($this);
                 ],
             ]);
             $menuItems = [
-                ['label' => 'Customer','alt' => 'Customer, Alt + C', 'url' => ['/customer/index'],['accesskey'=>'c']],
-                ['label' => 'Suppliers','alt' => 'Suppliers Page, Alt + S', 'url' =>  ['/supplier/index'],['accesskey'=>'s']],
-                ['label' => 'Product Inventory','alt' => 'Product Inventory Page, Alt + P', 'url' => ['/product-inventory/index'],['accesskey'=>'p']],
-                ['label' => 'Orders','alt' => 'Order Page, Alt + O', 'url' => ['/order/index'],['accesskey'=>'o']],
-
+                
             ];
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
             } else {
+                $menuItems[] =   ['label' => 'Customer','alt' => 'Customer, Alt + C', 'url' => ['/customer/index'],['accesskey'=>'c']];
+              $menuItems[] =  ['label' => 'Suppliers','alt' => 'Suppliers Page, Alt + S', 'url' =>  ['/supplier/index'],['accesskey'=>'s']];
+             $menuItems[] =   ['label' => 'Product Inventory','alt' => 'Product Inventory Page, Alt + P', 'url' => ['/product-inventory/index'],['accesskey'=>'p']];
+              $menuItems[] =  ['label' => 'Orders','alt' => 'Order Page, Alt + O', 'url' => ['/order/index'],['accesskey'=>'o']];
                 $menuItems[] = [
                     'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],
-                    'linkOptions' => ['data-method' => 'post']
+                    'linkOptions' => ['data-method' => 'post']   
                 ];
             }
             echo Nav::widget([
