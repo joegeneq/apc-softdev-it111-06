@@ -24,7 +24,7 @@ use app\models\supplier
 
     <?= $form->field($model, 'price')->textInput(['maxlength' => 10]) ?>
 
-    <?= $form->field($model, 'status')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'status')->dropDownList(array('1'=>'Available','2'=>'Out of stock'), array('options' => array('1'=>array('selected'=>true)))); ?>
 
     <?= $form->field($model, 'create_date')->textInput() ?><p><b><i>* Date format: YYYY-MM-DD</b></i></p><br>
 
