@@ -13,7 +13,7 @@ $this->title = 'Login';
 <div class="site-login">
 
     <div class="row">
-    <a class="col-lg-55" href="index.php?r=site%2Flogin"><img src="images/b2c_logo_100e1.jpg"></a>
+    <a class="col-lg-55" href="index.php?r=site%2Flogin"><img src="images/b2c_logo_100e1.jpg" alt="RBI Logo"></a>
     <div align="center" class="col-lg-56">
     <h1><?= Html::encode($this->title) ?></h1>
 
