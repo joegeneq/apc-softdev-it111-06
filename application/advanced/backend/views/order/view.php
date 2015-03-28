@@ -7,15 +7,15 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Order */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Orders', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Orders', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="order-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id, 'customer_id' => $model->customer_id, 'productinventory_id' => $model->productinventory_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Update', ['update', 'id' => $model->id, 'customer_id' => $model->customer_id, 'productinventory_id' => $model->productinventory_id], ['class' => 'btn btn-primary','accesskey'=>'u']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id, 'customer_id' => $model->customer_id, 'productinventory_id' => $model->productinventory_id], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -38,5 +38,5 @@ $this->params['breadcrumbs'][] = $this->title;
             'productinventory.name',
         ],
     ]) ?>
-<?= Html::a('Back to Orders', ['order/index'], ['class' => 'btn btn-primary']) ?>
+<?= Html::a('Back to Orders', ['order/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
 </div>
