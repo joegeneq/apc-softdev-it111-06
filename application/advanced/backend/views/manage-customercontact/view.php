@@ -7,15 +7,15 @@ use yii\widgets\DetailView;
 /* @var $model app\models\manageCustomercontact */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Manage Contact Person', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Manage Contact Person', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-customercontact-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id, 'customer_id' => $model->customer_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Update', ['update', 'id' => $model->id, 'customer_id' => $model->customer_id], ['class' => 'btn btn-primary','accesskey'=>'u']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id, 'customer_id' => $model->customer_id], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -39,5 +39,5 @@ $this->params['breadcrumbs'][] = $this->title;
             'customer_id',
         ],
     ]) ?>
-<?= Html::a('Back to Manage Contact Persons', ['/manage-customercontact/index'], ['class' => 'btn btn-primary']) ?>
+<?= Html::a('Back to Manage Contact Persons', ['/manage-customercontact/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
 </div>
