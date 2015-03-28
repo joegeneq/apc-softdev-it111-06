@@ -38,7 +38,7 @@ use app\models\productinventory
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-success']) ?>
-        <?= Html::a('Back to Manage Orders', ['/manage-order/index'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Back to Manage Orders', ['/manage-order/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
