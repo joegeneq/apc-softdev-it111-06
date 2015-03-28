@@ -6,9 +6,9 @@ use yii\helpers\Html;
 /* @var $model app\models\managesupplier */
 
 $this->title = 'Update Supplier: ' . ' ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Manage Suppliers', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+//$this->params['breadcrumbs'][] = ['label' => 'Manage Suppliers', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
+//$this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="managesupplier-update">
 
