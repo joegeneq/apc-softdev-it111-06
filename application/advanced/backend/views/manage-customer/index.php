@@ -12,9 +12,7 @@ $this->title = 'Manage Customers';
 ?>
 <div class="manage-customer-index">
     <center>
-    <p>
-        <?= Html::a('Add Customer', ['customer/create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
-    </p>
+    
 
     <h1><?= Html::encode($this->title) ?></h1></center>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

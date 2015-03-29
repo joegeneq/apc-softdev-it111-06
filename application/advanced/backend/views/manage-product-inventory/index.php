@@ -12,9 +12,7 @@ $this->title = 'Manage Productinventories';
 ?>
 <div class="manage-productinventory-index">
   <center>
-    <p>
-        <?= Html::a('Add Product Inventory', ['product-inventory/create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
-    </p>
+ 
 
     <h1><?= Html::encode($this->title) ?></h1></center>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
