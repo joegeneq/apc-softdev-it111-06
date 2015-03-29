@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\managesupplier */
+/* @var $model app\models\manageSupplier */
 
-$this->title = 'Create Managesupplier';
-$this->params['breadcrumbs'][] = ['label' => 'Managesuppliers', 'url' => ['index']];
+$this->title = 'Create Manage Supplier';
+$this->params['breadcrumbs'][] = ['label' => 'Manage Suppliers', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="managesupplier-create">
+<div class="manage-supplier-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

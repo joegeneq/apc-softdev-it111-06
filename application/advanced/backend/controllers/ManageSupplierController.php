@@ -3,36 +3,20 @@
 namespace backend\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
-use common\models\LoginForm;
-use app\models\managesupplier;
+use app\models\manageSupplier;
 use app\models\manageSupplierSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ManageSupplierController implements the CRUD actions for managesupplier model.
+ * ManageSupplierController implements the CRUD actions for manageSupplier model.
  */
 class ManageSupplierController extends Controller
 {
     public function behaviors()
     {
         return [
-          'access' => [
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['login', 'error'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['logout', 'index', 'create', 'view', 'update'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -43,7 +27,7 @@ class ManageSupplierController extends Controller
     }
 
     /**
-     * Lists all managesupplier models.
+     * Lists all manageSupplier models.
      * @return mixed
      */
     public function actionIndex()
@@ -58,7 +42,7 @@ class ManageSupplierController extends Controller
     }
 
     /**
-     * Displays a single managesupplier model.
+     * Displays a single manageSupplier model.
      * @param integer $id
      * @return mixed
      */
@@ -70,13 +54,13 @@ class ManageSupplierController extends Controller
     }
 
     /**
-     * Creates a new managesupplier model.
+     * Creates a new manageSupplier model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new managesupplier();
+        $model = new manageSupplier();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -88,7 +72,7 @@ class ManageSupplierController extends Controller
     }
 
     /**
-     * Updates an existing managesupplier model.
+     * Updates an existing manageSupplier model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -107,7 +91,7 @@ class ManageSupplierController extends Controller
     }
 
     /**
-     * Deletes an existing managesupplier model.
+     * Deletes an existing manageSupplier model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -120,15 +104,15 @@ class ManageSupplierController extends Controller
     }
 
     /**
-     * Finds the managesupplier model based on its primary key value.
+     * Finds the manageSupplier model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return managesupplier the loaded model
+     * @return manageSupplier the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = managesupplier::findOne($id)) !== null) {
+        if (($model = manageSupplier::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
