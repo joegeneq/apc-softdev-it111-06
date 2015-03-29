@@ -11,7 +11,7 @@ use Yii;
  * @property string $name
  * @property string $description
  * @property integer $qoh
- * @property string $items_sold
+ * @property integer $items_sold
  * @property string $serial_no
  * @property string $price
  * @property string $status
@@ -38,11 +38,11 @@ class Productinventory extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'description', 'qoh', 'items_sold', 'serial_no', 'price', 'status', 'supplier_id'], 'required'],
-            [['qoh', 'supplier_id'], 'integer'],
+            [['qoh', 'items_sold', 'supplier_id'], 'integer'],
             [['price'], 'number'],
             [['create_date'], 'safe'],
             [['name', 'description'], 'string', 'max' => 225],
-            [['items_sold', 'serial_no', 'status'], 'string', 'max' => 45]
+            [['serial_no', 'status'], 'string', 'max' => 45]
         ];
     }
 

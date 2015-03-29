@@ -18,8 +18,8 @@ class ProductInventorySearch extends Productinventory
     public function rules()
     {
         return [
-            [['id', 'qoh', 'supplier_id'], 'integer'],
-            [['name', 'description', 'items_sold', 'serial_no', 'status', 'create_date'], 'safe'],
+            [['id', 'qoh', 'items_sold', 'supplier_id'], 'integer'],
+            [['name', 'description', 'serial_no', 'status', 'create_date'], 'safe'],
             [['price'], 'number'],
         ];
     }
@@ -59,6 +59,7 @@ class ProductInventorySearch extends Productinventory
         $query->andFilterWhere([
             'id' => $this->id,
             'qoh' => $this->qoh,
+            'items_sold' => $this->items_sold,
             'price' => $this->price,
             'create_date' => $this->create_date,
             'supplier_id' => $this->supplier_id,
@@ -66,7 +67,6 @@ class ProductInventorySearch extends Productinventory
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'items_sold', $this->items_sold])
             ->andFilterWhere(['like', 'serial_no', $this->serial_no])
             ->andFilterWhere(['like', 'status', $this->status]);
 

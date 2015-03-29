@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'qoh')->textInput() ?>
 
-    <?= $form->field($model, 'items_sold')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'items_sold')->textInput() ?>
 
     <?= $form->field($model, 'serial_no')->textInput(['maxlength' => true]) ?>
 
