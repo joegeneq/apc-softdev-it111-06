@@ -7,15 +7,15 @@ use yii\widgets\DetailView;
 /* @var $model app\models\manageCustomer */
 
 $this->title = $model->name;
-//$this->params['breadcrumbs'][] = ['label' => 'Manage Customers', 'url' => ['index']];
-//$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = ['label' => 'Manage Customers', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-customer-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary','accesskey'=> 'u']) ?>
+        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -33,16 +33,13 @@ $this->title = $model->name;
             'contact_no',
             'house_no',
             'street',
-            'area',
             'city',
             'zip_code',
             'country',
             'email:email',
+            'contact_person',
             'create_date',
-            'update_date',
-            'created_by',
-            'updated_by',
         ],
     ]) ?>
-<?= Html::a('Back to Manage Customers', ['manage-customer/index'], ['class' => 'btn btn-primary','accesskey'=> 'b']) ?>
+
 </div>

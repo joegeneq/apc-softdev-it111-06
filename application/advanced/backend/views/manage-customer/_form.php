@@ -12,37 +12,28 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => 225]) ?>
+    <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'contact_no')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'contact_no')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'house_no')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'house_no')->textInput(['maxlength' => true]) ?>
 
-<fieldset><legend>Address</legend>
-    <?= $form->field($model, 'street')->textInput(['maxlength' => 225]) ?>
+    <?= $form->field($model, 'street')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'area')->textInput(['maxlength' => 225]) ?>
-
-    <?= $form->field($model, 'city')->textInput(['maxlength' => 225]) ?>
+    <?= $form->field($model, 'city')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'zip_code')->textInput() ?>
 
-    <?= $form->field($model, 'country')->textInput(['maxlength' => 225]) ?>
-       </fieldset><hr>
+    <?= $form->field($model, 'country')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'email')->textInput(['maxlength' => 225]) ?>
+    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'create_date')->textInput() ?><p><b><i>* Date format: YYYY-MM-DD</b></i></p><br>
+    <?= $form->field($model, 'contact_person')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'update_date')->textInput() ?><p><b><i>* Date format: YYYY-MM-DD</b></i></p><br>
-
-    <?= $form->field($model, 'created_by')->textInput(['maxlength' => 45]) ?>
-
-    <?= $form->field($model, 'updated_by')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'create_date')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-success']) ?>
-        <?= Html::a('Back to Manage Customers', ['/manage-customer/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
