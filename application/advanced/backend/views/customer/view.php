@@ -7,8 +7,8 @@ use yii\widgets\DetailView;
 /* @var $model backend\models\Customer */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Customers', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Customers', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customer-view">
 
@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'country',
             'email:email',
             'contact_person',
-            'create_date',
+           // 'create_date',
             'type',
         ],
     ]) ?>
