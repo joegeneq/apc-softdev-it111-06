@@ -12,14 +12,14 @@ $this->title = 'Product Inventory Page';
 ?>
 <div class="productinventory-index">
 
-    <p align="center">
+    <center><p>
         <?= Html::a('Add Product', ['create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
         <?= Html::a('Manage Inventory', ['manage-product-inventory/index'], ['class' => 'btn btn-danger','accesskey' => 'm']) ?>   
     </p><br>
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
+    </center>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         //'filterModel' => $searchModel,
