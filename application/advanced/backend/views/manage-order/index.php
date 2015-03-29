@@ -38,6 +38,6 @@ $this->title = 'Manage Orders';
         ],
     ]); ?>
 <p align="right">
-        <?= Html::a('Back to Order', ['/order/index'], ['class' => 'btn btn-primary','accesskey' => 'b']) ?>
+        <?= Html::a('Back to Orders Page', ['/order/index'], ['class' => 'btn btn-primary','accesskey' => 'b']) ?>
 </p>
 </div>
