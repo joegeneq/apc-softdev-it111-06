@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\CustomerSearch */
+/* @var $model backend\models\CustomerSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -25,8 +25,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'street') ?>
 
-    <?php // echo $form->field($model, 'area') ?>
-
     <?php // echo $form->field($model, 'city') ?>
 
     <?php // echo $form->field($model, 'zip_code') ?>
@@ -35,13 +33,9 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'email') ?>
 
+    <?php // echo $form->field($model, 'contact_person') ?>
+
     <?php // echo $form->field($model, 'create_date') ?>
-
-    <?php // echo $form->field($model, 'update_date') ?>
-
-    <?php // echo $form->field($model, 'created_by') ?>
-
-    <?php // echo $form->field($model, 'updated_by') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
