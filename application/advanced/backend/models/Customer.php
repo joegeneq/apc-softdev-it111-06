@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 
@@ -12,17 +12,13 @@ use Yii;
  * @property string $contact_no
  * @property string $house_no
  * @property string $street
- * @property string $area
  * @property string $city
  * @property integer $zip_code
  * @property string $country
  * @property string $email
+ * @property string $contact_person
  * @property string $create_date
- * @property string $update_date
- * @property string $created_by
- * @property string $updated_by
  *
- * @property Customercontact[] $customercontacts
  * @property Order[] $orders
  */
 class Customer extends \yii\db\ActiveRecord
@@ -41,11 +37,11 @@ class Customer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'contact_no', 'house_no', 'street', 'area', 'city', 'country', 'email', 'create_date', 'created_by'], 'required'],
+            [['name', 'contact_no', 'house_no', 'street', 'city', 'country', 'email'], 'required'],
             [['zip_code'], 'integer'],
-            [['create_date', 'update_date'], 'safe'],
-            [['name', 'street', 'area', 'city', 'country', 'email'], 'string', 'max' => 225],
-            [['contact_no', 'house_no', 'created_by', 'updated_by'], 'string', 'max' => 45]
+            [['create_date'], 'safe'],
+            [['name', 'street', 'city', 'country', 'email', 'contact_person'], 'string', 'max' => 225],
+            [['contact_no', 'house_no'], 'string', 'max' => 45]
         ];
     }
 
@@ -56,28 +52,17 @@ class Customer extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Customer Name',
-            'contact_no' => 'Contact Number',
-            'house_no' => 'House Number',
+            'name' => 'Name',
+            'contact_no' => 'Contact No',
+            'house_no' => 'House No',
             'street' => 'Street',
-            'area' => 'Area',
             'city' => 'City',
             'zip_code' => 'Zip Code',
             'country' => 'Country',
             'email' => 'Email',
+            'contact_person' => 'Contact Person',
             'create_date' => 'Create Date',
-            'update_date' => 'Update Date',
-            'created_by' => 'Created By',
-            'updated_by' => 'Updated By',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getCustomercontacts()
-    {
-        return $this->hasMany(Customercontact::className(), ['customer_id' => 'id']);
     }
 
     /**
