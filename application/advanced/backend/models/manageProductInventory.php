@@ -21,7 +21,7 @@ use Yii;
  * @property Order[] $orders
  * @property Supplier $supplier
  */
-class manageProductinventory extends \yii\db\ActiveRecord
+class manageProductInventory extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

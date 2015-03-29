@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\manageProductinventory;
+use app\models\manageProductInventory;
 
 /**
- * manageProductinventorySearch represents the model behind the search form about `app\models\manageProductinventory`.
+ * manageProductInventorySearch represents the model behind the search form about `app\models\manageProductInventory`.
  */
-class manageProductinventorySearch extends manageProductinventory
+class manageProductInventorySearch extends manageProductInventory
 {
     /**
      * @inheritdoc
@@ -42,7 +42,7 @@ class manageProductinventorySearch extends manageProductinventory
      */
     public function search($params)
     {
-        $query = manageProductinventory::find();
+        $query = manageProductInventory::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
