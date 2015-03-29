@@ -22,7 +22,7 @@ $this->title = 'Manage Suppliers';
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-       // 'filterModel' => $searchModel,
+        'filterModel' => $searchModel,
         'columns' => [
            // ['class' => 'yii\grid\SerialColumn'],
 
