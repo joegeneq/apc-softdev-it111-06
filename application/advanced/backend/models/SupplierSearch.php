@@ -1,16 +1,16 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\supplier;
+use backend\models\Supplier;
 
 /**
- * SupplierSearch represents the model behind the search form about `app\models\supplier`.
+ * SupplierSearch represents the model behind the search form about `backend\models\Supplier`.
  */
-class SupplierSearch extends supplier
+class SupplierSearch extends Supplier
 {
     /**
      * @inheritdoc
@@ -19,7 +19,7 @@ class SupplierSearch extends supplier
     {
         return [
             [['id', 'zip_code'], 'integer'],
-            [['name', 'contact_no', 'contact_person', 'house_no', 'street', 'area', 'city', 'country', 'email', 'create_date', 'update_date', 'created_by', 'updated_by'], 'safe'],
+            [['name', 'contact_no', 'contact_person', 'house_no', 'street', 'city', 'country', 'email', 'create_date'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class SupplierSearch extends supplier
      */
     public function search($params)
     {
-        $query = supplier::find();
+        $query = Supplier::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -59,7 +59,6 @@ class SupplierSearch extends supplier
             'id' => $this->id,
             'zip_code' => $this->zip_code,
             'create_date' => $this->create_date,
-            'update_date' => $this->update_date,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
@@ -67,12 +66,9 @@ class SupplierSearch extends supplier
             ->andFilterWhere(['like', 'contact_person', $this->contact_person])
             ->andFilterWhere(['like', 'house_no', $this->house_no])
             ->andFilterWhere(['like', 'street', $this->street])
-            ->andFilterWhere(['like', 'area', $this->area])
             ->andFilterWhere(['like', 'city', $this->city])
             ->andFilterWhere(['like', 'country', $this->country])
-            ->andFilterWhere(['like', 'email', $this->email])
-            ->andFilterWhere(['like', 'created_by', $this->created_by])
-            ->andFilterWhere(['like', 'updated_by', $this->updated_by]);
+            ->andFilterWhere(['like', 'email', $this->email]);
 
         return $dataProvider;
     }
