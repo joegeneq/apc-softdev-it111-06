@@ -7,8 +7,8 @@ use yii\widgets\DetailView;
 /* @var $model backend\models\Supplier */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Suppliers', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Suppliers', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="supplier-view">
 
@@ -38,8 +38,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'zip_code',
             'country',
             'email:email',
-            'create_date',
+         //   'create_date',
         ],
     ]) ?>
-
+ <p align="left">
+    <?= Html::a('Back to Suppliers Page', ['supplier/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
+    </p> 
 </div>

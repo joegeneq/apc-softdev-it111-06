@@ -7,37 +7,44 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\SupplierSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Suppliers';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Suppliers Page';
+// $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="supplier-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+     <p align="center">
+        <?= Html::a('Add Supplier', ['create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
+        <?= Html::a('Manage Suppliers', ['manage-supplier/index'], ['class' => 'btn btn-danger','accesskey' => 'm']) ?>   
+    </p><br>
 
-    <p>
-        <?= Html::a('Create Supplier', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    <center><h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?></center>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+       // 'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+        //    ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'name',
+          //  'id',
+            [
+            'attribute' => 'name',
+            'format' => 'raw',
+            'value'=>function ($data) {
+            return Html::a(Html::encode($data->name), array('view', 'id'=>$data->id));
+        },
+           ],
             'contact_no',
             'contact_person',
-            'house_no',
+            //'house_no',
             // 'street',
-            // 'city',
+            'city',
             // 'zip_code',
             // 'country',
             // 'email:email',
             // 'create_date',
 
-            ['class' => 'yii\grid\ActionColumn'],
+          //  ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 
