@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 
@@ -13,11 +13,11 @@ use Yii;
  * @property integer $num_items
  * @property string $amount
  * @property string $discount
- * @property integer $customer_id
  * @property integer $productinventory_id
+ * @property integer $customer_id
  *
- * @property Customer $customer
  * @property Productinventory $productinventory
+ * @property Customer $customer
  */
 class Order extends \yii\db\ActiveRecord
 {
@@ -35,9 +35,9 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['date', 'status', 'num_items', 'amount', 'customer_id', 'productinventory_id'], 'required'],
+            [['date', 'status', 'num_items', 'amount', 'productinventory_id', 'customer_id'], 'required'],
             [['date'], 'safe'],
-            [['num_items', 'customer_id', 'productinventory_id'], 'integer'],
+            [['num_items', 'productinventory_id', 'customer_id'], 'integer'],
             [['amount', 'discount'], 'number'],
             [['status'], 'string', 'max' => 45]
         ];
@@ -52,20 +52,12 @@ class Order extends \yii\db\ActiveRecord
             'id' => 'ID',
             'date' => 'Date',
             'status' => 'Status',
-            'num_items' => 'Number of Items',
+            'num_items' => 'Num Items',
             'amount' => 'Amount',
             'discount' => 'Discount',
-            'customer_id' => 'Customer Name',
-            'productinventory_id' => 'Product Name',
+            'productinventory_id' => 'Productinventory ID',
+            'customer_id' => 'Customer ID',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getCustomer()
-    {
-        return $this->hasOne(Customer::className(), ['id' => 'customer_id']);
     }
 
     /**
@@ -74,5 +66,13 @@ class Order extends \yii\db\ActiveRecord
     public function getProductinventory()
     {
         return $this->hasOne(Productinventory::className(), ['id' => 'productinventory_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCustomer()
+    {
+        return $this->hasOne(Customer::className(), ['id' => 'customer_id']);
     }
 }

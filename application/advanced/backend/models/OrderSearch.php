@@ -1,14 +1,14 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Order;
+use backend\models\Order;
 
 /**
- * OrderSearch represents the model behind the search form about `app\models\Order`.
+ * OrderSearch represents the model behind the search form about `backend\models\Order`.
  */
 class OrderSearch extends Order
 {
@@ -18,8 +18,8 @@ class OrderSearch extends Order
     public function rules()
     {
         return [
-            [['id', 'num_items', ], 'integer'],
-            [['date', 'customer_id', 'productinventory_id', 'status'], 'safe'],
+            [['id', 'num_items', 'productinventory_id', 'customer_id'], 'integer'],
+            [['date', 'status'], 'safe'],
             [['amount', 'discount'], 'number'],
         ];
     }
@@ -56,22 +56,17 @@ class OrderSearch extends Order
             return $dataProvider;
         }
 
-        $query->joinWith('customer');
-        $query->joinWith('productinventory');
-
         $query->andFilterWhere([
             'id' => $this->id,
             'date' => $this->date,
             'num_items' => $this->num_items,
             'amount' => $this->amount,
             'discount' => $this->discount,
-            'customer_id' => $this->id,
-            'productinventory_id' => $this->id,
+            'productinventory_id' => $this->productinventory_id,
+            'customer_id' => $this->customer_id,
         ]);
 
         $query->andFilterWhere(['like', 'status', $this->status]);
-        $query->andFilterWhere(['like', 'customer.name', $this->customer_id]);
-        $query->andFilterWhere(['like', 'productinventory.name', $this->productinventory_id]);
 
         return $dataProvider;
     }
