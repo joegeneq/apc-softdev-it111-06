@@ -41,7 +41,7 @@ $this->title = $model->name;
          //   'create_date',
         ],
     ]) ?>
- <p align="left">
-    <?= Html::a('Back to Suppliers Page', ['supplier/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
+    <p align="left">
+    <?= Html::a('Back to Manage Suppliers Page', ['manage-supplier/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
     </p> 
 </div>

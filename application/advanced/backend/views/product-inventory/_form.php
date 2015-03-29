@@ -35,7 +35,8 @@ use backend\models\supplier;
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-    
+    </div>
+     <div>
         <?= Html::a('Back to Product Inventory Page', ['product-inventory/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
     </div>
 

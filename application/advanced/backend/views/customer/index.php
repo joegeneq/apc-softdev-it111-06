@@ -15,7 +15,7 @@ $this->title = 'Customers Page';
    
     <center><p> 
         <?= Html::a('Add Customer', ['create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
-         <?= Html::a('Manage Customer', ['/manage-customer/index'], ['class' => 'btn btn-danger','accesskey' => 'm']) ?>   
+         <?= Html::a('Manage Customers', ['/manage-customer/index'], ['class' => 'btn btn-danger','accesskey' => 'm']) ?>   
       </p></center>
     <br>
 

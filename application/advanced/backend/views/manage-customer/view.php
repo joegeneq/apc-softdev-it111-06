@@ -42,4 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
+    <p align="left">
+    <?= Html::a('Back to Manage Customers Page', ['manage-customer/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
+    </p> 
 </div>

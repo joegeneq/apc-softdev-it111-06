@@ -40,8 +40,7 @@ $this->title = $model->name;
             'supplier_id',
         ],
     ]) ?>
-
     <p align="left">
-    <?= Html::a('Back to Product Inventory', ['product-inventory/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
+    <?= Html::a('Back to Manage Product Inventory', ['product-inventory/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
     </p>   
 </div>

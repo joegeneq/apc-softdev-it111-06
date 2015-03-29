@@ -34,7 +34,8 @@ use yii\widgets\ActiveForm;
 
    <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-  
+    </div>
+     <div>
         <?= Html::a('Back to Suppliers Page', ['supplier/index'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
     </div>
 
