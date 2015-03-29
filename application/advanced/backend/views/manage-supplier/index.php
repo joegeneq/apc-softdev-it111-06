@@ -40,6 +40,6 @@ $this->title = 'Manage Suppliers';
         ],
     ]); ?>
 <p align="right">
-        <?= Html::a('Back to Suppliers', ['/supplier/index'], ['class' => 'btn btn-primary','accesskey' => 'b']) ?>
+        <?= Html::a('Back to Suppliers Page', ['/supplier/index'], ['class' => 'btn btn-primary','accesskey' => 'b']) ?>
 </p>
 </div>
