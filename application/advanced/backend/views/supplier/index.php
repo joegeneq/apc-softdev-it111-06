@@ -48,4 +48,8 @@ $this->title = 'Suppliers Page';
         ],
     ]); ?>
 
+    <p align="right">
+        <?= Html::a('Back to Home', ['site/index'], ['class' => 'btn btn-primary','accesskey' => 'h']) ?>   
+    </p>
+    
 </div>

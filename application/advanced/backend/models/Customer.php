@@ -53,9 +53,9 @@ class Customer extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'contact_no' => 'Contact No',
-            'house_no' => 'House No',
+            'name' => 'Customer Name',
+            'contact_no' => 'Contact Number',
+            'house_no' => 'House Number',
             'street' => 'Street',
             'city' => 'City',
             'zip_code' => 'Zip Code',
@@ -63,7 +63,7 @@ class Customer extends \yii\db\ActiveRecord
             'email' => 'Email',
             'contact_person' => 'Contact Person',
             'create_date' => 'Create Date',
-            'type' => 'Type',
+            'type' => 'Customer Type',
         ];
     }
 

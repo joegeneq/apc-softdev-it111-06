@@ -26,9 +26,7 @@ use backend\models\supplier;
 
     <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'status')->dropDownList(array('Available'=>'Available','Out of stock'=>'Out of stock'), array('options' => array('1'=>array('selected'=>true)))); ?>
-
-    <?= $form->field($model, 'status')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'status')->dropDownList(array('Available'=>'Available','Out of stock'=>'Out of stock'), array('options' => array('Available'=>array('selected'=>true)))); ?>
 
     <?= $form->field($model, 'supplier_id')->dropdownList(
         ArrayHelper::map(supplier::find()->all(), 'id', 'name'),

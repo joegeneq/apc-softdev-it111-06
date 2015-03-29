@@ -52,10 +52,10 @@ class Supplier extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'contact_no' => 'Contact No',
+            'name' => 'Supplier Name',
+            'contact_no' => 'Contact Number',
             'contact_person' => 'Contact Person',
-            'house_no' => 'House No',
+            'house_no' => 'House Number',
             'street' => 'Street',
             'city' => 'City',
             'zip_code' => 'Zip Code',

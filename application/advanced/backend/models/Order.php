@@ -52,7 +52,7 @@ class Order extends \yii\db\ActiveRecord
             'id' => 'ID',
             'date' => 'Date',
             'status' => 'Status',
-            'num_items' => 'Num Items',
+            'num_items' => 'Number of Items',
             'amount' => 'Amount',
             'discount' => 'Discount',
             'productinventory_id' => 'Product Name',
