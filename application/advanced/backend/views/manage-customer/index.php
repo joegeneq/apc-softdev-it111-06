@@ -8,29 +8,28 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Manage Customers';
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-customer-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
+    <center>
     <p>
-        <?= Html::a('Create Manage Customer', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Add Customer', ['customer/create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
     </p>
 
+    <h1><?= Html::encode($this->title) ?></h1></center>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        //'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            //['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'name',
             'contact_no',
             'house_no',
             'street',
-            // 'city',
+             'city',
             // 'zip_code',
             // 'country',
             // 'email:email',
@@ -40,5 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
+<p align="right">
+        <?= Html::a('Back to Customer', ['/customer/index'], ['class' => 'btn btn-primary','accesskey' => 'b']) ?>
+</p>
 </div>

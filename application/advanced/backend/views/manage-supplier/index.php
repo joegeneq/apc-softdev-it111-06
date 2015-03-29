@@ -8,37 +8,40 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Manage Suppliers';
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-supplier-index">
+<center>
+    <p>
+        <?= Html::a('Add Suppliers', ['supplier/create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
+    </p>
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->title) ?></h1></center>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Manage Supplier', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+       // 'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+           // ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'name',
             'contact_no',
             'contact_person',
-            'house_no',
+            //'house_no',
             // 'street',
-            // 'city',
+             'city',
             // 'zip_code',
-            // 'country',
-            // 'email:email',
+             'country',
+             'email:email',
             // 'create_date',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
+<p align="right">
+        <?= Html::a('Back to Suppliers', ['/supplier/index'], ['class' => 'btn btn-primary','accesskey' => 'b']) ?>
+</p>
 </div>
