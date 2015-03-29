@@ -8,42 +8,34 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Manage Orders';
-//$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-order-index">
-    <p hidden><h3 hidden>Instructions:</h3></p>
-    <p hidden>Press Alt + B, to return to Orders Page<br></p>
 
-    <center><h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?></center>
+    <h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
+    <p>
+        <?= Html::a('Create Manage Order', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            [
-            'attribute' => 'customer_id',
-            'value' => 'customer.name',
-            ],
 
-            [
-            'attribute' => 'productinventory_id',
-            'value' => 'productinventory.name',
-            ],
             'id',
             'date',
             'status',
             'num_items',
             'amount',
             // 'discount',
-             
+            // 'productinventory_id',
+            // 'customer_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-<p align="right">
-                <?= Html::a('Back to Orders', ['order/index'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
-            </p>
+
 </div>
