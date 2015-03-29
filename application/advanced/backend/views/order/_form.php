@@ -17,7 +17,7 @@ use backend\models\productinventory
 
     <?= $form->field($model, 'date')->textInput() ?>
 
-    <?= $form->field($model, 'status')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'status')->dropDownList(array('Pending'=>'Pending','Confirmed'=>'Confirmed','Cancelled'=>'Cancelled','For Replacement'=>'For Replacement'), array('options' => array('Pending'=>array('selected'=>true)))); ?>
 
     <?= $form->field($model, 'num_items')->textInput() ?>
 
@@ -41,7 +41,7 @@ use backend\models\productinventory
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     
-        <?= Html::a('Back to Orders', ['order/index'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
+        <?= Html::a('Back to Orders Page', ['order/index'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
