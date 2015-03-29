@@ -18,6 +18,7 @@ use Yii;
  * @property string $email
  * @property string $contact_person
  * @property string $create_date
+ * @property string $type
  *
  * @property Order[] $orders
  */
@@ -41,7 +42,7 @@ class Customer extends \yii\db\ActiveRecord
             [['zip_code'], 'integer'],
             [['create_date'], 'safe'],
             [['name', 'street', 'city', 'country', 'email', 'contact_person'], 'string', 'max' => 225],
-            [['contact_no', 'house_no'], 'string', 'max' => 45]
+            [['contact_no', 'house_no', 'type'], 'string', 'max' => 45]
         ];
     }
 
@@ -62,6 +63,7 @@ class Customer extends \yii\db\ActiveRecord
             'email' => 'Email',
             'contact_person' => 'Contact Person',
             'create_date' => 'Create Date',
+            'type' => 'Type',
         ];
     }
 
