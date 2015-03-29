@@ -53,15 +53,15 @@ class Productinventory extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
+            'name' => 'Product Name',
             'description' => 'Description',
-            'qoh' => 'Qoh',
+            'qoh' => 'Quantity on Hand',
             'items_sold' => 'Items Sold',
-            'serial_no' => 'Serial No',
+            'serial_no' => 'Serial Number',
             'price' => 'Price',
             'status' => 'Status',
             'create_date' => 'Create Date',
-            'supplier_id' => 'Supplier ID',
+            'supplier_id' => 'Supplier Name',
         ];
     }
 

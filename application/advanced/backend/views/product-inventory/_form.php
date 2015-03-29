@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use backend\models\supplier;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Productinventory */
@@ -24,14 +26,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'status')->dropDownList(array('Available'=>'Available','Out of stock'=>'Out of stock'), array('options' => array('1'=>array('selected'=>true)))); ?>
+
     <?= $form->field($model, 'status')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'create_date')->textInput() ?>
-
-    <?= $form->field($model, 'supplier_id')->textInput() ?>
+    <?= $form->field($model, 'supplier_id')->dropdownList(
+        ArrayHelper::map(supplier::find()->all(), 'id', 'name'),
+        ['prompt'=>'Select Supplier']
+    ) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+    
+        <?= Html::a('Back to Product Inventory', ['product-inventory/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

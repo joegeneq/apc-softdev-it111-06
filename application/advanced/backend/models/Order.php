@@ -55,8 +55,8 @@ class Order extends \yii\db\ActiveRecord
             'num_items' => 'Num Items',
             'amount' => 'Amount',
             'discount' => 'Discount',
-            'productinventory_id' => 'Productinventory ID',
-            'customer_id' => 'Customer ID',
+            'productinventory_id' => 'Product Name',
+            'customer_id' => 'Customer Name',
         ];
     }
 

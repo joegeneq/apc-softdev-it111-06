@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use backend\models\customer;
+use backend\models\productinventory
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Order */
@@ -22,9 +25,18 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'discount')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'productinventory_id')->textInput() ?>
+    <?= $form->field($model, 'productinventory_id')->dropdownList(
+        ArrayHelper::map(productinventory::find()->all(), 'id', 'name'),
+        ['prompt'=>'Select Product Name']
+    ) ?>
 
-    <?= $form->field($model, 'customer_id')->textInput() ?>
+    <?= $form->field($model, 'customer_id')->dropdownList(
+        ArrayHelper::map(customer::find()->all(), 'id', 'name'),
+        ['prompt'=>'Select Customer Name']
+    ) ?>
+
+    
+
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
