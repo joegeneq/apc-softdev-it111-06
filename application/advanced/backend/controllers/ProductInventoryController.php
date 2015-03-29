@@ -3,36 +3,20 @@
 namespace backend\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
-use common\models\LoginForm;
-use app\models\productinventory;
-use app\models\ProductInventorySearch;
+use backend\models\Productinventory;
+use backend\models\ProductInventorySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ProductInventoryController implements the CRUD actions for productinventory model.
+ * ProductInventoryController implements the CRUD actions for Productinventory model.
  */
 class ProductInventoryController extends Controller
 {
     public function behaviors()
     {
         return [
-        'access' => [
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['login', 'error'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['logout', 'index', 'create', 'view', 'update'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -41,31 +25,9 @@ class ProductInventoryController extends Controller
             ],
         ];
     }
-    public function actionLogin()
-    {
-        if (!\Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        } else {
-            return $this->render('login', [
-                'model' => $model,
-            ]);
-        }
-    }
-
-    public function actionLogout()
-    {
-        Yii::$app->user->logout();
-
-        return $this->goHome();
-    }
 
     /**
-     * Lists all productinventory models.
+     * Lists all Productinventory models.
      * @return mixed
      */
     public function actionIndex()
@@ -80,7 +42,7 @@ class ProductInventoryController extends Controller
     }
 
     /**
-     * Displays a single productinventory model.
+     * Displays a single Productinventory model.
      * @param integer $id
      * @param integer $supplier_id
      * @return mixed
@@ -93,13 +55,13 @@ class ProductInventoryController extends Controller
     }
 
     /**
-     * Creates a new productinventory model.
+     * Creates a new Productinventory model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new productinventory();
+        $model = new Productinventory();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id, 'supplier_id' => $model->supplier_id]);
@@ -111,7 +73,7 @@ class ProductInventoryController extends Controller
     }
 
     /**
-     * Updates an existing productinventory model.
+     * Updates an existing Productinventory model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @param integer $supplier_id
@@ -131,7 +93,7 @@ class ProductInventoryController extends Controller
     }
 
     /**
-     * Deletes an existing productinventory model.
+     * Deletes an existing Productinventory model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @param integer $supplier_id
@@ -145,16 +107,16 @@ class ProductInventoryController extends Controller
     }
 
     /**
-     * Finds the productinventory model based on its primary key value.
+     * Finds the Productinventory model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
      * @param integer $supplier_id
-     * @return productinventory the loaded model
+     * @return Productinventory the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id, $supplier_id)
     {
-        if (($model = productinventory::findOne(['id' => $id, 'supplier_id' => $supplier_id])) !== null) {
+        if (($model = Productinventory::findOne(['id' => $id, 'supplier_id' => $supplier_id])) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

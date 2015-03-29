@@ -1,16 +1,16 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\productinventory;
+use backend\models\Productinventory;
 
 /**
- * ProductInventorySearch represents the model behind the search form about `app\models\productinventory`.
+ * ProductInventorySearch represents the model behind the search form about `backend\models\Productinventory`.
  */
-class ProductInventorySearch extends productinventory
+class ProductInventorySearch extends Productinventory
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class ProductInventorySearch extends productinventory
     public function rules()
     {
         return [
-            [['id', 'qoh'], 'integer'],
-            [['name', 'description', 'supplier_id', 'serial_no', 'status', 'create_date', 'update_date', 'created_by', 'updated_by'], 'safe'],
+            [['id', 'qoh', 'supplier_id'], 'integer'],
+            [['name', 'description', 'items_sold', 'serial_no', 'status', 'create_date'], 'safe'],
             [['price'], 'number'],
         ];
     }
@@ -42,7 +42,7 @@ class ProductInventorySearch extends productinventory
      */
     public function search($params)
     {
-        $query = productinventory::find();
+        $query = Productinventory::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -56,24 +56,19 @@ class ProductInventorySearch extends productinventory
             return $dataProvider;
         }
 
-        $query->joinWith('supplier');
-
         $query->andFilterWhere([
             'id' => $this->id,
             'qoh' => $this->qoh,
             'price' => $this->price,
             'create_date' => $this->create_date,
-            'update_date' => $this->update_date,
-            'supplier_id' => $this->id,
+            'supplier_id' => $this->supplier_id,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'description', $this->description])
+            ->andFilterWhere(['like', 'items_sold', $this->items_sold])
             ->andFilterWhere(['like', 'serial_no', $this->serial_no])
-            ->andFilterWhere(['like', 'status', $this->status])
-            ->andFilterWhere(['like', 'created_by', $this->created_by])
-            ->andFilterWhere(['like', 'updated_by', $this->updated_by])
-            ->andFilterWhere(['like', 'supplier.name', $this->supplier_id]);
+            ->andFilterWhere(['like', 'status', $this->status]);
 
         return $dataProvider;
     }

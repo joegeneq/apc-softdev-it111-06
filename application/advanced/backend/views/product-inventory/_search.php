@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\ProductInventorySearch */
+/* @var $model backend\models\ProductInventorySearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -23,19 +23,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'qoh') ?>
 
-    <?= $form->field($model, 'serial_no') ?>
+    <?= $form->field($model, 'items_sold') ?>
+
+    <?php // echo $form->field($model, 'serial_no') ?>
 
     <?php // echo $form->field($model, 'price') ?>
 
     <?php // echo $form->field($model, 'status') ?>
 
     <?php // echo $form->field($model, 'create_date') ?>
-
-    <?php // echo $form->field($model, 'update_date') ?>
-
-    <?php // echo $form->field($model, 'created_by') ?>
-
-    <?php // echo $form->field($model, 'updated_by') ?>
 
     <?php // echo $form->field($model, 'supplier_id') ?>
 
