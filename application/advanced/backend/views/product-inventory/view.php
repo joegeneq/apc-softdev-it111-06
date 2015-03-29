@@ -36,8 +36,8 @@ $this->title = $model->name;
             'serial_no',
             'price',
             'status',
-            'create_date',
-            'supplier_id',
+          //  'create_date',
+            'supplier.name',
         ],
     ]) ?>
     <p align="left">

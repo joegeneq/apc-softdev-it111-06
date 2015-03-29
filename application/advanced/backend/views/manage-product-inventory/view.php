@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'price',
             'status',
             'create_date',
-            'supplier_id',
+            'supplier.name',
         ],
     ]) ?>
     <p align="left">
