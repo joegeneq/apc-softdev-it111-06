@@ -4,47 +4,40 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\manageProductInventorySearch */
+/* @var $searchModel app\models\manageProductinventorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Manage Inventory Page';
-//$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Manage Productinventories';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="manage-product-inventory-index">
-    <p hidden><h3 hidden>Instructions:</h3></p>
-    <p hidden>Press Alt + B, to return to Product Inventory Page<br></p>
+<div class="manage-productinventory-index">
 
-    <center><h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?></center>
+    <h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
+    <p>
+        <?= Html::a('Create Manage Productinventory', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            [
-                'attribute'=>'supplier_id',
-                'value'=>'supplier.name',
-            ],
+
             'id',
             'name',
-            //'description',
+            'description',
             'qoh',
-            'serial_no',
-             'price',
+            'items_sold',
+            // 'serial_no',
+            // 'price',
             // 'status',
             // 'create_date',
-            // 'update_date',
-            // 'created_by',
-            // 'updated_by',
             // 'supplier_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 
-    <p align="right">
-        <?= Html::a('Back to Product Inventory', ['product-inventory/index'], ['class' => 'btn btn-primary', 'accesskey'=> 'b']) ?>
-    </p>
 </div>

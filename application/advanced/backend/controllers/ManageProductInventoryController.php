@@ -3,36 +3,20 @@
 namespace backend\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
-use common\models\LoginForm;
-use app\models\manageProductInventory;
-use app\models\manageProductInventorySearch;
+use app\models\manageProductinventory;
+use app\models\manageProductinventorySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ManageProductInventoryController implements the CRUD actions for manageProductInventory model.
+ * ManageProductInventoryController implements the CRUD actions for manageProductinventory model.
  */
 class ManageProductInventoryController extends Controller
 {
     public function behaviors()
     {
         return [
-          'access' => [
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['login', 'error'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['logout', 'index', 'create', 'view', 'update'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -43,12 +27,12 @@ class ManageProductInventoryController extends Controller
     }
 
     /**
-     * Lists all manageProductInventory models.
+     * Lists all manageProductinventory models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new manageProductInventorySearch();
+        $searchModel = new manageProductinventorySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -58,7 +42,7 @@ class ManageProductInventoryController extends Controller
     }
 
     /**
-     * Displays a single manageProductInventory model.
+     * Displays a single manageProductinventory model.
      * @param integer $id
      * @param integer $supplier_id
      * @return mixed
@@ -71,13 +55,13 @@ class ManageProductInventoryController extends Controller
     }
 
     /**
-     * Creates a new manageProductInventory model.
+     * Creates a new manageProductinventory model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new manageProductInventory();
+        $model = new manageProductinventory();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id, 'supplier_id' => $model->supplier_id]);
@@ -89,7 +73,7 @@ class ManageProductInventoryController extends Controller
     }
 
     /**
-     * Updates an existing manageProductInventory model.
+     * Updates an existing manageProductinventory model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @param integer $supplier_id
@@ -109,7 +93,7 @@ class ManageProductInventoryController extends Controller
     }
 
     /**
-     * Deletes an existing manageProductInventory model.
+     * Deletes an existing manageProductinventory model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @param integer $supplier_id
@@ -123,16 +107,16 @@ class ManageProductInventoryController extends Controller
     }
 
     /**
-     * Finds the manageProductInventory model based on its primary key value.
+     * Finds the manageProductinventory model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
      * @param integer $supplier_id
-     * @return manageProductInventory the loaded model
+     * @return manageProductinventory the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id, $supplier_id)
     {
-        if (($model = manageProductInventory::findOne(['id' => $id, 'supplier_id' => $supplier_id])) !== null) {
+        if (($model = manageProductinventory::findOne(['id' => $id, 'supplier_id' => $supplier_id])) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

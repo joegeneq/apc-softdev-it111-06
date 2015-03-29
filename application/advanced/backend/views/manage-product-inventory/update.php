@@ -3,14 +3,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\manageProductInventory */
+/* @var $model app\models\manageProductinventory */
 
-$this->title = 'Update Product Inventory: ' . ' ' . $model->name;
-//$this->params['breadcrumbs'][] = ['label' => 'Manage Inventory', 'url' => ['index']];
-//$this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id, 'supplier_id' => $model->supplier_id]];
-//$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'Update Manage Productinventory: ' . ' ' . $model->name;
+$this->params['breadcrumbs'][] = ['label' => 'Manage Productinventories', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id, 'supplier_id' => $model->supplier_id]];
+$this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="manage-product-inventory-update">
+<div class="manage-productinventory-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
