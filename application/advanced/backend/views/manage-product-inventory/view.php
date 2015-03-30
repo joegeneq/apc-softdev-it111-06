@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\manageProductInventory */
+/* @var $model backend\models\manageProductInventory */
 
 $this->title = $model->name;
 //$this->params['breadcrumbs'][] = ['label' => 'Manage Product Inventories', 'url' => ['index']];
