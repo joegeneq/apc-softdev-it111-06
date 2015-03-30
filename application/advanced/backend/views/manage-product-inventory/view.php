@@ -7,8 +7,8 @@ use yii\widgets\DetailView;
 /* @var $model app\models\manageProductInventory */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Manage Product Inventories', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Manage Product Inventories', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-product-inventory-view">
 

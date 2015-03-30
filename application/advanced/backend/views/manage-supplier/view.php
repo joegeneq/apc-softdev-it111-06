@@ -7,8 +7,8 @@ use yii\widgets\DetailView;
 /* @var $model app\models\manageSupplier */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Manage Suppliers', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Manage Suppliers', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-supplier-view">
 

@@ -7,8 +7,8 @@ use yii\widgets\DetailView;
 /* @var $model app\models\manageOrder */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Manage Orders', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Manage Orders', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-order-view">
 
@@ -34,8 +34,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'num_items',
             'amount',
             'discount',
-            'productinventory_id',
-            'customer_id',
+            'productinventory.name',
+            'customer.name',
         ],
     ]) ?>
     <p align="left">
