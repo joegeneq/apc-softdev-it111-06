@@ -34,11 +34,11 @@ $this->title = $model->id;
             'num_items',
             'amount',
             'discount',
-            'productinventory_id',
-            'customer_id',
+            'productinventory.name',
+            'customer.name',
         ],
     ]) ?>
     <p align="left">
-    <?= Html::a('Back to Manage Orders', ['manage-order/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
+    <?= Html::a('Back to Manage Orders Page', ['manage-order/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
     </p> 
 </div>

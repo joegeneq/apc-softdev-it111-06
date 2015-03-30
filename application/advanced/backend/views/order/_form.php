@@ -42,7 +42,7 @@ use backend\models\productinventory
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
      <div>
-        <?= Html::a('Back to Orders Page', ['order/index'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
+        <?= Html::a('Back to Manage Orders', ['manage-order/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
