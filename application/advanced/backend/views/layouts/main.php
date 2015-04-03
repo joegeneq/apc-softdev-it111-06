@@ -28,7 +28,7 @@ AppAsset::register($this);
         <a href="index.php?r=supplier%2Findex" accesskey="s" hidden>Suppliers</a>
         <a href="index.php?r=productinventory%2Findex" accesskey="p" hidden>Product Inventory</a>
         <a href="index.php?r=order%2Findex" accesskey="o" hidden>Orders</a>
-         <a href="index.php?r=purchase%2Findex" accesskey="u" hidden>Purchase</a>
+         <a href="index.php?r=purchase%2Findex" accesskey="u" hidden>Purchases</a>
     </p>
     <?php $this->beginBody() ?>
     <div class="wrap">
@@ -50,7 +50,7 @@ AppAsset::register($this);
               $menuItems[] =  ['label' => 'Suppliers','alt' => 'Suppliers Page, Alt + S', 'url' =>  ['/supplier/index'],['accesskey'=>'s']];
              $menuItems[] =   ['label' => 'Product Inventory','alt' => 'Product Inventory Page, Alt + P', 'url' => ['/productinventory/index'],['accesskey'=>'p']];
               $menuItems[] =  ['label' => 'Orders','alt' => 'Order Page, Alt + O', 'url' => ['/order/index'],['accesskey'=>'o']];
-              $menuItems[] =  ['label' => 'Purchase','alt' => 'Purchase Page, Alt + u', 'url' => ['/purchase/index']];
+              $menuItems[] =  ['label' => 'Purchases','alt' => 'Purchases Page, Alt + u', 'url' => ['/purchase/index']];
                 $menuItems[] = [
                     'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],
