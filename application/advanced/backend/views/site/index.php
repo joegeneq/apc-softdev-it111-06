@@ -24,7 +24,7 @@ $this->title = 'RBI Inventory System Home Page';
         <br><br><br>
     </div>  
     <div>
-        <a href="index.php?r=product-inventory" title="Product Inventory" accesskey="p"><img src="images/Products2.png" height="200" width="200"><h2>Product Inventory</h2></a>
+        <a href="index.php?r=productinventory" title="Product Inventory" accesskey="p"><img src="images/Products2.png" height="200" width="200"><h2>Product Inventory</h2></a>
         <br><br><br>
     </div>   
      <div>
