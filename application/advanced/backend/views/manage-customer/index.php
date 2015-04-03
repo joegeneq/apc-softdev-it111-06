@@ -39,6 +39,6 @@ $this->title = 'Manage Customers';
         ],
     ]); ?>
    <p align="right">
-        <?= Html::a('Back to Customer', ['create'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Back to Customer', ['/customer/index'], ['class' => 'btn btn-primary']) ?>
     </p>
 </div>
