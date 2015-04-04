@@ -54,10 +54,10 @@ class manageCustomer extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'type' => 'Type',
-            'contact_no' => 'Contact No',
-            'house_no' => 'House No',
+            'name' => 'Customer Name',
+            'type' => 'Customer Type',
+            'contact_no' => 'Contact Number',
+            'house_no' => 'House Number',
             'street' => 'Street',
             'city' => 'City',
             'zip_code' => 'Zip Code',
