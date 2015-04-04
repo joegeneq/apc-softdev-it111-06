@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\manageProductinventorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Manage Inventory';
+$this->title = 'Manage Inventory Page';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-productinventory-index">
