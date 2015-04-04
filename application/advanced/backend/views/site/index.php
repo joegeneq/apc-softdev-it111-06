@@ -24,12 +24,16 @@ $this->title = 'RBI Inventory System Home Page';
         <br><br><br>
     </div>  
     <div>
-        <a href="index.php?r=productinventory" title="Product Inventory" accesskey="p"><img src="images/Products2.png" height="200" width="200"><h2>Product Inventory</h2></a>
+        <a href="index.php?r=productinventory" title="Product Inventory" accesskey="i"><img src="images/Products2.png" height="200" width="200"><h2>Product Inventory</h2></a>
         <br><br><br>
     </div>   
      <div>
         <a href="index.php?r=order" title="Orders" accesskey="o"><img src="images/Orders2.png" height="200" width="200"><h2>Orders</h2></a>
         <br><br><br>
     </div>   
+     <div>
+        <a href="index.php?r=purchase" title="Purchases" accesskey="p"><img src="images/Purchases2.png" height="200" width="200"><h2>Purchases</h2></a>
+        <br><br><br>
+    </div> 
     </center>
 </div>
