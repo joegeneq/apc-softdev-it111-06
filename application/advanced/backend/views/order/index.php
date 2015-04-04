@@ -51,7 +51,7 @@ $this->title = 'Orders';
     ]); ?>
 
     <p align="right">
-        <?= Html::a('Generate Orders', ['generated-order/index'], ['class' => 'btn btn-success','accesskey' => 'g']) ?>
+        <?= Html::a('Generate Report', ['generated-order/index'], ['class' => 'btn btn-success','accesskey' => 'g']) ?>
         <?= Html::a('Back to Home', ['site/index'], ['class' => 'btn btn-primary','accesskey' => 'h']) ?>
     </p>
 </div>
