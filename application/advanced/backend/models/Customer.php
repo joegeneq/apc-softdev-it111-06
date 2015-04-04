@@ -43,6 +43,7 @@ class Customer extends \yii\db\ActiveRecord
             [['zip_code'], 'integer'],
             [['create_date', 'update_date'], 'safe'],
             [['name', 'street', 'city', 'country', 'email', 'contact_person'], 'string', 'max' => 225],
+            [['email'], 'email'],
             [['type', 'contact_no', 'house_no'], 'string', 'max' => 45]
         ];
     }
