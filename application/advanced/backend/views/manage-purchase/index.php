@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\managePurchaseSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Manage Purchases';
+$this->title = 'Manage Purchases Page';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-purchase-index">
@@ -35,6 +35,6 @@ $this->title = 'Manage Purchases';
         ],
     ]); ?>
     <p align="right">
-        <?= Html::a('Back to Purchases', ['purchase/index'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Back to Purchases Page', ['purchase/index'], ['class' => 'btn btn-primary','accesskey' => 'b']) ?>
     </p>
 </div>
