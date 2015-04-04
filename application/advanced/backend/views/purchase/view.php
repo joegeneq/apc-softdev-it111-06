@@ -7,8 +7,8 @@ use yii\widgets\DetailView;
 /* @var $model backend\models\Purchase */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Purchases', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Purchases', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="purchase-view">
 
