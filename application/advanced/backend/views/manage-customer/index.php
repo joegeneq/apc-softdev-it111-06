@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\manageCustomerSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Manage Customers';
+$this->title = 'Manage Customers Page';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-customer-index">
@@ -17,7 +17,7 @@ $this->title = 'Manage Customers';
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        //'filterModel' => $searchModel,
+        'filterModel' => $searchModel,
         'columns' => [
            // ['class' => 'yii\grid\SerialColumn'],
 
@@ -38,7 +38,7 @@ $this->title = 'Manage Customers';
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-   <p align="right">
-        <?= Html::a('Back to Customer', ['/customer/index'], ['class' => 'btn btn-primary']) ?>
+    <p align="right">
+        <?= Html::a('Back to Customers Page', ['/customer/index'], ['class' => 'btn btn-primary','accesskey' => 'b' ?>
     </p>
 </div>
