@@ -16,7 +16,7 @@ $this->title = $model->id;
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id, 'customer_id' => $model->customer_id, 'productinventory_id' => $model->productinventory_id], ['class' => 'btn btn-primary','accesskey'=>'u']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id, 'supplier_id' => $model->supplier_id, 'productinventory_id' => $model->productinventory_id], [
+        <?= Html::a('Delete', ['delete', 'id' => $model->id, 'customer_id' => $model->supplier_id, 'productinventory_id' => $model->productinventory_id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
