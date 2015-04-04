@@ -35,7 +35,6 @@ $this->title = 'Customers Page';
         },
            ],
 
-           // 'name',
             'type',
             'contact_no',
             //'house_no',
