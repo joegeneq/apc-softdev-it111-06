@@ -38,7 +38,7 @@ use backend\models\productinventory
     </div>
 
     <div>
-     <?= Html::a('Back to Purchases', ['purchase/index'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
+     <?= Html::a('Back to Purchases Page', ['purchase/index'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
