@@ -26,13 +26,13 @@ $this->title = 'Manage Orders';
             //'id',
             'date',
             'qty',
-            'supplier_id',
-            'productinventory_id',
+            'supplier.name',
+            'productinventory.name',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-<p align="right">
-        <?= Html::a('Back to Order', ['/order/index'], ['class' => 'btn btn-primary']) ?>
+    <p align="right">
+        <?= Html::a('Back to Orders Page', ['/order/index'], ['class' => 'btn btn-primary','accesskey' => 'b']) ?>
     </p>
 </div>
