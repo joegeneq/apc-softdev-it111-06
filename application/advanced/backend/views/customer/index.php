@@ -7,40 +7,52 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\CustomerSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Customers';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Customers Page';
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customer-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <center><p> 
+        <?= Html::a('Add Customer', ['create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
+        <?= Html::a('Manage Customers', ['/manage-customer/index'], ['class' => 'btn btn-danger','accesskey' => 'm']) ?>   
+      </p><br>
 
-    <p>
-        <?= Html::a('Create Customer', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
+   <h1 align="center"><?= Html::encode($this->title) ?></h1>
+   <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+   </center>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        //'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+           // ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'name',
+           // 'id',
+             [
+            'attribute' => 'name',
+            'format' => 'raw',
+            'value'=>function ($data) {
+            return Html::a(Html::encode($data->name), array('view', 'id'=>$data->id));
+        },
+           ],
+
+           // 'name',
             'type',
             'contact_no',
-            'house_no',
+            //'house_no',
             // 'street',
-            // 'city',
+             'city',
             // 'zip_code',
             // 'country',
-            // 'email:email',
+             'email:email',
             // 'contact_person',
             // 'create_date',
             // 'update_date',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            //['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
+   
+    <p align="right">
+        <?= Html::a('Back to Home', ['/site/index'], ['class' => 'btn btn-primary','accesskey' => 'h']) ?>
+    </p>
 </div>
