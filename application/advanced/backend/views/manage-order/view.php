@@ -15,7 +15,7 @@ $this->title = $model->id;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id, 'productinventory_id' => $model->productinventory_id, 'customer_id' => $model->customer_id], ['class' => 'btn btn-primary','accesskey'=>'u']) ?>
+        <?= Html::a('Update', ['update', 'id' => $model->id, 'supplier_id' => $model->productinventory_id, 'customer_id' => $model->customer_id], ['class' => 'btn btn-primary','accesskey'=>'u']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id, 'supplier_id' => $model->supplier_id, 'productinventory_id' => $model->productinventory_id], [
             'class' => 'btn btn-danger',
             'data' => [
