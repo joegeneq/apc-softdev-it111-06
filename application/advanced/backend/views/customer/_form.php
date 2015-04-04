@@ -14,10 +14,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'type')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'type')->dropDownList(
+    array('Company'=>'Company','Individual'=>'Individual'), 
+    ['prompt'=>'Select Customer Type']); ?>
 
     <?= $form->field($model, 'contact_no')->textInput(['maxlength' => true]) ?>
 
+<fieldset><legend>Address</legend>
     <?= $form->field($model, 'house_no')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'street')->textInput(['maxlength' => true]) ?>
@@ -27,19 +30,20 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'zip_code')->textInput() ?>
 
     <?= $form->field($model, 'country')->textInput(['maxlength' => true]) ?>
+  </fieldset><hr>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'contact_person')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'create_date')->textInput() ?>
-
-    <?= $form->field($model, 'update_date')->textInput() ?>
-
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
+     <div>
+         <?= Html::a('Back to Customers Page', ['/customer/index'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
+    </div>
+    
     <?php ActiveForm::end(); ?>
 
 </div>
