@@ -7,15 +7,15 @@ use yii\widgets\DetailView;
 /* @var $model backend\models\manageSupplier */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Manage Suppliers', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Manage Suppliers', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-supplier-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary','accesskey'=>'u']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -42,5 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'update_date',
         ],
     ]) ?>
-
+    <p align="left">
+    <?= Html::a('Back to Manage Suppliers Page', ['manage-supplier/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
+    </p> 
 </div>
