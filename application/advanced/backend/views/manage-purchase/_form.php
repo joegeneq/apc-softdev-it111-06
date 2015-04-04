@@ -28,6 +28,10 @@ use yii\widgets\ActiveForm;
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
+    <div>
+     <?= Html::a('Back to Purchases Page', ['purchase/index'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
+    </div>
+
     <?php ActiveForm::end(); ?>
 
 </div>
