@@ -32,9 +32,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'date',
             'status',
             'num_items',
-            'total_amount',
-            'productinventory_id',
-            'customer_id',
+            'productinventory.price',
+             [
+            'attribute' => 'total_amount',
+            'value' => $model->getAmount(),
+            ],
+            'productinventory.name',
+            'customer.name',
         ],
     ]) ?>
 
