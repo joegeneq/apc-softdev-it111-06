@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\manageOrderSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Manage Orders';
+$this->title = 'Manage Orders Page';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-order-index">
