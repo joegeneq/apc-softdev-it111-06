@@ -6,9 +6,9 @@ use yii\helpers\Html;
 /* @var $model backend\models\Supplier */
 
 $this->title = 'Update Supplier: ' . ' ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Suppliers', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+//$this->params['breadcrumbs'][] = ['label' => 'Suppliers', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
+//$this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="supplier-update">
 
