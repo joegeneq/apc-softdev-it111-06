@@ -38,7 +38,7 @@ use backend\models\supplier
     </div>
 
     <div>
-    <?= Html::a('Back to Product Inventory', ['product-inventory/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
+    <?= Html::a('Back to Product Inventory', ['productinventory/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
