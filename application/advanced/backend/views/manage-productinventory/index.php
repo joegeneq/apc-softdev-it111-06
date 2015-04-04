@@ -39,6 +39,6 @@ $this->title = 'Manage Inventory';
     ]); ?>
 
     <p align="right">
-        <?= Html::a('Back to Inventory', ['/productinventory/index'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Back to Inventory', ['/productinventory/index'], ['class' => 'btn btn-primary','accesskey' => 'b']) ?>
     </p>
 </div>

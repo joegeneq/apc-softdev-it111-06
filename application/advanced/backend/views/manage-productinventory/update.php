@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\manageProductinventory */
 
-$this->title = 'Update Manage Productinventory: ' . ' ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Manage Productinventories', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id, 'supplier_id' => $model->supplier_id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'Update Product: ' . ' ' . $model->name;
+//$this->params['breadcrumbs'][] = ['label' => 'Manage Productinventories', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id, 'supplier_id' => $model->supplier_id]];
+//$this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="manage-productinventory-update">
 

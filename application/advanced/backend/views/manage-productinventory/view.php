@@ -7,15 +7,15 @@ use yii\widgets\DetailView;
 /* @var $model backend\models\manageProductinventory */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Manage Productinventories', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Manage Productinventories', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-productinventory-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id, 'supplier_id' => $model->supplier_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Update', ['update', 'id' => $model->id, 'supplier_id' => $model->supplier_id], ['class' => 'btn btn-primary','accesskey' => 'u']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id, 'supplier_id' => $model->supplier_id], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -38,8 +38,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'status',
             'create_date',
             'update_date',
-            'supplier_id',
+            'supplier.name',
         ],
     ]) ?>
-
+     <p align="left">
+    <?= Html::a('Back to Manage Product Inventory', ['product-inventory/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
+    </p> 
 </div>
