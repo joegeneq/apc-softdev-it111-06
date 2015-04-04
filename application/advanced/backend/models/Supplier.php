@@ -43,6 +43,7 @@ class Supplier extends \yii\db\ActiveRecord
             [['zip_code'], 'integer'],
             [['create_date', 'update_date'], 'safe'],
             [['name', 'contact_person', 'street', 'city', 'country'], 'string', 'max' => 225],
+            [['email'], 'email'],
             [['contact_no', 'house_no', 'email'], 'string', 'max' => 45]
         ];
     }
