@@ -63,6 +63,7 @@ class Productinventory extends \yii\db\ActiveRecord
             'price' => 'Price',
             'status' => 'Status',
             'create_date' => 'Create Date',
+            'update_date' => 'Update Date',
             'supplier_id' => 'Supplier Name',
         ];
     }
