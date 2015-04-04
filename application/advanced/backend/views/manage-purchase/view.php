@@ -7,15 +7,15 @@ use yii\widgets\DetailView;
 /* @var $model backend\models\managePurchase */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Manage Purchases', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = ['label' => 'Manage Purchases', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-purchase-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id, 'productinventory_id' => $model->productinventory_id, 'customer_id' => $model->customer_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Update', ['update', 'id' => $model->id, 'productinventory_id' => $model->productinventory_id, 'customer_id' => $model->customer_id], ['class' => 'btn btn-primary','accesskey'=>'u']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id, 'productinventory_id' => $model->productinventory_id, 'customer_id' => $model->customer_id], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -33,9 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'status',
             'num_items',
             'total_amount',
-            'productinventory_id',
-            'customer_id',
+            'productinventory.name',
+            'customer.name',
         ],
     ]) ?>
-
+    <p align="left">
+    <?= Html::a('Back to Manage Purchases Page', ['manage-purchase/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
+    </p>
 </div>
