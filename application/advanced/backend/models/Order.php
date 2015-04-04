@@ -46,9 +46,9 @@ class Order extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'date' => 'Date',
-            'qty' => 'Qty',
-            'supplier_id' => 'Supplier ID',
-            'productinventory_id' => 'Productinventory ID',
+            'qty' => 'Quantity',
+            'supplier_id' => 'Supplier Name',
+            'productinventory_id' => 'Product Name',
         ];
     }
 
