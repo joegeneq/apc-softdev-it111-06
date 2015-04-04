@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\manageSupplierSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Manage Suppliers';
+$this->title = 'Manage Suppliers Page';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="manage-supplier-index">
@@ -40,6 +40,6 @@ $this->title = 'Manage Suppliers';
     ]); ?>
 
     <p align="right">
-        <?= Html::a('Back to Suppliers', ['supplier/index'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Back to Suppliers Page', ['supplier/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
     </p>
 </div>
