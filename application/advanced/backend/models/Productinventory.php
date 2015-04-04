@@ -91,4 +91,9 @@ class Productinventory extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Purchase::className(), ['productinventory_id' => 'id']);
     }
+
+     public function getTotal()
+     {
+        return ($this->qoh - $this->items_sold);
+    }
 }

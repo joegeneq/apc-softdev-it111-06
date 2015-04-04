@@ -33,12 +33,15 @@ $this->params['breadcrumbs'][] = $this->title;
             'description',
             'qoh',
             'items_sold',
-            'items_remaining',
+            [
+            'attribute' => 'items_remaining',
+            'value' => $model->getTotal(),
+            ],
             'price',
             'status',
             'create_date',
             'update_date',
-            'supplier_id',
+            'supplier.name',
         ],
     ]) ?>
 
