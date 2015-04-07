@@ -44,7 +44,7 @@ $this->title = 'Product Inventory';
             'items_sold',
             // 'items_remaining',
             // 'price',
-            'status',
+            // 'status',
             // 'create_date',
             // 'update_date',
             // 'supplier_id',
