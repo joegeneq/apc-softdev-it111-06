@@ -43,8 +43,8 @@ $this->title = 'Purchases Page';
             //'id',
             'date',
             'status',
-            'num_items',
-            'total_amount',
+            // 'num_items',
+           // 'total_amount',
             // 'productinventory_id',
             // 'customer_id',
 
