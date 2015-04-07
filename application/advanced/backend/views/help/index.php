@@ -1,7 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 ?>
-<h1>Help</h1>
+<h1>Guide</h1>
 
 <h3> General Access Keys: </h3>
 <p class="installation">
@@ -21,3 +21,9 @@
   2. Press Alt + M to Manage Customer, Orders, Suppliers, Purchases and Product.<br />
   3. Press Alt + B or Backspace to Go Back.<br />
 </p> 
+
+<h3> Images </h3>
+
+<img src="images/guide/view.png"> - Click to View the specific item</img><br />
+<img src="images/guide/update.png"> - Click to Update the specific item</img><br />
+<img src="images/guide/delete.png"> - Click to Delete the specific item</img><br />
