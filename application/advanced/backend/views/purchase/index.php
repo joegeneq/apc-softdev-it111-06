@@ -53,10 +53,10 @@ $this->title = 'Purchases Page';
     ]); ?>
 
     <p align="right">
-        <?= Html::a('Generate Report All Confirmed', ['generated-confirmed/index'], ['class' => 'btn btn-success','accesskey' => '']) ?>
-        <?= Html::a('Generate Report All Pending', ['generated-pending/index'], ['class' => 'btn btn-success','accesskey' => '']) ?>
+        <?= Html::a('Generate Report', ['generated-confirmed/index'], ['class' => 'btn btn-success','accesskey' => '']) ?>
+       <!-- <?= Html::a('Generate Report All Pending', ['generated-pending/index'], ['class' => 'btn btn-success','accesskey' => '']) ?>
         <?= Html::a('Generate Report All Cancelled', ['generated-cancelled/index'], ['class' => 'btn btn-success','accesskey' => '']) ?>
-        <?= Html::a('Generate Report All For Replacement', ['generated-replacement/index'], ['class' => 'btn btn-success','accesskey' => '']) ?>
+        <?= Html::a('Generate Report All For Replacement', ['generated-replacement/index'], ['class' => 'btn btn-success','accesskey' => '']) ?>-->
         <?= Html::a('Back to Home', ['site/index'], ['class' => 'btn btn-primary','accesskey' => 'h']) ?>
     </p>
 </div>
