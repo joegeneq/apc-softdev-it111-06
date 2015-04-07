@@ -1,4 +1,5 @@
 <?php
+use yii\helpers\Html;
 /* @var $this yii\web\View */
 ?>
 <h1>Installation</h1>
@@ -17,9 +18,15 @@
 <h3>How to Install NVDA </h3>
 
 <p>1. Click the Skip Donation to download the NVDA software directly, and wait until it's finished. <p>
-	<img src="images/installation/ht1.png"></img>
+	<img src="images/installation/ht1.png" alt="Image of NVDA Download"></img>
 <p>2. Run the NVDA software to start installation <p>
-	<img src="images/installation/ht2.png"></img>
-<p>3. And wait until it finishes installation <p>
+	<img src="images/installation/ht2.png" alt="Image of NVDA Installation"></img>
+<p>3. Wait until it finishes installation <p>
 <p>4. After installing, double click the shortcut icon to launch NVDA Screen Reader. <p>
-	<img src="images/installation/ht3.png" width="110px" height="120px"></img>
+	<img src="images/installation/ht3.png" width="110px" height="120px" alt="Image of NVDA Shortcut key"></img>
+
+	<div>
+	<p align="left">
+    <?= Html::a('Back to Login Page', ['site/login'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
+    </p> 
+</div>
