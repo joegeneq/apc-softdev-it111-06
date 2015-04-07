@@ -27,7 +27,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'zip_code')->textInput() ?>
 
-     <?= $form->field($model, 'country')->dropDownList(
+        <?= $form->field($model, 'country')->dropDownList(
     array('Afghanistan'=>'Afghanistan','Åland Islands'=>'Åland Islands','Albania'=>'Albania','Algeria'=>'Algeria','American Samoa'=>'American Samoa','Andorra'=>'Andorra'
         ,'Angola'=>'Angola','Anguilla'=>'Anguilla','Antarctica'=>'Antarctica','Antigua And Barbuda'=>'Antigua And Barbuda','Argentina'=>'Argentina'
         ,'Armenia'=>'Armenia','Aruba'=>'Aruba','Australia'=>'Australia','Austria'=>'Austria','Azerbaijan'=>'Azerbaijan'
@@ -49,7 +49,7 @@ use yii\widgets\ActiveForm;
         ,'Guyana'=>'Guyana','Haiti'=>'Haiti','Heard Island And Mcdonald Islands'=>'Heard Island And Mcdonald Islands','Holy See (Vatican City State)'=>'Holy See (Vatican City State)','Honduras'=>'Honduras'
         ,'Hong Kong'=>'Hong Kong','Hungary'=>'Hungary','Iceland'=>'Iceland','India'=>'India','Indonesia'=>'Indonesia'
         ,'Iran'=>'Iran','Iraq'=>'Iraq','Ireland'=>'Ireland','Isle Of Man'=>'Isle Of Man','Israel'=>'Israel'
-        ,'Italy'=>'Italy','Jamaica'=>'Jamaica','Japan'=>'Jersey','Jordan'=>'Jordan','Kazakhstan'=>'Kazakhstan'
+        ,'Italy'=>'Italy','Jamaica'=>'Jamaica','Japan'=>'Japan', 'Jersey' => 'Jersey', 'Jordan'=>'Jordan','Kazakhstan'=>'Kazakhstan'
         ,'Kenya'=>'Kenya','Kiribati'=>'Kiribati','Korea, North'=>'Korea, North','Korea, South'=>'Korea, South','Kuwait'=>'Kuwait'
         ,'Kyrgyzstan'=>'Kyrgyzstan','Laos'=>'Laos','Latvia'=>'Latvia','Lebanon'=>'Lebanon','Lesotho'=>'Lesotho'
         ,'Liberia'=>'Liberia','Libya'=>'Libya','Liechtenstein'=>'Liechtenstein','Lithuania'=>'Lithuania','Luxembourgt'=>'Luxembourg'
