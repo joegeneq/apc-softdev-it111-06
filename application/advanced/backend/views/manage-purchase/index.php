@@ -23,14 +23,21 @@ $this->title = 'Manage Purchases Page';
         'columns' => [
            // ['class' => 'yii\grid\SerialColumn'],
 
-           // 'id',
+           'id',
+          [
+            'attribute' => 'productinventory_id',
+            'value' => 'productinventory.name',
+            ],
+               [
+            'attribute' => 'customer_id',
+            'value' => 'customer.name',
+            ],
             'date',
             'status',
             'num_items',
-            'total_amount',
-            // 'productinventory_id',
-            // 'customer_id',
-
+            //'total_amount',
+          
+          
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
