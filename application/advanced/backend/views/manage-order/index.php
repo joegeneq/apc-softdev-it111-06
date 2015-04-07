@@ -22,13 +22,7 @@ $this->title = 'Manage Orders Page';
        // 'filterModel' => $searchModel,
         'columns' => [
             //['class' => 'yii\grid\SerialColumn'],
-  [
-            'attribute' => 'id',
-            'format' => 'raw',
-            'value'=>function ($data) {
-           return Html::a(Html::encode($data->id), array('view', 'id'=>$data->id, 'productinventory_id'=>$data->productinventory_id));
-        },
-           ],
+            'id',
             [
             'attribute' => 'supplier_id',
             'value' => 'supplier.name',
