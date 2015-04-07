@@ -1,5 +1,4 @@
 <?php
-
 namespace backend\controllers;
 
 class HelpController extends \yii\web\Controller
