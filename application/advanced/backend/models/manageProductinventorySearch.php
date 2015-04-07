@@ -18,8 +18,8 @@ class manageProductinventorySearch extends manageProductinventory
     public function rules()
     {
         return [
-            [['id', 'qoh', 'items_sold', 'items_remaining', 'supplier_id'], 'integer'],
-            [['name', 'description', 'status', 'create_date', 'update_date'], 'safe'],
+            [['id', 'qoh', 'items_sold', 'items_remaining'], 'integer'],
+            [['name', 'description', 'status', 'create_date', 'update_date', 'supplier_id'], 'safe'],
             [['price'], 'number'],
         ];
     }
@@ -55,6 +55,8 @@ class manageProductinventorySearch extends manageProductinventory
             // $query->where('0=1');
             return $dataProvider;
         }
+
+        
 
         $query->andFilterWhere([
             'id' => $this->id,

@@ -18,10 +18,13 @@ $this->title = 'Manage Inventory Page';
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        //'filterModel' => $searchModel,
+       // 'filterModel' => $searchModel,
         'columns' => [
            // ['class' => 'yii\grid\SerialColumn'],
-
+    [
+                'attribute'=>'supplier_id',
+                'value'=>'supplier.name',
+            ],
            // 'id',
             'name',
             'description',
@@ -32,7 +35,7 @@ $this->title = 'Manage Inventory Page';
              'status',
             // 'create_date',
             // 'update_date',
-            // 'supplier_id',
+            
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
