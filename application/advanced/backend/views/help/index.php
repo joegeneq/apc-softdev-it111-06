@@ -17,11 +17,11 @@
 <h3> On Page Access Keys: </h3>
 <p class="installation">
   1. Press Alt + A to Add Customers, Orders, Suppliers, Purchases and Product.<br />
-  2. Press Alt + M to Manage Customer, Orders, Suppliers, Purchases and Product.<br />
-  3. Press Alt + B or press the Backspace button to Go Back.<br />
+  2. Press Alt + M to go to Manage Customer, Orders, Suppliers, Purchases and Product.<br />
+  3. Press Alt + B or press the Backspace button to Go Back to previous page.<br />
 </p> 
 
-<h3> Images </h3>
+<h3> Manage Pages:</h3>
 
 <img src="images/guide/view.png"> - Click to View the specific item</img><br />
 <img src="images/guide/update.png"> - Click to Update the specific item</img><br />
