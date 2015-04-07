@@ -42,6 +42,6 @@ $this->title = $model->id;
         ],
     ]) ?>
     <p align="left">
-    <?= Html::a('Back to Manage Purchases Page', ['manage-purchase/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
+    <?= Html::a('Back to Purchases Page', ['purchase/index'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
     </p> 
 </div>
