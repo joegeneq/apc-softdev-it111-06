@@ -33,7 +33,10 @@ $this->title = $model->name;
             'description',
             'qoh',
             'items_sold',
-            'items_remaining',
+            [
+            'attribute' => 'items_remaining',
+            'value' => $model->getTotal(),
+            ],
             'price',
             'status',
             'create_date',
@@ -42,6 +45,6 @@ $this->title = $model->name;
         ],
     ]) ?>
      <p align="left">
-    <?= Html::a('Back to Manage Product Inventory', ['product-inventory/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
+    <?= Html::a('Back to Manage Product Inventory', ['productinventory/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
     </p> 
 </div>
