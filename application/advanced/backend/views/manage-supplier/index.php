@@ -30,7 +30,7 @@ $this->title = 'Manage Suppliers Page';
             // 'street',
              'city',
             // 'zip_code',
-             'country',
+            // 'country',
              'email:email',
             // 'create_date',
             // 'update_date',

@@ -29,9 +29,9 @@ $this->title = 'Manage Customers Page';
             // 'street',
              'city',
             // 'zip_code',
-             'country',
+             //'country',
              'email:email',
-             'contact_person',
+            // 'contact_person',
             // 'create_date',
             // 'update_date',
 

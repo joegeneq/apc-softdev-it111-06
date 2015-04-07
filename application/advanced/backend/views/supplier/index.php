@@ -19,7 +19,7 @@ $this->title = 'Suppliers Page';
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?></center>
-    <center>
+    </center>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         //'filterModel' => $searchModel,
@@ -37,12 +37,12 @@ $this->title = 'Suppliers Page';
 
             'contact_no',
             'contact_person',
-            'house_no',
+            //'house_no',
             // 'street',
-            // 'city',
+             'city',
             // 'zip_code',
             // 'country',
-            // 'email:email',
+             'email:email',
             // 'create_date',
             // 'update_date',
 

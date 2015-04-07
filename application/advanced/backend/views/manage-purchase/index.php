@@ -34,7 +34,7 @@ $this->title = 'Manage Purchases Page';
             ],
             'date',
             'status',
-            'num_items',
+            //'num_items',
             //'total_amount',
           
           
