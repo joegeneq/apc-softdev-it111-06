@@ -29,7 +29,7 @@ $this->title = 'Orders';
             'attribute' => 'id',
             'format' => 'raw',
             'value'=>function ($data) {
-           return Html::a(Html::encode($data->id), array('view', 'id'=>$data->id, 'customer_id'=>$data->customer_id, 'productinventory_id'=>$data->productinventory_id));
+           return Html::a(Html::encode($data->id), array('view', 'id'=>$data->id, 'productinventory_id'=>$data->productinventory_id));
         },
            ],
             [

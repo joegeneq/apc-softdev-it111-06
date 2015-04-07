@@ -29,6 +29,7 @@ AppAsset::register($this);
         <a href="index.php?r=productinventory%2Findex" accesskey="i" hidden>Product Inventory</a>
         <a href="index.php?r=order%2Findex" accesskey="o" hidden>Orders</a>
          <a href="index.php?r=purchase%2Findex" accesskey="p" hidden>Purchases</a>
+         <a href="index.php?r=help%2Findex" accesskey="g" hidden>Guide</a>
     </p>
     <?php $this->beginBody() ?>
     <div class="wrap">
@@ -45,12 +46,14 @@ AppAsset::register($this);
             ];
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+                $menuItems[] = ['label' => 'Getting Started', 'url' => ['/installation/index']];
             } else {
                 $menuItems[] =   ['label' => 'Customer','alt' => 'Customer, Alt + C', 'url' => ['/customer/index'],['accesskey'=>'c']];
               $menuItems[] =  ['label' => 'Suppliers','alt' => 'Suppliers Page, Alt + S', 'url' =>  ['/supplier/index'],['accesskey'=>'s']];
              $menuItems[] =   ['label' => 'Product Inventory','alt' => 'Product Inventory Page, Alt + I', 'url' => ['/productinventory/index'],['accesskey'=>'i']];
               $menuItems[] =  ['label' => 'Orders','alt' => 'Order Page, Alt + O', 'url' => ['/order/index'],['accesskey'=>'o']];
               $menuItems[] =  ['label' => 'Purchases','alt' => 'Purchases Page, Alt + P', 'url' => ['/purchase/index'],['accesskey'=>'p']];
+                 $menuItems[] = ['label' => 'Guide', 'url' => ['/help/index']];
                 $menuItems[] = [
                     'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],

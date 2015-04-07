@@ -6678,3 +6678,21 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+.installation{
+
+  font-size: 15px;
+
+}
+
+.note{
+
+  font-style: italic;
+  color:  red;
+}
+
+.hyperlink{
+
+  font-style: italic;
+  
+}
