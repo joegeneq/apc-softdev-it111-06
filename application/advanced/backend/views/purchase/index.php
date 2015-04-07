@@ -14,7 +14,7 @@ $this->title = 'Purchases Page';
 
     <center><p>
         <?= Html::a('Add Purchase Record', ['create'], ['class' => 'btn btn-success','accesskey' => 'a']) ?>
-        <?= Html::a('Manage Purchases', ['manage-order/index'], ['class' => 'btn btn-danger','accesskey' => 'm']) ?>
+        <?= Html::a('Manage Purchases', ['manage-purchase/index'], ['class' => 'btn btn-danger','accesskey' => 'm']) ?>
     </p><br>
 
     <h1><?= Html::encode($this->title) ?></h1>
