@@ -19,7 +19,7 @@
 <p class="installation">
   1. Press Alt + A to Add Customers, Orders, Suppliers, Purchases and Product.<br />
   2. Press Alt + M to Manage Customer, Orders, Suppliers, Purchases and Product.<br />
-  3. Press Alt + B or Backspace to Go Back.<br />
+  3. Press Alt + B or press the Backspace button to Go Back.<br />
 </p> 
 
 <h3> Images </h3>
