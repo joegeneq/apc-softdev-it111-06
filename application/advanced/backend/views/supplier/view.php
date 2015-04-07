@@ -43,7 +43,7 @@ $this->title = $model->name;
         ],
     ]) ?>
     <p align="left">
-    <?= Html::a('Back to Manage Suppliers Page', ['manage-supplier/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
+    <?= Html::a('Back to Suppliers', ['supplier/index'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
     </p> 
 
 </div>
