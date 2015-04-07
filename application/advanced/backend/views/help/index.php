@@ -1,7 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 ?>
-<h1>Guide</h1>
+<h1>Help</h1>
 
 <h3> General Access Keys: </h3>
 <p class="installation">
@@ -10,9 +10,8 @@
   3. Press Alt + I to Go to Product Inventory Page.<br />
   4. Press Alt + O to Go to Order Page. <br />
   5. Press Alt + P to Go to Purchases Page.<br />
-  6. Press Alt + G to Go to Guide Page.<br />
+  6. Press Alt + L to Go to Help Page.<br />
   7. Press Alt + H to Go to Home Page.<br />
-  8. Press Alt + L to Logout<br />
 </p>
 
 <h3> On Page Access Keys: </h3>

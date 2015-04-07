@@ -28,8 +28,10 @@ AppAsset::register($this);
         <a href="index.php?r=supplier%2Findex" accesskey="s" hidden>Suppliers</a>
         <a href="index.php?r=productinventory%2Findex" accesskey="i" hidden>Product Inventory</a>
         <a href="index.php?r=order%2Findex" accesskey="o" hidden>Orders</a>
-         <a href="index.php?r=purchase%2Findex" accesskey="p" hidden>Purchases</a>
-         <a href="index.php?r=help%2Findex" accesskey="g" hidden>Guide</a>
+        <a href="index.php?r=purchase%2Findex" accesskey="p" hidden>Purchases</a>
+        <a href="index.php?r=help%2Findex" accesskey="l" hidden>Help</a>
+        
+          
     </p>
     <?php $this->beginBody() ?>
     <div class="wrap">
@@ -53,7 +55,7 @@ AppAsset::register($this);
              $menuItems[] =   ['label' => 'Product Inventory','alt' => 'Product Inventory Page, Alt + I', 'url' => ['/productinventory/index'],['accesskey'=>'i']];
               $menuItems[] =  ['label' => 'Orders','alt' => 'Order Page, Alt + O', 'url' => ['/order/index'],['accesskey'=>'o']];
               $menuItems[] =  ['label' => 'Purchases','alt' => 'Purchases Page, Alt + P', 'url' => ['/purchase/index'],['accesskey'=>'p']];
-                 $menuItems[] = ['label' => 'Guide', 'url' => ['/help/index']];
+                 $menuItems[] = ['label' => 'Help', 'url' => ['/help/index']];
                 $menuItems[] = [
                     'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],
