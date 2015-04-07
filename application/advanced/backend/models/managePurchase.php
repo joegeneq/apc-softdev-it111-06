@@ -73,4 +73,11 @@ class managePurchase extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Customer::className(), ['id' => 'customer_id']);
     }
+
+    public function getAmount()
+     {
+       
+
+        return ($this->productinventory->price * $this->num_items);
+    }
 }

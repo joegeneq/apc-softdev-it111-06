@@ -32,7 +32,10 @@ $this->title = $model->id;
             'date',
             'status',
             'num_items',
-            'total_amount',
+            [
+            'attribute' => 'total_amount',
+            'value' => $model->getAmount(),
+            ],
             'productinventory.name',
             'customer.name',
         ],
