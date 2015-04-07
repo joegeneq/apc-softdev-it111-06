@@ -36,6 +36,6 @@ $this->title = $model->id;
         ],
     ]) ?>
     <p align="left">
-    <?= Html::a('Back to Manage Orders Page', ['manage-order/index'], ['class' => 'btn btn-primary','accesskey'=>'b']) ?>
+    <?= Html::a('Back to Orders', ['order/index'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
     </p> 
 </div>
