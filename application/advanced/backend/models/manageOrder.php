@@ -12,9 +12,10 @@ use Yii;
  * @property integer $qty
  * @property integer $supplier_id
  * @property integer $productinventory_id
+ * @property string $price
  *
- * @property Supplier $supplier
  * @property Productinventory $productinventory
+ * @property Supplier $supplier
  */
 class manageOrder extends \yii\db\ActiveRecord
 {
@@ -34,7 +35,8 @@ class manageOrder extends \yii\db\ActiveRecord
         return [
             [['date'], 'safe'],
             [['qty', 'supplier_id', 'productinventory_id'], 'required'],
-            [['qty', 'supplier_id', 'productinventory_id'], 'integer']
+            [['qty', 'supplier_id', 'productinventory_id'], 'integer'],
+            [['price'], 'number']
         ];
     }
 
@@ -46,18 +48,11 @@ class manageOrder extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'date' => 'Date',
-            'qty' => 'Quantity',
-            'supplier_id' => 'Supplier Name',
-            'productinventory_id' => 'Product Name',
+            'qty' => 'Qty',
+            'supplier_id' => 'Supplier ID',
+            'productinventory_id' => 'Productinventory ID',
+            'price' => 'Price',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getSupplier()
-    {
-        return $this->hasOne(Supplier::className(), ['id' => 'supplier_id']);
     }
 
     /**
@@ -66,5 +61,13 @@ class manageOrder extends \yii\db\ActiveRecord
     public function getProductinventory()
     {
         return $this->hasOne(Productinventory::className(), ['id' => 'productinventory_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSupplier()
+    {
+        return $this->hasOne(Supplier::className(), ['id' => 'supplier_id']);
     }
 }
