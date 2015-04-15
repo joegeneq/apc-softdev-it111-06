@@ -20,6 +20,7 @@ class OrderSearch extends Order
         return [
             [['id', 'qty', 'supplier_id', 'productinventory_id'], 'integer'],
             [['date'], 'safe'],
+            [['price'], 'number'],
         ];
     }
 
@@ -61,6 +62,7 @@ class OrderSearch extends Order
             'qty' => $this->qty,
             'supplier_id' => $this->supplier_id,
             'productinventory_id' => $this->productinventory_id,
+            'price' => $this->price,
         ]);
 
         return $dataProvider;

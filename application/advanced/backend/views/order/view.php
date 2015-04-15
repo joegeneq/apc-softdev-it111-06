@@ -7,15 +7,15 @@ use yii\widgets\DetailView;
 /* @var $model backend\models\Order */
 
 $this->title = $model->id;
-//$this->params['breadcrumbs'][] = ['label' => 'Orders', 'url' => ['index']];
-//$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = ['label' => 'Orders', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="order-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id, 'supplier_id' => $model->supplier_id, 'productinventory_id' => $model->productinventory_id], ['class' => 'btn btn-primary','accesskey'=>'u']) ?>
+        <?= Html::a('Update', ['update', 'id' => $model->id, 'supplier_id' => $model->supplier_id, 'productinventory_id' => $model->productinventory_id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id, 'supplier_id' => $model->supplier_id, 'productinventory_id' => $model->productinventory_id], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -31,11 +31,10 @@ $this->title = $model->id;
             'id',
             'date',
             'qty',
-            'supplier.name',
-            'productinventory.name',
+            'supplier_id',
+            'productinventory_id',
+            'price',
         ],
     ]) ?>
-    <p align="left">
-    <?= Html::a('Back to Orders', ['order/index'], ['class' => 'btn btn-primary', 'accesskey'=>'b']) ?>
-    </p> 
+
 </div>
