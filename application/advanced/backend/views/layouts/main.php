@@ -30,6 +30,7 @@ AppAsset::register($this);
         <a href="index.php?r=order%2Findex" accesskey="o" hidden>Orders</a>
         <a href="index.php?r=purchase%2Findex" accesskey="p" hidden>Purchases</a>
         <a href="index.php?r=help%2Findex" accesskey="l" hidden>Help</a>
+
         
           
     </p>

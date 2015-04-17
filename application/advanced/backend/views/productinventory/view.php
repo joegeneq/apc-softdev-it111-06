@@ -42,6 +42,7 @@ $this->title = $model->name;
             'create_date',
             'update_date',
             'supplier.name',
+            
         ],
     ]) ?>
     <p align="left">

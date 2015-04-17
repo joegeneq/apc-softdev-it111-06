@@ -12,7 +12,7 @@ use yii\grid\GridView;
 ?>
 <div class="generated-order-index">
 
-    <h1 align="center">Generated Orders</h1>
+    <h1 align="center">Orders</h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([

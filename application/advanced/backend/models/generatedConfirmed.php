@@ -51,7 +51,7 @@ class generatedConfirmed extends \yii\db\ActiveRecord
             'id' => 'ID',
             'date' => 'Date',
             'status' => 'Status',
-            'num_items' => 'Num Items',
+            'num_items' => 'Number of Items',
             'total_amount' => 'Total Amount',
             'productinventory_id' => 'Product Name',
             'customer_id' => 'Customer Name',

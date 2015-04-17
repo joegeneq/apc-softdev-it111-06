@@ -12,7 +12,7 @@ use yii\grid\GridView;
 ?>
 <div class="generated-confirmed-index">
 
-    <h1 align="center">Generated Purchases</h1>
+    <h1 align="center">Confirmed Purchases</h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
@@ -37,9 +37,9 @@ use yii\grid\GridView;
             ],
             //'id',
             'date',
-            'status',
             'num_items',
-            'total_amount',
+            'status',
+           // 'total_amount',
             // 'productinventory_id',
             // 'customer_id',
 

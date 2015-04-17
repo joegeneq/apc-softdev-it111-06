@@ -48,7 +48,7 @@ class manageOrder extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'date' => 'Date',
-            'qty' => 'Qty',
+            'qty' => 'Quantity',
             'supplier_id' => 'Supplier Name',
             'productinventory_id' => 'Product Name',
             'price' => 'Price',

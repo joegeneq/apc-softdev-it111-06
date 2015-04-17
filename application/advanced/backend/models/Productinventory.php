@@ -94,6 +94,7 @@ class Productinventory extends \yii\db\ActiveRecord
 
      public function getTotal()
      {
+
         return ($this->qoh - $this->items_sold);
     }
 }
