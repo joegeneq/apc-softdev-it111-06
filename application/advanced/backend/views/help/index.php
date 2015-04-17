@@ -27,7 +27,7 @@
 <img src="images/guide/update.png"> - Click to Update the specific item</img><br />
 <img src="images/guide/delete.png"> - Click to Delete the specific item</img><br /><br>
 
-<a href="http://www.nvaccess.org/download/" class="hyperlink"> * Click here to Download RBI User Manual</a><br>
+<a href="https://github.com/joegeneq/apc-softdev-it111-06/tree/master/documentation/softdev/RBI%20User%20Manual" class="hyperlink"> * Click here to Download RBI User Manual</a><br>
 <h3> Site Creators:</h3>
 Clarence Carillaga <br>
 Pauline Gabrielle De Ocampo <br>
